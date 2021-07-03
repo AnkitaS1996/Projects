@@ -1,0 +1,66 @@
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe.config
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csprojAssemblyReference.cache
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Properties.Resources.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Login.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.GenerateResource.cache
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.CoreCompileInputs.cache
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Product.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Product.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Category.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Category.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Stock.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Product.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Stock.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Category.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.MDI_LED_Bulb.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Distributors.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Distributors.resources
+F:\Ankita Shedage\Vickram Project\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Distributors.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe.config
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csprojAssemblyReference.cache
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Properties.Resources.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Distributors.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Category.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Product.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Stock.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Login.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Category.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Distributors.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Product.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Category.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Distributors.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Product.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Stock.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.MDI_LED_Bulb.resources
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.GenerateResource.cache
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.CoreCompileInputs.cache
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita Shedage\C# Projects\Lightup LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe.config
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\bin\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csprojAssemblyReference.cache
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Properties.Resources.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Distributors.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Category.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Product.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Stock.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Login.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Category.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Distributors.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Product.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Category.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Distributors.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Product.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Stock.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.MDI_LED_Bulb.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.GenerateResource.cache
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.CoreCompileInputs.cache
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.exe
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.pdb
