@@ -379,7 +379,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dgv_Data.Name = "dgv_Data";
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.RowTemplate.Height = 24;
-            this.dgv_Data.Size = new System.Drawing.Size(1649, 320);
+            this.dgv_Data.Size = new System.Drawing.Size(1649, 262);
             this.dgv_Data.TabIndex = 22;
             // 
             // Frm_Add_Stock
@@ -397,6 +397,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Stock";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Add_Stock_Load);
             this.gb_Search_Product.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

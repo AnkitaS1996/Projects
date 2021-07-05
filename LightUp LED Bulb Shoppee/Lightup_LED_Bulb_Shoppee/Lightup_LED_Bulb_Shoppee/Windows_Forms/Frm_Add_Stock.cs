@@ -29,5 +29,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
+
+        private void Frm_Add_Stock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

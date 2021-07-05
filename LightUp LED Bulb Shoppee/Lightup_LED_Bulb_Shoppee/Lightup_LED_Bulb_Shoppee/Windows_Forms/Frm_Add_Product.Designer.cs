@@ -376,7 +376,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dgv_Data.RowHeadersVisible = false;
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.RowTemplate.Height = 24;
-            this.dgv_Data.Size = new System.Drawing.Size(1646, 319);
+            this.dgv_Data.Size = new System.Drawing.Size(1646, 261);
             this.dgv_Data.TabIndex = 26;
             // 
             // btn_Save
@@ -410,7 +410,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel3.Controls.Add(this.btn_Save);
             this.panel3.Controls.Add(this.btn_Refresh);
-            this.panel3.Location = new System.Drawing.Point(13, 753);
+            this.panel3.Location = new System.Drawing.Point(13, 695);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1645, 96);
             this.panel3.TabIndex = 29;

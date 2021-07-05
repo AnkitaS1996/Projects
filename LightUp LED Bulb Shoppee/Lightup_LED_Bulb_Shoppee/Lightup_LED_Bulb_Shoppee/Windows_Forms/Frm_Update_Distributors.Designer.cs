@@ -33,6 +33,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -45,32 +46,26 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_PAN_No = new System.Windows.Forms.Label();
             this.txt_PanNo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.gb_Gender = new System.Windows.Forms.GroupBox();
-            this.rbtn_Female = new System.Windows.Forms.RadioButton();
-            this.rbtn_Male = new System.Windows.Forms.RadioButton();
             this.txt_Address = new System.Windows.Forms.TextBox();
             this.txt_Addhar_No = new System.Windows.Forms.TextBox();
             this.txt_Brand = new System.Windows.Forms.TextBox();
             this.lbl_Date = new System.Windows.Forms.Label();
-            this.lbl_Gender = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
             this.lbl_Addhar_No = new System.Windows.Forms.Label();
             this.lbl_Brand = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.gb_Add_Distributor.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.gb_Gender.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Add_Distributor
@@ -130,6 +125,18 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.textBox1.Size = new System.Drawing.Size(216, 38);
             this.textBox1.TabIndex = 11;
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(775, 3);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(241, 55);
+            this.btn_Search.TabIndex = 19;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -147,22 +154,20 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel1.Controls.Add(this.txt_Name, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Mob_No1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_Mob_No1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Mob_No_2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Mob_No2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Email_ID, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_EmailID, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_PAN_No, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txt_PanNo, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gb_Gender, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Address, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Addhar_No, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txt_Brand, 5, 4);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Date, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Gender, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Address, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Addhar_No, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Brand, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Mob_No2, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Mob_No_2, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Address, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Address, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Email_ID, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_EmailID, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Addhar_No, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Addhar_No, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txt_PanNo, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_PAN_No, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_Brand, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt_Brand, 2, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 108);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -221,9 +226,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Mob_No_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Mob_No_2.AutoSize = true;
             this.lbl_Mob_No_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mob_No_2.Location = new System.Drawing.Point(43, 178);
+            this.lbl_Mob_No_2.Location = new System.Drawing.Point(626, 101);
             this.lbl_Mob_No_2.Name = "lbl_Mob_No_2";
-            this.lbl_Mob_No_2.Size = new System.Drawing.Size(206, 29);
+            this.lbl_Mob_No_2.Size = new System.Drawing.Size(276, 29);
             this.lbl_Mob_No_2.TabIndex = 15;
             this.lbl_Mob_No_2.Text = "Mobile No. 2";
             // 
@@ -231,20 +236,20 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.txt_Mob_No2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Mob_No2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Mob_No2.Location = new System.Drawing.Point(272, 175);
+            this.txt_Mob_No2.Location = new System.Drawing.Point(925, 98);
             this.txt_Mob_No2.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Mob_No2.Name = "txt_Mob_No2";
-            this.txt_Mob_No2.Size = new System.Drawing.Size(307, 34);
+            this.txt_Mob_No2.Size = new System.Drawing.Size(303, 34);
             this.txt_Mob_No2.TabIndex = 20;
             // 
             // txt_Email_ID
             // 
             this.txt_Email_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Email_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Email_ID.Location = new System.Drawing.Point(272, 252);
+            this.txt_Email_ID.Location = new System.Drawing.Point(925, 175);
             this.txt_Email_ID.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Email_ID.Name = "txt_Email_ID";
-            this.txt_Email_ID.Size = new System.Drawing.Size(307, 34);
+            this.txt_Email_ID.Size = new System.Drawing.Size(303, 34);
             this.txt_Email_ID.TabIndex = 27;
             // 
             // lbl_EmailID
@@ -252,9 +257,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_EmailID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_EmailID.AutoSize = true;
             this.lbl_EmailID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EmailID.Location = new System.Drawing.Point(43, 255);
+            this.lbl_EmailID.Location = new System.Drawing.Point(626, 178);
             this.lbl_EmailID.Name = "lbl_EmailID";
-            this.lbl_EmailID.Size = new System.Drawing.Size(206, 29);
+            this.lbl_EmailID.Size = new System.Drawing.Size(276, 29);
             this.lbl_EmailID.TabIndex = 24;
             this.lbl_EmailID.Text = "Email ID";
             // 
@@ -263,9 +268,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_PAN_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PAN_No.AutoSize = true;
             this.lbl_PAN_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PAN_No.Location = new System.Drawing.Point(43, 334);
+            this.lbl_PAN_No.Location = new System.Drawing.Point(626, 255);
             this.lbl_PAN_No.Name = "lbl_PAN_No";
-            this.lbl_PAN_No.Size = new System.Drawing.Size(206, 29);
+            this.lbl_PAN_No.Size = new System.Drawing.Size(276, 29);
             this.lbl_PAN_No.TabIndex = 28;
             this.lbl_PAN_No.Text = "PAN Card No.";
             // 
@@ -273,10 +278,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.txt_PanNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_PanNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_PanNo.Location = new System.Drawing.Point(272, 331);
+            this.txt_PanNo.Location = new System.Drawing.Point(925, 252);
             this.txt_PanNo.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_PanNo.Name = "txt_PanNo";
-            this.txt_PanNo.Size = new System.Drawing.Size(307, 34);
+            this.txt_PanNo.Size = new System.Drawing.Size(303, 34);
             this.txt_PanNo.TabIndex = 29;
             // 
             // dateTimePicker1
@@ -290,73 +295,34 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dateTimePicker1.Size = new System.Drawing.Size(303, 38);
             this.dateTimePicker1.TabIndex = 10;
             // 
-            // gb_Gender
-            // 
-            this.gb_Gender.Controls.Add(this.rbtn_Female);
-            this.gb_Gender.Controls.Add(this.rbtn_Male);
-            this.gb_Gender.Location = new System.Drawing.Point(925, 80);
-            this.gb_Gender.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.gb_Gender.Name = "gb_Gender";
-            this.gb_Gender.Padding = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.gb_Gender.Size = new System.Drawing.Size(267, 51);
-            this.gb_Gender.TabIndex = 18;
-            this.gb_Gender.TabStop = false;
-            // 
-            // rbtn_Female
-            // 
-            this.rbtn_Female.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtn_Female.AutoSize = true;
-            this.rbtn_Female.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_Female.Location = new System.Drawing.Point(163, 16);
-            this.rbtn_Female.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.rbtn_Female.Name = "rbtn_Female";
-            this.rbtn_Female.Size = new System.Drawing.Size(104, 29);
-            this.rbtn_Female.TabIndex = 1;
-            this.rbtn_Female.TabStop = true;
-            this.rbtn_Female.Text = "Female";
-            this.rbtn_Female.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_Male
-            // 
-            this.rbtn_Male.AutoSize = true;
-            this.rbtn_Male.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_Male.Location = new System.Drawing.Point(10, 16);
-            this.rbtn_Male.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.rbtn_Male.Name = "rbtn_Male";
-            this.rbtn_Male.Size = new System.Drawing.Size(80, 29);
-            this.rbtn_Male.TabIndex = 0;
-            this.rbtn_Male.TabStop = true;
-            this.rbtn_Male.Text = "Male";
-            this.rbtn_Male.UseVisualStyleBackColor = true;
-            // 
             // txt_Address
             // 
             this.txt_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Address.Location = new System.Drawing.Point(925, 175);
+            this.txt_Address.Location = new System.Drawing.Point(272, 175);
             this.txt_Address.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.Size = new System.Drawing.Size(303, 34);
+            this.txt_Address.Size = new System.Drawing.Size(307, 34);
             this.txt_Address.TabIndex = 21;
             // 
             // txt_Addhar_No
             // 
             this.txt_Addhar_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Addhar_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Addhar_No.Location = new System.Drawing.Point(925, 252);
+            this.txt_Addhar_No.Location = new System.Drawing.Point(272, 252);
             this.txt_Addhar_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Addhar_No.Name = "txt_Addhar_No";
-            this.txt_Addhar_No.Size = new System.Drawing.Size(303, 34);
+            this.txt_Addhar_No.Size = new System.Drawing.Size(307, 34);
             this.txt_Addhar_No.TabIndex = 23;
             // 
             // txt_Brand
             // 
             this.txt_Brand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Brand.Location = new System.Drawing.Point(925, 331);
+            this.txt_Brand.Location = new System.Drawing.Point(272, 331);
             this.txt_Brand.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Brand.Name = "txt_Brand";
-            this.txt_Brand.Size = new System.Drawing.Size(303, 34);
+            this.txt_Brand.Size = new System.Drawing.Size(307, 34);
             this.txt_Brand.TabIndex = 26;
             // 
             // lbl_Date
@@ -370,25 +336,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Date.TabIndex = 2;
             this.lbl_Date.Text = "Tie Up Date";
             // 
-            // lbl_Gender
-            // 
-            this.lbl_Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Gender.AutoSize = true;
-            this.lbl_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Gender.Location = new System.Drawing.Point(626, 101);
-            this.lbl_Gender.Name = "lbl_Gender";
-            this.lbl_Gender.Size = new System.Drawing.Size(276, 29);
-            this.lbl_Gender.TabIndex = 17;
-            this.lbl_Gender.Text = "Gender";
-            // 
             // lbl_Address
             // 
             this.lbl_Address.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Address.AutoSize = true;
             this.lbl_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address.Location = new System.Drawing.Point(626, 178);
+            this.lbl_Address.Location = new System.Drawing.Point(43, 178);
             this.lbl_Address.Name = "lbl_Address";
-            this.lbl_Address.Size = new System.Drawing.Size(276, 29);
+            this.lbl_Address.Size = new System.Drawing.Size(206, 29);
             this.lbl_Address.TabIndex = 16;
             this.lbl_Address.Text = "Address";
             // 
@@ -397,9 +352,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Addhar_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Addhar_No.AutoSize = true;
             this.lbl_Addhar_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Addhar_No.Location = new System.Drawing.Point(626, 255);
+            this.lbl_Addhar_No.Location = new System.Drawing.Point(43, 240);
             this.lbl_Addhar_No.Name = "lbl_Addhar_No";
-            this.lbl_Addhar_No.Size = new System.Drawing.Size(276, 29);
+            this.lbl_Addhar_No.Size = new System.Drawing.Size(206, 58);
             this.lbl_Addhar_No.TabIndex = 22;
             this.lbl_Addhar_No.Text = "Addhar Card Number";
             // 
@@ -408,9 +363,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Brand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Brand.AutoSize = true;
             this.lbl_Brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Brand.Location = new System.Drawing.Point(626, 334);
+            this.lbl_Brand.Location = new System.Drawing.Point(43, 334);
             this.lbl_Brand.Name = "lbl_Brand";
-            this.lbl_Brand.Size = new System.Drawing.Size(276, 29);
+            this.lbl_Brand.Size = new System.Drawing.Size(206, 29);
             this.lbl_Brand.TabIndex = 25;
             this.lbl_Brand.Text = "Brand";
             // 
@@ -424,6 +379,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1317, 91);
             this.panel1.TabIndex = 7;
+            // 
+            // pb_Exit
+            // 
+            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pb_Exit.Location = new System.Drawing.Point(1260, 3);
+            this.pb_Exit.Name = "pb_Exit";
+            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
+            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Exit.TabIndex = 1;
+            this.pb_Exit.TabStop = false;
             // 
             // lbl_Header
             // 
@@ -487,39 +453,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
             // 
-            // btn_Search
-            // 
-            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Search.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(775, 3);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(241, 55);
-            this.btn_Search.TabIndex = 19;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = false;
-            // 
-            // pb_Exit
-            // 
-            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pb_Exit.Location = new System.Drawing.Point(1260, 3);
-            this.pb_Exit.Name = "pb_Exit";
-            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
-            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Exit.TabIndex = 1;
-            this.pb_Exit.TabStop = false;
-            // 
             // Frm_Update_Distributors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 685);
+            this.ClientSize = new System.Drawing.Size(1317, 714);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gb_Add_Distributor);
-            this.MinimumSize = new System.Drawing.Size(1335, 732);
+            this.MinimumSize = new System.Drawing.Size(1335, 761);
             this.Name = "Frm_Update_Distributors";
             this.Text = "Update Distributors";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -528,12 +471,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.gb_Gender.ResumeLayout(false);
-            this.gb_Gender.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -556,14 +497,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_PAN_No;
         private System.Windows.Forms.TextBox txt_PanNo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.GroupBox gb_Gender;
-        private System.Windows.Forms.RadioButton rbtn_Female;
-        private System.Windows.Forms.RadioButton rbtn_Male;
         private System.Windows.Forms.TextBox txt_Address;
         private System.Windows.Forms.TextBox txt_Addhar_No;
         private System.Windows.Forms.TextBox txt_Brand;
         private System.Windows.Forms.Label lbl_Date;
-        private System.Windows.Forms.Label lbl_Gender;
         private System.Windows.Forms.Label lbl_Address;
         private System.Windows.Forms.Label lbl_Addhar_No;
         private System.Windows.Forms.Label lbl_Brand;

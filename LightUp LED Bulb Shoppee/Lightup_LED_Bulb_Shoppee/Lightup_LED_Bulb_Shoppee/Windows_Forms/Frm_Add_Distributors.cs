@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dtp_Tie_UPDate.Text = "";
             txt_Mob_No1.Text = "";
             txt_Mob_No2.Text = "";
-            rbtn_Female.Checked = false;
-            rbtn_Male.Checked = false;
             txt_Address.Text = "";
             txt_Email_ID.Text = "";
             txt_Addhar_No.Text = "";
@@ -81,7 +80,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         //#Endregion
         private void txt_Addhar_No_TextChanged(object sender, EventArgs e)
         {
-            if(txt_Addhar_No.TextLength > 12)
+           /* if(txt_Addhar_No.TextLength > 12)
             {
                 DialogResult result = MessageBox.Show("Invalid Addharcard Number..Please Enter Valid Addhar card Number","Please Valid Addhar Card Number",MessageBoxButtons.OK);
                 if(result == DialogResult.OK)
@@ -89,7 +88,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                     txt_Addhar_No.Text = "";
                     MessageBox.Show("Plase Valid 12 Digits Addhar Card Number");
                 }
-            }
+            }*/
 
         }
 
@@ -105,7 +104,37 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         //#Save Button Code
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            long Mobile_No2 = 0;
+            string Email = "-";
+            if(txt_Mob_No2.Text != "")
+            {
+                Mobile_No2 = Convert.ToInt32(txt_Mob_No2.Text);
+            }
+            if(txt_Email_ID.Text != "")
+            {
+                Email = txt_Email_ID.Text;
+            }
 
+            GVObj.Con_Open();
+            if(txt_Distributor_ID.Text != "" && txt_Name.Text != "" && txt_Mob_No1.Text != "" && txt_Address.Text != "" && txt_Addhar_No.Text != "" && txt_PanNo.Text != "" && txt_Brand.Text != "")
+            { 
+                DialogResult result = MessageBox.Show("Are You Sure Record Save Data Successfully..!!", "Record Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    SqlCommand cmd = new SqlCommand("Insert into Distributor_db Values (" + Convert.ToInt32(txt_Distributor_ID.Text) + ",'" + txt_Name.Text + "','" + dtp_Tie_UPDate.Text + "'," + txt_Mob_No1.Text + "," + Mobile_No2 + ",'" + txt_Address.Text + "','" + Email + "'," + txt_Addhar_No.Text + ",'" + txt_PanNo.Text + "','" + txt_Brand.Text + "')", GVObj.con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Save Successfully");
+                    Clear_Controls();
+                }
+                else
+                {
+                    this.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("First Fill All The Field", "First Data field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }  
         }
 
         //#region Keydown Event Hwndling
@@ -134,22 +163,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
 
         private void txt_Mob_No2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                rbtn_Male.Focus();
-            }
-        }
-
-        private void rbtn_Male_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                rbtn_Female.Focus();
-            }
-        }
-
-        private void rbtn_Female_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
