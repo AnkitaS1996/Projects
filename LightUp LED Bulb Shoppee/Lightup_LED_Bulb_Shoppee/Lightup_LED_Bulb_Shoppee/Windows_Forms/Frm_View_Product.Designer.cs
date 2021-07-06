@@ -94,7 +94,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.DGV_View_Product_Data.Name = "DGV_View_Product_Data";
             this.DGV_View_Product_Data.RowHeadersWidth = 51;
             this.DGV_View_Product_Data.RowTemplate.Height = 24;
-            this.DGV_View_Product_Data.Size = new System.Drawing.Size(1638, 618);
+            this.DGV_View_Product_Data.Size = new System.Drawing.Size(1638, 667);
             this.DGV_View_Product_Data.TabIndex = 21;
             // 
             // gb_View_Product
@@ -155,7 +155,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             "Product ID",
             "Category",
             "Product Name"});
-            this.cmb_SearchBy.Location = new System.Drawing.Point(358, 21);
+            this.cmb_SearchBy.Location = new System.Drawing.Point(358, 20);
             this.cmb_SearchBy.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.cmb_SearchBy.Name = "cmb_SearchBy";
             this.cmb_SearchBy.Size = new System.Drawing.Size(342, 39);
@@ -208,10 +208,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Controls.Add(this.gb_View_Product);
             this.Controls.Add(this.DGV_View_Product_Data);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1680, 995);
             this.MinimumSize = new System.Drawing.Size(1680, 995);
             this.Name = "Frm_View_Product";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Product";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);

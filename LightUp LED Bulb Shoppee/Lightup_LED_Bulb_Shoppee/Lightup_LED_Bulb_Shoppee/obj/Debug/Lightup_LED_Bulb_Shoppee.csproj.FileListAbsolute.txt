@@ -64,3 +64,11 @@ F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csproj.CoreCompileInputs.cache
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.exe
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.pdb
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Frm_Add_Retailer_Info.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Update_Retailer_Info.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Retailer.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Add_Normal_Customer.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Retailer_Order.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Accept_Payment.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_Show_Pending_Bills.resources
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_View_Customer_Details.resources

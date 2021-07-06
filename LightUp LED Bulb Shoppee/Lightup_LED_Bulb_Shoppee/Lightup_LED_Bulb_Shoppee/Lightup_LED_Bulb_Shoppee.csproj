@@ -47,11 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code_Class_Global_Vars.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Windows_Forms\Frm_Accept_Payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Windows_Forms\Frm_Accept_Payment.Designer.cs">
+      <DependentUpon>Frm_Accept_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Add_Normal_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Add_Normal_Customer.Designer.cs">
+      <DependentUpon>Frm_Add_Normal_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Add_Retailer_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Add_Retailer_Info.Designer.cs">
+      <DependentUpon>Frm_Add_Retailer_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +97,18 @@
     <Compile Include="Windows_Forms\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows_Forms\Frm_Retailer_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Retailer_Order.Designer.cs">
+      <DependentUpon>Frm_Retailer_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Show_Pending_Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Show_Pending_Bills.Designer.cs">
+      <DependentUpon>Frm_Show_Pending_Bills.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows_Forms\Frm_Update_Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +127,12 @@
     <Compile Include="Windows_Forms\Frm_Update_Product.Designer.cs">
       <DependentUpon>Frm_Update_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows_Forms\Frm_Update_Retailer_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_Update_Retailer_Info.Designer.cs">
+      <DependentUpon>Frm_Update_Retailer_Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows_Forms\Frm_View_Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +145,23 @@
     <Compile Include="Windows_Forms\Frm_View_Distributors.Designer.cs">
       <DependentUpon>Frm_View_Distributors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows_Forms\Frm_View_Customer_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_View_Customer_Details.Designer.cs">
+      <DependentUpon>Frm_View_Customer_Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows_Forms\Frm_View_Product.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows_Forms\Frm_View_Product.Designer.cs">
       <DependentUpon>Frm_View_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_View_Retailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_View_Retailer.Designer.cs">
+      <DependentUpon>Frm_View_Retailer.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows_Forms\Frm_View_Stock.cs">
       <SubType>Form</SubType>
@@ -133,6 +175,15 @@
     <Compile Include="Windows_Forms\MDI_LED_Bulb.Designer.cs">
       <DependentUpon>MDI_LED_Bulb.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows_Forms\Frm_Accept_Payment.resx">
+      <DependentUpon>Frm_Accept_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_Add_Normal_Customer.resx">
+      <DependentUpon>Frm_Add_Normal_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_Add_Retailer_Info.resx">
+      <DependentUpon>Frm_Add_Retailer_Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,6 +209,12 @@
     <EmbeddedResource Include="Windows_Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_Retailer_Order.resx">
+      <DependentUpon>Frm_Retailer_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_Show_Pending_Bills.resx">
+      <DependentUpon>Frm_Show_Pending_Bills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_Update_Category.resx">
       <DependentUpon>Frm_Update_Category.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,14 +224,23 @@
     <EmbeddedResource Include="Windows_Forms\Frm_Update_Product.resx">
       <DependentUpon>Frm_Update_Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_Update_Retailer_Info.resx">
+      <DependentUpon>Frm_Update_Retailer_Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_View_Category.resx">
       <DependentUpon>Frm_View_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_View_Distributors.resx">
       <DependentUpon>Frm_View_Distributors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_View_Customer_Details.resx">
+      <DependentUpon>Frm_View_Customer_Details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_View_Product.resx">
       <DependentUpon>Frm_View_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_View_Retailer.resx">
+      <DependentUpon>Frm_View_Retailer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_View_Stock.resx">
       <DependentUpon>Frm_View_Stock.cs</DependentUpon>

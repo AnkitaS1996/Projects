@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lightup_LED_Bulb_Shoppee
+namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
 {
-    public partial class Form1 : Form
+    public partial class Frm_Add_Normal_Customer : Form
     {
-        public Form1()
+        public Frm_Add_Normal_Customer()
         {
             InitializeComponent();
         }

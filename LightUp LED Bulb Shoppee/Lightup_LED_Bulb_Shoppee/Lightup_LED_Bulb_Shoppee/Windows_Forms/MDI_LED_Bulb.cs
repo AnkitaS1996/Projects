@@ -122,6 +122,61 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
         }
 
-       
+        private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+        private void notepadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Notepad.exe");
+        }
+
+        private void addRetailerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Add_Retailer_Info ARIObj = new Frm_Add_Retailer_Info();
+            ARIObj.MdiParent = this;
+            ARIObj.WindowState = FormWindowState.Maximized;
+            ARIObj.Show();
+        }
+
+        private void viewRetailerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_View_Retailer VRObj = new Frm_View_Retailer();
+            VRObj.MdiParent = this;
+            VRObj.WindowState = FormWindowState.Maximized;
+            VRObj.Show();
+        }
+
+        private void updateRetailerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Update_Retailer_Info URIObj = new Frm_Update_Retailer_Info();
+            URIObj.MdiParent = this;
+            URIObj.WindowState = FormWindowState.Maximized;
+            URIObj.Show();
+        }
+
+        private void addNormalCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Add_Normal_Customer ANCObj = new Frm_Add_Normal_Customer();
+            ANCObj.MdiParent = this;
+            ANCObj.WindowState = FormWindowState.Maximized;
+            ANCObj.Show();
+        }
+
+        private void retailerOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Retailer_Order ROobj = new Frm_Retailer_Order();
+            ROobj.MdiParent = this;
+            ROobj.WindowState = FormWindowState.Maximized;
+            ROobj.Show();
+        }
+
+        private void viewCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_View_Customer_Details VCObj = new Frm_View_Customer_Details();
+            VCObj.MdiParent = this;
+            VCObj.WindowState = FormWindowState.Maximized;
+            VCObj.Show();
+        }
     }
 }

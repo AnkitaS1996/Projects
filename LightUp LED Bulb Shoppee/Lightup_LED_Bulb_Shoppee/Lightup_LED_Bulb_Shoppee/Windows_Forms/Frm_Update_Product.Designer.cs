@@ -61,6 +61,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Search = new System.Windows.Forms.Label();
             this.cb_Searchby = new System.Windows.Forms.ComboBox();
             this.lbl_SearchBy = new System.Windows.Forms.Label();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_Product.SuspendLayout();
@@ -382,7 +383,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dgv_Data.RowHeadersVisible = false;
             this.dgv_Data.RowHeadersWidth = 51;
             this.dgv_Data.RowTemplate.Height = 24;
-            this.dgv_Data.Size = new System.Drawing.Size(1646, 397);
+            this.dgv_Data.Size = new System.Drawing.Size(1646, 368);
             this.dgv_Data.TabIndex = 27;
             // 
             // gb_Search_Product
@@ -447,17 +448,29 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_SearchBy.TabIndex = 2;
             this.lbl_SearchBy.Text = "Search By";
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(698, 874);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(177, 62);
+            this.btn_Delete.TabIndex = 29;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            // 
             // Frm_Update_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1662, 948);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.gb_Search_Product);
             this.Controls.Add(this.dgv_Data);
             this.Controls.Add(this.gb_Product);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1680, 995);
             this.MinimumSize = new System.Drawing.Size(1680, 995);
             this.Name = "Frm_Update_Product";
             this.Text = "Update Product";
@@ -506,5 +519,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_Search;
         private System.Windows.Forms.ComboBox cb_Searchby;
         private System.Windows.Forms.Label lbl_SearchBy;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }

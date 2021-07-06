@@ -30,8 +30,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Header = new System.Windows.Forms.Label();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
+            this.lbl_Header = new System.Windows.Forms.Label();
             this.gb_View_Stock = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_View_ProductBy = new System.Windows.Forms.Label();
@@ -58,6 +58,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel1.Size = new System.Drawing.Size(1662, 91);
             this.panel1.TabIndex = 25;
             // 
+            // pb_Exit
+            // 
+            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pb_Exit.Location = new System.Drawing.Point(1605, 3);
+            this.pb_Exit.Name = "pb_Exit";
+            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
+            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Exit.TabIndex = 1;
+            this.pb_Exit.TabStop = false;
+            // 
             // lbl_Header
             // 
             this.lbl_Header.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -71,17 +82,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Header.TabIndex = 0;
             this.lbl_Header.Text = "VIEW DISTRIBUTORS";
             this.lbl_Header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_Exit
-            // 
-            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pb_Exit.Location = new System.Drawing.Point(1605, 3);
-            this.pb_Exit.Name = "pb_Exit";
-            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
-            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Exit.TabIndex = 1;
-            this.pb_Exit.TabStop = false;
             // 
             // gb_View_Stock
             // 
@@ -140,7 +140,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.cmb_SearchBy.Items.AddRange(new object[] {
             "ID",
             "Name"});
-            this.cmb_SearchBy.Location = new System.Drawing.Point(358, 20);
+            this.cmb_SearchBy.Location = new System.Drawing.Point(358, 21);
             this.cmb_SearchBy.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.cmb_SearchBy.Name = "cmb_SearchBy";
             this.cmb_SearchBy.Size = new System.Drawing.Size(342, 39);
@@ -205,7 +205,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Controls.Add(this.DGV_View_Product_Data);
             this.Controls.Add(this.gb_View_Stock);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1680, 995);
             this.MinimumSize = new System.Drawing.Size(1680, 995);
             this.Name = "Frm_View_Distributors";
             this.Text = "View Distributors";
