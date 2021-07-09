@@ -44,6 +44,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_PName = new System.Windows.Forms.Label();
             this.lbl_Category = new System.Windows.Forms.Label();
             this.dgv_Data = new System.Windows.Forms.DataGridView();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_Info.SuspendLayout();
@@ -112,7 +113,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.76316F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.18421F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel1.Controls.Add(this.txt_Category, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_Product_Name, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txt_PID, 1, 1);
@@ -137,6 +138,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Category.Name = "txt_Category";
             this.txt_Category.Size = new System.Drawing.Size(481, 38);
             this.txt_Category.TabIndex = 11;
+            this.txt_Category.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Category_KeyDown);
             // 
             // txt_Product_Name
             // 
@@ -145,7 +147,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Product_Name.Location = new System.Drawing.Point(902, 64);
             this.txt_Product_Name.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Product_Name.Name = "txt_Product_Name";
-            this.txt_Product_Name.Size = new System.Drawing.Size(460, 38);
+            this.txt_Product_Name.Size = new System.Drawing.Size(459, 38);
             this.txt_Product_Name.TabIndex = 9;
             // 
             // txt_PID
@@ -175,7 +177,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Save.Location = new System.Drawing.Point(1402, 54);
+            this.btn_Save.Location = new System.Drawing.Point(1401, 54);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(139, 57);
@@ -201,7 +203,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Category.Location = new System.Drawing.Point(885, 6);
             this.lbl_Category.Name = "lbl_Category";
-            this.lbl_Category.Size = new System.Drawing.Size(494, 36);
+            this.lbl_Category.Size = new System.Drawing.Size(493, 36);
             this.lbl_Category.TabIndex = 8;
             this.lbl_Category.Text = "Product Name";
             this.lbl_Category.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -237,12 +239,27 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dgv_Data.Size = new System.Drawing.Size(1638, 631);
             this.dgv_Data.TabIndex = 17;
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Refresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Refresh.Location = new System.Drawing.Point(662, 905);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(241, 60);
+            this.btn_Refresh.TabIndex = 18;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // Frm_Add_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1662, 948);
+            this.ClientSize = new System.Drawing.Size(1662, 977);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.dgv_Data);
             this.Controls.Add(this.gb_Info);
             this.Controls.Add(this.panel1);
@@ -277,5 +294,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_PName;
         private System.Windows.Forms.Label lbl_Category;
         private System.Windows.Forms.DataGridView dgv_Data;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }

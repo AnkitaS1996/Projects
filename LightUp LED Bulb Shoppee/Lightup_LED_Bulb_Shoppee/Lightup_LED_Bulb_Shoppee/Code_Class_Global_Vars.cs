@@ -21,7 +21,6 @@ namespace Lightup_LED_Bulb_Shoppee
                 con.Open();
             }
         }
-
         public void Con_Close()
         {
             if(con.State == ConnectionState.Open)
@@ -61,6 +60,19 @@ namespace Lightup_LED_Bulb_Shoppee
             return cnt;
         }
         //End Region Auto Increment
+
+        public void FillDataGridView(string query,DataGridView DGV)
+        {
+            Con_Open();
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            DGV.DataSource = dt;
+            Con_Close();
+            sda.Dispose();
+            dt.Dispose();
+           
+        }
 
 
     }
