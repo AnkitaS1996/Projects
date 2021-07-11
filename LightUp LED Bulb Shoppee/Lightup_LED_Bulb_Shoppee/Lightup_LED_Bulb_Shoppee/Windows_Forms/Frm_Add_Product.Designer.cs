@@ -35,7 +35,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.gb_Product = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Distributor = new System.Windows.Forms.ComboBox();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.cmb_Category = new System.Windows.Forms.ComboBox();
             this.lbl_Distributor_Name = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Warranty = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgv_Data = new System.Windows.Forms.DataGridView();
+            this.dgv_Sub_Product = new System.Windows.Forms.DataGridView();
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,7 +63,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_Product.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Sub_Product)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.gb_Product.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_Product.BackColor = System.Drawing.Color.DarkGray;
-            this.gb_Product.Controls.Add(this.comboBox1);
+            this.gb_Product.Controls.Add(this.cmb_Distributor);
             this.gb_Product.Controls.Add(this.lbl_ID);
             this.gb_Product.Controls.Add(this.cmb_Category);
             this.gb_Product.Controls.Add(this.lbl_Distributor_Name);
@@ -127,15 +127,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.gb_Product.TabStop = false;
             this.gb_Product.Text = "Product Details";
             // 
-            // comboBox1
+            // cmb_Distributor
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1155, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(453, 33);
-            this.comboBox1.TabIndex = 25;
+            this.cmb_Distributor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_Distributor.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Distributor.FormattingEnabled = true;
+            this.cmb_Distributor.Location = new System.Drawing.Point(1155, 121);
+            this.cmb_Distributor.Name = "cmb_Distributor";
+            this.cmb_Distributor.Size = new System.Drawing.Size(453, 33);
+            this.cmb_Distributor.TabIndex = 25;
             // 
             // lbl_ID
             // 
@@ -157,6 +157,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.cmb_Category.Name = "cmb_Category";
             this.cmb_Category.Size = new System.Drawing.Size(453, 33);
             this.cmb_Category.TabIndex = 9;
+            this.cmb_Category.SelectedIndexChanged += new System.EventHandler(this.cmb_Category_SelectedIndexChanged);
+            this.cmb_Category.TextChanged += new System.EventHandler(this.cmb_Category_TextChanged);
             // 
             // lbl_Distributor_Name
             // 
@@ -326,6 +328,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Add.TabIndex = 22;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // panel2
             // 
@@ -346,14 +349,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel2.Size = new System.Drawing.Size(1646, 127);
             this.panel2.TabIndex = 25;
             // 
-            // dgv_Data
+            // dgv_Sub_Product
             // 
-            this.dgv_Data.AllowUserToAddRows = false;
-            this.dgv_Data.AllowUserToDeleteRows = false;
-            this.dgv_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_Sub_Product.AllowUserToAddRows = false;
+            this.dgv_Sub_Product.AllowUserToDeleteRows = false;
+            this.dgv_Sub_Product.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Sub_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -361,8 +364,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Sub_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Sub_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,14 +373,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Data.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Data.Location = new System.Drawing.Point(12, 428);
-            this.dgv_Data.Name = "dgv_Data";
-            this.dgv_Data.RowHeadersVisible = false;
-            this.dgv_Data.RowHeadersWidth = 51;
-            this.dgv_Data.RowTemplate.Height = 24;
-            this.dgv_Data.Size = new System.Drawing.Size(1646, 406);
-            this.dgv_Data.TabIndex = 26;
+            this.dgv_Sub_Product.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Sub_Product.Location = new System.Drawing.Point(11, 428);
+            this.dgv_Sub_Product.Name = "dgv_Sub_Product";
+            this.dgv_Sub_Product.RowHeadersVisible = false;
+            this.dgv_Sub_Product.RowHeadersWidth = 51;
+            this.dgv_Sub_Product.RowTemplate.Height = 24;
+            this.dgv_Sub_Product.Size = new System.Drawing.Size(1646, 435);
+            this.dgv_Sub_Product.TabIndex = 26;
             // 
             // btn_Save
             // 
@@ -410,7 +413,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel3.Controls.Add(this.btn_Save);
             this.panel3.Controls.Add(this.btn_Refresh);
-            this.panel3.Location = new System.Drawing.Point(12, 840);
+            this.panel3.Location = new System.Drawing.Point(11, 869);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1645, 96);
             this.panel3.TabIndex = 29;
@@ -419,10 +422,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1662, 948);
+            this.ClientSize = new System.Drawing.Size(1662, 977);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dgv_Data);
+            this.Controls.Add(this.dgv_Sub_Product);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gb_Product);
             this.Controls.Add(this.panel1);
@@ -431,6 +434,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Product";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Add_Product_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
@@ -438,7 +442,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.gb_Product.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Sub_Product)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -468,9 +472,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_P_Warranty;
         private System.Windows.Forms.TextBox txt_Warranty;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Distributor;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgv_Data;
+        private System.Windows.Forms.DataGridView dgv_Sub_Product;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Panel panel3;
