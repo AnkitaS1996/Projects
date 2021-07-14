@@ -77,6 +77,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             Auto_Increment();
             Bind_Combobox_Category_Data();
             Bind_Distributor_Name_Combobox();
+            Create_Column_Gridview();
         }
         void Create_Column_Gridview()
         {
@@ -89,19 +90,20 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dt.Columns.Add(c2);
             dt.Columns.Add(c3);
             dt.Columns.Add(c4);
+          
         }
-        void Insert_Gridview()
+        /*void Insert_Gridview()
         {
             GVObj.Con_Open();
             foreach(DataGridViewRow row in dgv_Sub_Product.Rows)
             {
-                cmd.CommandText = "Insert into Sub_Product_Details(Watts,Unit_Price,Purchase_Price,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + 0 + ",'" + Convert.ToInt32(txt_ID.Text) + "') ";
+                cmd.CommandText = "Insert into Sub_Product_Details(Watts,Unit_Price,Purchase_Price,Warrenty,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + 0 + "," + Convert.ToInt32(txt_ID.Text) + ") ";
                 cmd.Connection = GVObj.con;
                 cmd.ExecuteNonQuery();
             }
             cmd.Dispose();
             GVObj.Con_Close();
-        }
+        }*/
         private void cmb_Category_SelectedIndexChanged(object sender, EventArgs e)
         {
             Bind_Product_Name_Combobox();
@@ -120,24 +122,43 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
 
             GVObj.Con_Open();
-            if(txt_Watt.Text != "" && txt_Unit_Price.Text != "" && txt_Warranty.Text != "")
+            int flag = -1;
+            if (txt_Watt.Text != "" && txt_Unit_Price.Text != "" && txt_Warranty.Text != "")
             {
-                DialogResult result = MessageBox.Show("Are You Sure Add Data to Grid View", "Message", MessageBoxButtons.YesNo);
+                foreach (DataGridViewRow row in dgv_Sub_Product.Rows)
+                {
+                    if (Convert.ToString(row.Cells[0].Value) == txt_Watt.Text)
+                    {
+                        flag = 0;
+                        row.Cells[1].Value = Convert.ToDecimal(txt_Unit_Price.Text);
+                        row.Cells[2].Value = Purchase_Price;
+                        row.Cells[3].Value = Convert.ToString(txt_Warranty.Text);
+                        Clear_Control_Sub_Product();
+                    }
+                }
+                if (flag == -1)
+                {
+                    dt.Rows.Add(txt_Watt.Text,Convert.ToDecimal(txt_Unit_Price.Text),Purchase_Price,txt_Warranty.Text);
+                    dgv_Sub_Product.DataSource = dt;
+                    Clear_Control_Sub_Product();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("1st Fill All The Fields.....!!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                /*DialogResult result = MessageBox.Show("Are You Sure Add Data to Grid View", "Message", MessageBoxButtons.YesNo);
                 if(result == DialogResult.Yes)
                 {
-                    dt.Rows.Add(txt_Watt.Text,Convert.ToDecimal(txt_Unit_Price.Text),Convert.ToDecimal(txt_Purchase_Price.Text),txt_Warranty.Text,"0");
+                    dt.Rows.Add(txt_Watt.Text,Convert.ToDecimal(txt_Unit_Price.Text),Convert.ToDecimal(Purchase_Price),txt_Warranty.Text);
                     dgv_Sub_Product.DataSource = dt;
                     Clear_Control_Sub_Product();
                 }
                 else
                 {
                     this.Show();
-                }
-            }
-            else
-            {
-                MessageBox.Show("1st Fill All The Fields....", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } 
+                }*/
             GVObj.Con_Close();
         }
         private void pb_Exit_Click(object sender, EventArgs e)

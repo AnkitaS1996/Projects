@@ -130,6 +130,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // cmb_Distributor
             // 
             this.cmb_Distributor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_Distributor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_Distributor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_Distributor.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Distributor.FormattingEnabled = true;
             this.cmb_Distributor.Location = new System.Drawing.Point(1155, 121);
@@ -151,6 +153,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // cmb_Category
             // 
             this.cmb_Category.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_Category.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Category.FormattingEnabled = true;
             this.cmb_Category.Location = new System.Drawing.Point(1155, 50);
@@ -174,6 +178,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // cmb_Product_Name
             // 
             this.cmb_Product_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_Product_Name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_Product_Name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_Product_Name.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Product_Name.FormattingEnabled = true;
             this.cmb_Product_Name.Location = new System.Drawing.Point(335, 121);
