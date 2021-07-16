@@ -29,8 +29,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
@@ -138,6 +138,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.cmb_Distributor.Name = "cmb_Distributor";
             this.cmb_Distributor.Size = new System.Drawing.Size(453, 33);
             this.cmb_Distributor.TabIndex = 25;
+            this.cmb_Distributor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_Distributor_KeyDown);
             // 
             // lbl_ID
             // 
@@ -247,6 +248,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Watt.Name = "txt_Watt";
             this.txt_Watt.Size = new System.Drawing.Size(203, 34);
             this.txt_Watt.TabIndex = 21;
+            this.txt_Watt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Watt_KeyDown);
+            this.txt_Watt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Watt_KeyPress);
             // 
             // lbl_Watt
             // 
@@ -268,6 +271,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Purchase_Price.Name = "txt_Purchase_Price";
             this.txt_Purchase_Price.Size = new System.Drawing.Size(237, 34);
             this.txt_Purchase_Price.TabIndex = 17;
+            this.txt_Purchase_Price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Purchase_Price_KeyDown);
+            this.txt_Purchase_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Purchase_Price_KeyPress);
             // 
             // txt_Unit_Price
             // 
@@ -277,6 +282,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Unit_Price.Name = "txt_Unit_Price";
             this.txt_Unit_Price.Size = new System.Drawing.Size(187, 34);
             this.txt_Unit_Price.TabIndex = 15;
+            this.txt_Unit_Price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Unit_Price_KeyDown);
+            this.txt_Unit_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Unit_Price_KeyPress);
             // 
             // lbl_P_Price
             // 
@@ -322,6 +329,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Warranty.Name = "txt_Warranty";
             this.txt_Warranty.Size = new System.Drawing.Size(220, 34);
             this.txt_Warranty.TabIndex = 24;
+            this.txt_Warranty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Warranty_KeyDown);
             // 
             // btn_Add
             // 
@@ -363,23 +371,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Sub_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Sub_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Sub_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_Sub_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Sub_Product.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Sub_Product.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_Sub_Product.Location = new System.Drawing.Point(11, 428);
             this.dgv_Sub_Product.Name = "dgv_Sub_Product";
             this.dgv_Sub_Product.RowHeadersVisible = false;

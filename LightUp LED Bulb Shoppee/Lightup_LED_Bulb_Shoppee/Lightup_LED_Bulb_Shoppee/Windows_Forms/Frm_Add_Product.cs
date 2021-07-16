@@ -14,13 +14,11 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
     public partial class Frm_Add_Product : Form
     {
         Code_Class_Global_Vars GVObj = new Code_Class_Global_Vars();
-        //SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         public Frm_Add_Product()
         {
             InitializeComponent();
         }
-
         void Auto_Increment()
         {
             txt_ID.Text = Convert.ToString(GVObj.AutoIncrement("Select Count(Main_Product_ID) from Main_Product_Details_db", "Select Max(Main_Product_ID) from Main_Product_Details_db", 101));
@@ -65,6 +63,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             c.Dispose();
             GVObj.Con_Close();
         }
+
+        //#region Clear Control Field
         void clear_Control_All_Field()
         {
             Auto_Increment();
@@ -81,6 +81,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Purchase_Price.Clear();
             txt_Warranty.Clear();
         }
+        //#Endregion
+
+        //#region From Loding Code
         private void Frm_Add_Product_Load(object sender, EventArgs e)
         {
             Auto_Increment();
@@ -88,6 +91,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             Bind_Distributor_Name_Combobox();
             Create_Column_Gridview();
         }
+        //#region Column Create Gridview Code
         void Create_Column_Gridview()
         {
             //DataTable dt = new DataTable();
@@ -98,30 +102,99 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dt.Columns.Add(c1);
             dt.Columns.Add(c2);
             dt.Columns.Add(c3);
-            dt.Columns.Add(c4);
-          
+            dt.Columns.Add(c4); 
         }
+        //#endregion
+
+        //#region Insert Gridview Code
         void Insert_Gridview()
         {
+            int Stock = 0;
             GVObj.Con_Open();
             foreach(DataGridViewRow row in dgv_Sub_Product.Rows)
             {
-                SqlCommand Cmd2 = new SqlCommand("Insert into Sub_Product_Details_db Values (Watts,Unit_Price,Purchase_Price,Warrenty,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + 0 + "," + Convert.ToInt32(txt_ID.Text) + ") ",GVObj.con);
+                SqlCommand Cmd2 = new SqlCommand("Insert into Sub_Product_Details_db(Watts,Unit_Price,Purchase_Price,Warrenty,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + Stock + "," + Convert.ToInt32(txt_ID.Text) + ")",GVObj.con);
                 Cmd2.ExecuteNonQuery();
                 Cmd2.Dispose();
             }
            
             GVObj.Con_Close();
         }
+        //#endregion
         private void cmb_Category_SelectedIndexChanged(object sender, EventArgs e)
         {
             Bind_Product_Name_Combobox();
         }
+        //#region Category Combobox Textchanged Code
         private void cmb_Category_TextChanged(object sender, EventArgs e)
         {
             cmb_Product_Name.Items.Clear();
             cmb_Product_Name.SelectedIndex = -1;
         }
+
+        //#region KeyPress Handling
+        private void txt_Watt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txt_Unit_Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txt_Purchase_Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+        //#endregion
+
+        //#region KeyDown Event Handling
+        private void cmb_Distributor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Watt.Focus();
+            }
+        }
+        private void txt_Watt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Unit_Price.Focus();
+            }
+        }
+        private void txt_Unit_Price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Purchase_Price.Focus();
+            }
+        }
+        private void txt_Purchase_Price_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Warranty.Focus();
+            }
+        }
+        private void txt_Warranty_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_Add.Focus();
+            }
+        }
+        //#endregion
+
+        //#region Add Button Click Code
         private void btn_Add_Click(object sender, EventArgs e)
         {
             decimal Purchase_Price = 0;
@@ -167,14 +240,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             GVObj.Con_Close();
         }
+        //#End Region
+
+        //#region Save Button Code
         private void btn_Save_Click(object sender, EventArgs e)
         {
             GVObj.Con_Open();
             if(txt_ID.Text != "" && cmb_Category.Text != "" && cmb_Product_Name.Text != "" && cmb_Distributor.Text != "" && dgv_Sub_Product.Rows.Count > 0)
             {
-                //SqlDataAdapter sda = new SqlDataAdapter("Insert into Main_Product_Details_db Values(" + txt_ID.Text + ",'" + dtp_Date.Text + "','" + cmb_Category.Text + "' ,'" + cmb_Product_Name.Text + "','" + cmb_Distributor.Text + "')", GVObj.con);
-                /*DataTable Da = new DataTable();
-                sda.Fill(Da);*/
                 SqlCommand cmd3 = new SqlCommand("Insert into Main_Product_Details_db Values(@id,@Date,@Category,@ProductName,@Distributor)", GVObj.con);
                 cmd3.Parameters.Add("@id", SqlDbType.Int).Value = txt_ID.Text;
                 cmd3.Parameters.Add("@Date", SqlDbType.Date).Value = dtp_Date.Text;
@@ -193,6 +266,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             GVObj.Con_Close();
         }
+        //#Endregion
+
+        //#region Exit Button Code
         private void pb_Exit_Click(object sender, EventArgs e)
         {
             DialogResult Result = MessageBox.Show("Are You Sure Close This Form???...", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -205,7 +281,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
-
-        
+        //#Endregion    
     }
 }
