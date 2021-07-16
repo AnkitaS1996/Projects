@@ -14,7 +14,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
     public partial class Frm_Add_Product : Form
     {
         Code_Class_Global_Vars GVObj = new Code_Class_Global_Vars();
-        SqlCommand cmd = new SqlCommand();
+        //SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         public Frm_Add_Product()
         {
@@ -65,6 +65,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             c.Dispose();
             GVObj.Con_Close();
         }
+        void clear_Control_All_Field()
+        {
+            Auto_Increment();
+            cmb_Category.SelectedIndex = -1;
+            cmb_Product_Name.Text = "";
+            cmb_Distributor.SelectedIndex = -1;
+            dt.Rows.Clear();
+            Clear_Control_Sub_Product();
+        }
         void Clear_Control_Sub_Product()
         {
             txt_Watt.Clear();
@@ -81,29 +90,29 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         void Create_Column_Gridview()
         {
-            DataTable dt = new DataTable();
+            //DataTable dt = new DataTable();
             DataColumn c1 = new DataColumn("Watts",typeof(string));
-            DataColumn c2 = new DataColumn("Unit Price", typeof(decimal));
-            DataColumn c3 = new DataColumn("Purchase Price", typeof(decimal));
-            DataColumn c4 = new DataColumn("Warrenty", typeof(string));
+            DataColumn c2 = new DataColumn("Unit Price",typeof(decimal));
+            DataColumn c3 = new DataColumn("Purchase Price",typeof(decimal));
+            DataColumn c4 = new DataColumn("Warrenty",typeof(string));
             dt.Columns.Add(c1);
             dt.Columns.Add(c2);
             dt.Columns.Add(c3);
             dt.Columns.Add(c4);
           
         }
-        /*void Insert_Gridview()
+        void Insert_Gridview()
         {
             GVObj.Con_Open();
             foreach(DataGridViewRow row in dgv_Sub_Product.Rows)
             {
-                cmd.CommandText = "Insert into Sub_Product_Details(Watts,Unit_Price,Purchase_Price,Warrenty,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + 0 + "," + Convert.ToInt32(txt_ID.Text) + ") ";
-                cmd.Connection = GVObj.con;
-                cmd.ExecuteNonQuery();
+                SqlCommand Cmd2 = new SqlCommand("Insert into Sub_Product_Details_db Values (Watts,Unit_Price,Purchase_Price,Warrenty,Current_Stock,Main_Product_ID) Values('" + row.Cells[0].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[1].Value) + "," + Convert.ToDecimal(row.Cells[2].Value) + ",'" + row.Cells[3].Value.ToString() + "'," + 0 + "," + Convert.ToInt32(txt_ID.Text) + ") ",GVObj.con);
+                Cmd2.ExecuteNonQuery();
+                Cmd2.Dispose();
             }
-            cmd.Dispose();
+           
             GVObj.Con_Close();
-        }*/
+        }
         private void cmb_Category_SelectedIndexChanged(object sender, EventArgs e)
         {
             Bind_Product_Name_Combobox();
@@ -125,40 +134,63 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             int flag = -1;
             if (txt_Watt.Text != "" && txt_Unit_Price.Text != "" && txt_Warranty.Text != "")
             {
-                foreach (DataGridViewRow row in dgv_Sub_Product.Rows)
+                DialogResult result = MessageBox.Show("Are You Sure Add Data to Grid View", "Message", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    if (Convert.ToString(row.Cells[0].Value) == txt_Watt.Text)
+                    foreach (DataGridViewRow row in dgv_Sub_Product.Rows)
                     {
-                        flag = 0;
-                        row.Cells[1].Value = Convert.ToDecimal(txt_Unit_Price.Text);
-                        row.Cells[2].Value = Purchase_Price;
-                        row.Cells[3].Value = Convert.ToString(txt_Warranty.Text);
+                        if (Convert.ToString(row.Cells[0].Value) == txt_Watt.Text + "W")
+                        {
+                            flag = 0;
+                            row.Cells[1].Value = Convert.ToDecimal(txt_Unit_Price.Text);
+                            row.Cells[2].Value = Purchase_Price;
+                            row.Cells[3].Value = Convert.ToString(txt_Warranty.Text);
+                            Clear_Control_Sub_Product();
+                        }
+                    }
+                    if (flag == -1)
+                    {
+                        dt.Rows.Add(txt_Watt.Text + "W", Convert.ToDecimal(txt_Unit_Price.Text), Purchase_Price, txt_Warranty.Text);
+                        dgv_Sub_Product.DataSource = dt;
                         Clear_Control_Sub_Product();
+                        dt.Dispose();
                     }
                 }
-                if (flag == -1)
+                else
                 {
-                    dt.Rows.Add(txt_Watt.Text,Convert.ToDecimal(txt_Unit_Price.Text),Purchase_Price,txt_Warranty.Text);
-                    dgv_Sub_Product.DataSource = dt;
-                    Clear_Control_Sub_Product();
+                    this.Show();
                 }
-
             }
             else
             {
                 MessageBox.Show("1st Fill All The Fields.....!!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                /*DialogResult result = MessageBox.Show("Are You Sure Add Data to Grid View", "Message", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes)
-                {
-                    dt.Rows.Add(txt_Watt.Text,Convert.ToDecimal(txt_Unit_Price.Text),Convert.ToDecimal(Purchase_Price),txt_Warranty.Text);
-                    dgv_Sub_Product.DataSource = dt;
-                    Clear_Control_Sub_Product();
-                }
-                else
-                {
-                    this.Show();
-                }*/
+            GVObj.Con_Close();
+        }
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            GVObj.Con_Open();
+            if(txt_ID.Text != "" && cmb_Category.Text != "" && cmb_Product_Name.Text != "" && cmb_Distributor.Text != "" && dgv_Sub_Product.Rows.Count > 0)
+            {
+                //SqlDataAdapter sda = new SqlDataAdapter("Insert into Main_Product_Details_db Values(" + txt_ID.Text + ",'" + dtp_Date.Text + "','" + cmb_Category.Text + "' ,'" + cmb_Product_Name.Text + "','" + cmb_Distributor.Text + "')", GVObj.con);
+                /*DataTable Da = new DataTable();
+                sda.Fill(Da);*/
+                SqlCommand cmd3 = new SqlCommand("Insert into Main_Product_Details_db Values(@id,@Date,@Category,@ProductName,@Distributor)", GVObj.con);
+                cmd3.Parameters.Add("@id", SqlDbType.Int).Value = txt_ID.Text;
+                cmd3.Parameters.Add("@Date", SqlDbType.Date).Value = dtp_Date.Text;
+                cmd3.Parameters.Add("@Category", SqlDbType.NVarChar).Value = cmb_Category.Text;
+                cmd3.Parameters.Add("@ProductName", SqlDbType.NVarChar).Value = cmb_Product_Name.Text;
+                cmd3.Parameters.Add("@Distributor", SqlDbType.NVarChar).Value = cmb_Distributor.Text;
+                cmd3.ExecuteNonQuery();
+                Insert_Gridview();
+                MessageBox.Show("Record Save Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cmd3.Dispose();
+                clear_Control_All_Field();
+            }
+            else
+            {
+                MessageBox.Show("1st Fill All The Fields.....!!!", "Fill The Field Completely", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             GVObj.Con_Close();
         }
         private void pb_Exit_Click(object sender, EventArgs e)
@@ -173,8 +205,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
-
-        
 
         
     }

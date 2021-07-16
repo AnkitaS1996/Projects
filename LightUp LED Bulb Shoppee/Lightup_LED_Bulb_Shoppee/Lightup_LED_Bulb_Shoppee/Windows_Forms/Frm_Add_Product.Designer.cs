@@ -236,7 +236,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dtp_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_Date.Location = new System.Drawing.Point(574, 52);
             this.dtp_Date.Name = "dtp_Date";
-            this.dtp_Date.Size = new System.Drawing.Size(297, 34);
+            this.dtp_Date.Size = new System.Drawing.Size(195, 34);
             this.dtp_Date.TabIndex = 7;
             // 
             // txt_Watt
@@ -399,6 +399,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Save.TabIndex = 27;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Refresh
             // 
