@@ -18,17 +18,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         {
             InitializeComponent();
         }
-        void Enable_True()
+        private void Enable_True()
         {
             txt_Category.Enabled = true;
             txt_Product_Name.Enabled = true;
         }
-        void Enabled_False()
+        private void Enabled_False()
         {
             txt_Category.Enabled = false;
             txt_Product_Name.Enabled = false;
         }
-        void Data_Clear_Control()
+        private void Data_Clear_Control()
         {
             txt_PID.Clear();
             txt_Category.Clear();
