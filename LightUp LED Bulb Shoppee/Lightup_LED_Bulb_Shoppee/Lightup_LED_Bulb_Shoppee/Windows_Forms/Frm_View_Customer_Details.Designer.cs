@@ -29,6 +29,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_Exits = new System.Windows.Forms.PictureBox();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
@@ -38,15 +40,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_View_CustomerBY = new System.Windows.Forms.Label();
             this.cmb_SearchBy = new System.Windows.Forms.ComboBox();
             this.txt_Search = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.DGV_View_Product_Data = new System.Windows.Forms.DataGridView();
+            this.DGV_View_Customer_Data = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_View_Product.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_View_Product_Data)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_View_Customer_Data)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,20 +115,18 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.80045F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.05476F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.55589F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8252063F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.08102F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.7787F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.57839F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.250563F));
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.436919F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.13147F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.50598F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.917663F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.7676F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.27224F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.901726F));
             this.tableLayoutPanel2.Controls.Add(this.lbl_View_CustomerBY, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmb_SearchBy, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_Search, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Search, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Refresh, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Refresh, 5, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -139,9 +138,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.lbl_View_CustomerBY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_View_CustomerBY.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_View_CustomerBY.Location = new System.Drawing.Point(30, 22);
+            this.lbl_View_CustomerBY.Location = new System.Drawing.Point(115, 22);
             this.lbl_View_CustomerBY.Name = "lbl_View_CustomerBY";
-            this.lbl_View_CustomerBY.Size = new System.Drawing.Size(281, 36);
+            this.lbl_View_CustomerBY.Size = new System.Drawing.Size(252, 36);
             this.lbl_View_CustomerBY.TabIndex = 16;
             this.lbl_View_CustomerBY.Text = "View Customer By";
             this.lbl_View_CustomerBY.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -155,35 +154,21 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             "Product ID",
             "Category",
             "Product Name"});
-            this.cmb_SearchBy.Location = new System.Drawing.Point(334, 20);
+            this.cmb_SearchBy.Location = new System.Drawing.Point(390, 21);
             this.cmb_SearchBy.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.cmb_SearchBy.Name = "cmb_SearchBy";
-            this.cmb_SearchBy.Size = new System.Drawing.Size(315, 39);
+            this.cmb_SearchBy.Size = new System.Drawing.Size(314, 39);
             this.cmb_SearchBy.TabIndex = 18;
             // 
             // txt_Search
             // 
             this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Search.Location = new System.Drawing.Point(701, 21);
+            this.txt_Search.Location = new System.Drawing.Point(803, 21);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(322, 38);
+            this.txt_Search.Size = new System.Drawing.Size(333, 38);
             this.txt_Search.TabIndex = 17;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Search.Location = new System.Drawing.Point(1063, 12);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(182, 57);
-            this.btn_Search.TabIndex = 19;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = false;
             // 
             // btn_Refresh
             // 
@@ -191,33 +176,52 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Refresh.Location = new System.Drawing.Point(1285, 12);
+            this.btn_Refresh.Location = new System.Drawing.Point(1176, 12);
             this.btn_Refresh.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(164, 57);
+            this.btn_Refresh.Size = new System.Drawing.Size(190, 57);
             this.btn_Refresh.TabIndex = 20;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             // 
-            // DGV_View_Product_Data
+            // DGV_View_Customer_Data
             // 
-            this.DGV_View_Product_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGV_View_Customer_Data.AllowUserToAddRows = false;
+            this.DGV_View_Customer_Data.AllowUserToDeleteRows = false;
+            this.DGV_View_Customer_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_View_Product_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_View_Product_Data.Location = new System.Drawing.Point(12, 243);
-            this.DGV_View_Product_Data.Name = "DGV_View_Product_Data";
-            this.DGV_View_Product_Data.RowHeadersWidth = 51;
-            this.DGV_View_Product_Data.RowTemplate.Height = 24;
-            this.DGV_View_Product_Data.Size = new System.Drawing.Size(1521, 540);
-            this.DGV_View_Product_Data.TabIndex = 24;
+            this.DGV_View_Customer_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_View_Customer_Data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_View_Customer_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_View_Customer_Data.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_View_Customer_Data.Location = new System.Drawing.Point(12, 243);
+            this.DGV_View_Customer_Data.Name = "DGV_View_Customer_Data";
+            this.DGV_View_Customer_Data.RowHeadersWidth = 51;
+            this.DGV_View_Customer_Data.RowTemplate.Height = 24;
+            this.DGV_View_Customer_Data.Size = new System.Drawing.Size(1521, 540);
+            this.DGV_View_Customer_Data.TabIndex = 24;
             // 
             // Frm_View_Customer_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1545, 811);
-            this.Controls.Add(this.DGV_View_Product_Data);
+            this.Controls.Add(this.DGV_View_Customer_Data);
             this.Controls.Add(this.gb_View_Product);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1563, 858);
@@ -231,7 +235,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.gb_View_Product.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_View_Product_Data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_View_Customer_Data)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,8 +251,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_View_CustomerBY;
         private System.Windows.Forms.ComboBox cmb_SearchBy;
         private System.Windows.Forms.TextBox txt_Search;
-        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.DataGridView DGV_View_Product_Data;
+        private System.Windows.Forms.DataGridView DGV_View_Customer_Data;
     }
 }

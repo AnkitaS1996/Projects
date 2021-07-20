@@ -18,6 +18,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         {
             InitializeComponent();
         }
+        #region Clear Control Code
         private void Clear_Controls()
         {
             txt_Distributor_ID.Clear();
@@ -31,6 +32,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_PanNo.Text = "";
             txt_Brand.Text = "";
         }
+        #endregion
+
+        #region Enabled True Code
         void Enabled_True()
         {
             txt_Distributor_ID.Enabled = true;
@@ -44,6 +48,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_PanNo.Enabled = true;
             txt_Brand.Enabled = true;
         }
+        #endregion
+
+        #region Enabled False Code
         void Enabled_False()
         {
             //txt_Distributor_ID.Enabled = false;
@@ -57,12 +64,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_PanNo.Enabled = false;
             txt_Brand.Enabled = false;
         }
+        #endregion
+
+        #region Update Distributor From Loading Code
         private void Frm_Update_Distributors_Load(object sender, EventArgs e)
         {
             Enabled_False();
             txt_Distributor_ID.Enabled = true;
         }
-        //Search Button Coding
+        #endregion
+
+        #region Search Button Coding
         private void btn_Search_Click(object sender, EventArgs e)
         {
             Enabled_True();
@@ -96,9 +108,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             GVObj.Con_Close();
         }
-        //region End
+        #endregion
 
-        //Update button Code
+        #region Update Button Code
         private void btn_Update_Click(object sender, EventArgs e)
         {
             double Mobile_No2 = 0;
@@ -138,9 +150,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             GVObj.Con_Close();
         }
-        //End Region
+        #endregion
 
-        //#region Delete Button Code
+        #region Delete Button Code
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             GVObj.Con_Open();
@@ -161,9 +173,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Distributor_ID.Enabled = true;
             GVObj.Con_Close();
         }
-        //#End Region
+        #endregion
 
-        //#region KeyDown Event Handling
+        #region KeyDown Event Handling Code
         private void txt_Name_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -229,9 +241,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 btn_Update.Focus();
             }
         }
-        //#region End
+        #endregion
 
-        //#region KeyPress Handling Event
+        #region KeyPress Handling Event Code
         private void txt_Name_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Space || e.KeyChar == (char)Keys.CapsLock || e.KeyChar == (char)Keys.ShiftKey || e.KeyChar == (char)Keys.Back))
@@ -271,7 +283,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 e.Handled = true;
             }
         }
+        #endregion
 
+        #region Refresh Button Code
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             DialogResult Result = MessageBox.Show("Are You Refresh TextBox", "Refresh", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -287,6 +301,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 txt_Distributor_ID.Enabled = false;
             }
         }
-        //#region End
+        #endregion
     }
 }

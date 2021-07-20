@@ -29,7 +29,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.gb_Customer_Detail = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,25 +40,25 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Date = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Mobile_No = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.gb_Product_Info = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.txt_Cust_ID = new System.Windows.Forms.TextBox();
             this.txt_Cust_Name = new System.Windows.Forms.TextBox();
             this.txt_Mobile_No = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.lbl_Category = new System.Windows.Forms.Label();
             this.lbl_Product_Name = new System.Windows.Forms.Label();
             this.lbl_Watt = new System.Windows.Forms.Label();
             this.lbl_Quantity = new System.Windows.Forms.Label();
             this.lbl_Unit_Price = new System.Windows.Forms.Label();
             this.lbl_Total_Price = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
+            this.cmb_Category = new System.Windows.Forms.ComboBox();
             this.cmb_Watts = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Unit_Price = new System.Windows.Forms.TextBox();
+            this.txt_Quantity = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btn_Add = new System.Windows.Forms.Button();
+            this.cmb_Product_Name = new System.Windows.Forms.ComboBox();
+            this.gb_Product_Info = new System.Windows.Forms.GroupBox();
             this.dgv_Data_View = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -64,17 +67,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Total_Bills = new System.Windows.Forms.Label();
             this.lbl_Discount = new System.Windows.Forms.Label();
-            this.lbl_Final_Bills = new System.Windows.Forms.Label();
+            this.lbl_Percent = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_Per = new System.Windows.Forms.Label();
-            this.lbl_Percent = new System.Windows.Forms.Label();
+            this.lbl_Final_Bills = new System.Windows.Forms.Label();
             this.txt_Total_Bill = new System.Windows.Forms.TextBox();
             this.txt_Discount = new System.Windows.Forms.TextBox();
             this.txt_GST = new System.Windows.Forms.TextBox();
             this.txt_Final_Bills = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_Customer_Detail.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -82,8 +85,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Data_View)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +98,28 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1455, 91);
             this.panel1.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pictureBox1.Location = new System.Drawing.Point(1398, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pb_Exit
+            // 
+            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pb_Exit.Location = new System.Drawing.Point(1902, 3);
+            this.pb_Exit.Name = "pb_Exit";
+            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
+            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Exit.TabIndex = 1;
+            this.pb_Exit.TabStop = false;
             // 
             // lbl_Header
             // 
@@ -136,7 +159,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 399F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel1.Controls.Add(this.lbl_Customer_ID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Date, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Name, 1, 1);
@@ -160,7 +183,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Customer_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Customer_ID.Location = new System.Drawing.Point(20, 9);
             this.lbl_Customer_ID.Name = "lbl_Customer_ID";
-            this.lbl_Customer_ID.Size = new System.Drawing.Size(236, 32);
+            this.lbl_Customer_ID.Size = new System.Drawing.Size(234, 32);
             this.lbl_Customer_ID.TabIndex = 1;
             this.lbl_Customer_ID.Text = "Customer ID";
             // 
@@ -169,7 +192,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Date.AutoSize = true;
             this.lbl_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Date.Location = new System.Drawing.Point(730, 9);
+            this.lbl_Date.Location = new System.Drawing.Point(728, 9);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(265, 32);
             this.lbl_Date.TabIndex = 2;
@@ -182,7 +205,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Name.Location = new System.Drawing.Point(20, 59);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(236, 32);
+            this.lbl_Name.Size = new System.Drawing.Size(234, 32);
             this.lbl_Name.TabIndex = 3;
             this.lbl_Name.Text = "Customer Name";
             // 
@@ -191,11 +214,52 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Mobile_No.AutoSize = true;
             this.lbl_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mobile_No.Location = new System.Drawing.Point(730, 59);
+            this.lbl_Mobile_No.Location = new System.Drawing.Point(728, 59);
             this.lbl_Mobile_No.Name = "lbl_Mobile_No";
             this.lbl_Mobile_No.Size = new System.Drawing.Size(265, 32);
             this.lbl_Mobile_No.TabIndex = 4;
             this.lbl_Mobile_No.Text = "Mobile Number";
+            // 
+            // dtp_Date
+            // 
+            this.dtp_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Date.Location = new System.Drawing.Point(1016, 6);
+            this.dtp_Date.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(359, 38);
+            this.dtp_Date.TabIndex = 10;
+            // 
+            // txt_Cust_ID
+            // 
+            this.txt_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cust_ID.Location = new System.Drawing.Point(277, 6);
+            this.txt_Cust_ID.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Cust_ID.Name = "txt_Cust_ID";
+            this.txt_Cust_ID.Size = new System.Drawing.Size(404, 38);
+            this.txt_Cust_ID.TabIndex = 11;
+            // 
+            // txt_Cust_Name
+            // 
+            this.txt_Cust_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Cust_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cust_Name.Location = new System.Drawing.Point(277, 56);
+            this.txt_Cust_Name.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Cust_Name.Name = "txt_Cust_Name";
+            this.txt_Cust_Name.Size = new System.Drawing.Size(404, 38);
+            this.txt_Cust_Name.TabIndex = 12;
+            // 
+            // txt_Mobile_No
+            // 
+            this.txt_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Mobile_No.Location = new System.Drawing.Point(1016, 56);
+            this.txt_Mobile_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Mobile_No.Name = "txt_Mobile_No";
+            this.txt_Mobile_No.Size = new System.Drawing.Size(359, 38);
+            this.txt_Mobile_No.TabIndex = 13;
             // 
             // tableLayoutPanel2
             // 
@@ -204,13 +268,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.ColumnCount = 9;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.462687F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.53732F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 310F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tableLayoutPanel2.Controls.Add(this.btn_Add, 7, 1);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Category, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Product_Name, 2, 0);
@@ -218,10 +282,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.Controls.Add(this.lbl_Quantity, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Unit_Price, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_Total_Price, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_Category, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmb_Watts, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 4, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_Unit_Price, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_Quantity, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.textBox3, 6, 1);
             this.tableLayoutPanel2.Controls.Add(this.cmb_Product_Name, 2, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 27);
@@ -231,6 +295,158 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1411, 100);
             this.tableLayoutPanel2.TabIndex = 11;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(1274, 53);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(98, 44);
+            this.btn_Add.TabIndex = 17;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            // 
+            // lbl_Category
+            // 
+            this.lbl_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Category.AutoSize = true;
+            this.lbl_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Category.Location = new System.Drawing.Point(21, 9);
+            this.lbl_Category.Name = "lbl_Category";
+            this.lbl_Category.Size = new System.Drawing.Size(224, 32);
+            this.lbl_Category.TabIndex = 4;
+            this.lbl_Category.Text = "Category";
+            this.lbl_Category.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Product_Name
+            // 
+            this.lbl_Product_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Product_Name.AutoSize = true;
+            this.lbl_Product_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Product_Name.Location = new System.Drawing.Point(251, 9);
+            this.lbl_Product_Name.Name = "lbl_Product_Name";
+            this.lbl_Product_Name.Size = new System.Drawing.Size(304, 32);
+            this.lbl_Product_Name.TabIndex = 5;
+            this.lbl_Product_Name.Text = "Product Name";
+            this.lbl_Product_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Watt
+            // 
+            this.lbl_Watt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Watt.AutoSize = true;
+            this.lbl_Watt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Watt.Location = new System.Drawing.Point(561, 9);
+            this.lbl_Watt.Name = "lbl_Watt";
+            this.lbl_Watt.Size = new System.Drawing.Size(179, 32);
+            this.lbl_Watt.TabIndex = 6;
+            this.lbl_Watt.Text = "Watts";
+            this.lbl_Watt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Quantity
+            // 
+            this.lbl_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Quantity.AutoSize = true;
+            this.lbl_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Quantity.Location = new System.Drawing.Point(935, 9);
+            this.lbl_Quantity.Name = "lbl_Quantity";
+            this.lbl_Quantity.Size = new System.Drawing.Size(140, 32);
+            this.lbl_Quantity.TabIndex = 7;
+            this.lbl_Quantity.Text = "Quantity";
+            this.lbl_Quantity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Unit_Price
+            // 
+            this.lbl_Unit_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Unit_Price.AutoSize = true;
+            this.lbl_Unit_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Unit_Price.Location = new System.Drawing.Point(746, 9);
+            this.lbl_Unit_Price.Name = "lbl_Unit_Price";
+            this.lbl_Unit_Price.Size = new System.Drawing.Size(183, 32);
+            this.lbl_Unit_Price.TabIndex = 8;
+            this.lbl_Unit_Price.Text = "Unit Price";
+            this.lbl_Unit_Price.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Total_Price
+            // 
+            this.lbl_Total_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Total_Price.AutoSize = true;
+            this.lbl_Total_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Total_Price.Location = new System.Drawing.Point(1081, 9);
+            this.lbl_Total_Price.Name = "lbl_Total_Price";
+            this.lbl_Total_Price.Size = new System.Drawing.Size(170, 32);
+            this.lbl_Total_Price.TabIndex = 9;
+            this.lbl_Total_Price.Text = "Total Price";
+            this.lbl_Total_Price.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmb_Category
+            // 
+            this.cmb_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Category.FormattingEnabled = true;
+            this.cmb_Category.Location = new System.Drawing.Point(38, 56);
+            this.cmb_Category.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.cmb_Category.Name = "cmb_Category";
+            this.cmb_Category.Size = new System.Drawing.Size(190, 37);
+            this.cmb_Category.TabIndex = 10;
+            this.cmb_Category.SelectedIndexChanged += new System.EventHandler(this.cmb_Category_SelectedIndexChanged);
+            this.cmb_Category.TextChanged += new System.EventHandler(this.cmb_Category_TextChanged);
+            // 
+            // cmb_Watts
+            // 
+            this.cmb_Watts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Watts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Watts.FormattingEnabled = true;
+            this.cmb_Watts.Location = new System.Drawing.Point(578, 56);
+            this.cmb_Watts.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.cmb_Watts.Name = "cmb_Watts";
+            this.cmb_Watts.Size = new System.Drawing.Size(145, 37);
+            this.cmb_Watts.TabIndex = 12;
+            // 
+            // txt_Unit_Price
+            // 
+            this.txt_Unit_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Unit_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Unit_Price.Location = new System.Drawing.Point(763, 58);
+            this.txt_Unit_Price.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Unit_Price.Name = "txt_Unit_Price";
+            this.txt_Unit_Price.Size = new System.Drawing.Size(149, 34);
+            this.txt_Unit_Price.TabIndex = 13;
+            // 
+            // txt_Quantity
+            // 
+            this.txt_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Quantity.Location = new System.Drawing.Point(952, 58);
+            this.txt_Quantity.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Quantity.Name = "txt_Quantity";
+            this.txt_Quantity.Size = new System.Drawing.Size(106, 34);
+            this.txt_Quantity.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(1098, 58);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(136, 34);
+            this.textBox3.TabIndex = 15;
+            // 
+            // cmb_Product_Name
+            // 
+            this.cmb_Product_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Product_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Product_Name.FormattingEnabled = true;
+            this.cmb_Product_Name.Location = new System.Drawing.Point(268, 56);
+            this.cmb_Product_Name.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.cmb_Product_Name.Name = "cmb_Product_Name";
+            this.cmb_Product_Name.Size = new System.Drawing.Size(270, 37);
+            this.cmb_Product_Name.TabIndex = 11;
+            this.cmb_Product_Name.SelectedIndexChanged += new System.EventHandler(this.cmb_Product_Name_SelectedIndexChanged);
+            this.cmb_Product_Name.TextChanged += new System.EventHandler(this.cmb_Product_Name_TextChanged);
             // 
             // gb_Product_Info
             // 
@@ -247,200 +463,22 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.gb_Product_Info.TabStop = false;
             this.gb_Product_Info.Text = "Product Information";
             // 
-            // dtp_Date
-            // 
-            this.dtp_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_Date.Location = new System.Drawing.Point(1018, 6);
-            this.dtp_Date.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.dtp_Date.Name = "dtp_Date";
-            this.dtp_Date.Size = new System.Drawing.Size(359, 38);
-            this.dtp_Date.TabIndex = 10;
-            // 
-            // txt_Cust_ID
-            // 
-            this.txt_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cust_ID.Location = new System.Drawing.Point(279, 6);
-            this.txt_Cust_ID.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.txt_Cust_ID.Name = "txt_Cust_ID";
-            this.txt_Cust_ID.Size = new System.Drawing.Size(404, 38);
-            this.txt_Cust_ID.TabIndex = 11;
-            // 
-            // txt_Cust_Name
-            // 
-            this.txt_Cust_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Cust_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Cust_Name.Location = new System.Drawing.Point(279, 56);
-            this.txt_Cust_Name.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.txt_Cust_Name.Name = "txt_Cust_Name";
-            this.txt_Cust_Name.Size = new System.Drawing.Size(404, 38);
-            this.txt_Cust_Name.TabIndex = 12;
-            // 
-            // txt_Mobile_No
-            // 
-            this.txt_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Mobile_No.Location = new System.Drawing.Point(1018, 56);
-            this.txt_Mobile_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.txt_Mobile_No.Name = "txt_Mobile_No";
-            this.txt_Mobile_No.Size = new System.Drawing.Size(359, 38);
-            this.txt_Mobile_No.TabIndex = 13;
-            // 
-            // lbl_Category
-            // 
-            this.lbl_Category.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Category.AutoSize = true;
-            this.lbl_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Category.Location = new System.Drawing.Point(21, 9);
-            this.lbl_Category.Name = "lbl_Category";
-            this.lbl_Category.Size = new System.Drawing.Size(226, 32);
-            this.lbl_Category.TabIndex = 4;
-            this.lbl_Category.Text = "Category";
-            this.lbl_Category.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Product_Name
-            // 
-            this.lbl_Product_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Product_Name.AutoSize = true;
-            this.lbl_Product_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Product_Name.Location = new System.Drawing.Point(253, 9);
-            this.lbl_Product_Name.Name = "lbl_Product_Name";
-            this.lbl_Product_Name.Size = new System.Drawing.Size(256, 32);
-            this.lbl_Product_Name.TabIndex = 5;
-            this.lbl_Product_Name.Text = "Product Name";
-            this.lbl_Product_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Watt
-            // 
-            this.lbl_Watt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Watt.AutoSize = true;
-            this.lbl_Watt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Watt.Location = new System.Drawing.Point(515, 9);
-            this.lbl_Watt.Name = "lbl_Watt";
-            this.lbl_Watt.Size = new System.Drawing.Size(208, 32);
-            this.lbl_Watt.TabIndex = 6;
-            this.lbl_Watt.Text = "Watts";
-            this.lbl_Watt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Quantity
-            // 
-            this.lbl_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Quantity.AutoSize = true;
-            this.lbl_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Quantity.Location = new System.Drawing.Point(909, 9);
-            this.lbl_Quantity.Name = "lbl_Quantity";
-            this.lbl_Quantity.Size = new System.Drawing.Size(168, 32);
-            this.lbl_Quantity.TabIndex = 7;
-            this.lbl_Quantity.Text = "Quantity";
-            this.lbl_Quantity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Unit_Price
-            // 
-            this.lbl_Unit_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Unit_Price.AutoSize = true;
-            this.lbl_Unit_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Unit_Price.Location = new System.Drawing.Point(729, 9);
-            this.lbl_Unit_Price.Name = "lbl_Unit_Price";
-            this.lbl_Unit_Price.Size = new System.Drawing.Size(174, 32);
-            this.lbl_Unit_Price.TabIndex = 8;
-            this.lbl_Unit_Price.Text = "Unit Price";
-            this.lbl_Unit_Price.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Total_Price
-            // 
-            this.lbl_Total_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Total_Price.AutoSize = true;
-            this.lbl_Total_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Total_Price.Location = new System.Drawing.Point(1083, 9);
-            this.lbl_Total_Price.Name = "lbl_Total_Price";
-            this.lbl_Total_Price.Size = new System.Drawing.Size(170, 32);
-            this.lbl_Total_Price.TabIndex = 9;
-            this.lbl_Total_Price.Text = "Total Price";
-            this.lbl_Total_Price.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(38, 60);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 37);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // cmb_Product_Name
-            // 
-            this.cmb_Product_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Product_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Product_Name.FormattingEnabled = true;
-            this.cmb_Product_Name.Location = new System.Drawing.Point(270, 60);
-            this.cmb_Product_Name.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.cmb_Product_Name.Name = "cmb_Product_Name";
-            this.cmb_Product_Name.Size = new System.Drawing.Size(222, 37);
-            this.cmb_Product_Name.TabIndex = 11;
-            // 
-            // cmb_Watts
-            // 
-            this.cmb_Watts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Watts.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Watts.FormattingEnabled = true;
-            this.cmb_Watts.Location = new System.Drawing.Point(532, 60);
-            this.cmb_Watts.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.cmb_Watts.Name = "cmb_Watts";
-            this.cmb_Watts.Size = new System.Drawing.Size(174, 37);
-            this.cmb_Watts.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(746, 58);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 34);
-            this.textBox1.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(926, 58);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 34);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1100, 58);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 34);
-            this.textBox3.TabIndex = 15;
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Add.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(1276, 53);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(98, 44);
-            this.btn_Add.TabIndex = 17;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.UseVisualStyleBackColor = false;
-            // 
             // dgv_Data_View
             // 
+            this.dgv_Data_View.AllowUserToAddRows = false;
+            this.dgv_Data_View.AllowUserToDeleteRows = false;
             this.dgv_Data_View.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Data_View.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Data_View.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Data_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Data_View.Location = new System.Drawing.Point(6, 133);
             this.dgv_Data_View.Name = "dgv_Data_View";
@@ -553,18 +591,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Discount.TabIndex = 3;
             this.lbl_Discount.Text = "Discount";
             // 
-            // lbl_Final_Bills
+            // lbl_Percent
             // 
-            this.lbl_Final_Bills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Final_Bills.AutoSize = true;
-            this.lbl_Final_Bills.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Final_Bills.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Final_Bills.ForeColor = System.Drawing.Color.Maroon;
-            this.lbl_Final_Bills.Location = new System.Drawing.Point(1043, 16);
-            this.lbl_Final_Bills.Name = "lbl_Final_Bills";
-            this.lbl_Final_Bills.Size = new System.Drawing.Size(155, 32);
-            this.lbl_Final_Bills.TabIndex = 5;
-            this.lbl_Final_Bills.Text = "Final Bills";
+            this.lbl_Percent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Percent.AutoSize = true;
+            this.lbl_Percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Percent.Location = new System.Drawing.Point(717, 16);
+            this.lbl_Percent.Name = "lbl_Percent";
+            this.lbl_Percent.Size = new System.Drawing.Size(33, 32);
+            this.lbl_Percent.TabIndex = 8;
+            this.lbl_Percent.Text = "%";
             // 
             // label3
             // 
@@ -588,16 +624,18 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Per.TabIndex = 7;
             this.lbl_Per.Text = "%";
             // 
-            // lbl_Percent
+            // lbl_Final_Bills
             // 
-            this.lbl_Percent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Percent.AutoSize = true;
-            this.lbl_Percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Percent.Location = new System.Drawing.Point(717, 16);
-            this.lbl_Percent.Name = "lbl_Percent";
-            this.lbl_Percent.Size = new System.Drawing.Size(33, 32);
-            this.lbl_Percent.TabIndex = 8;
-            this.lbl_Percent.Text = "%";
+            this.lbl_Final_Bills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Final_Bills.AutoSize = true;
+            this.lbl_Final_Bills.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_Final_Bills.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Final_Bills.ForeColor = System.Drawing.Color.Maroon;
+            this.lbl_Final_Bills.Location = new System.Drawing.Point(1043, 16);
+            this.lbl_Final_Bills.Name = "lbl_Final_Bills";
+            this.lbl_Final_Bills.Size = new System.Drawing.Size(155, 32);
+            this.lbl_Final_Bills.TabIndex = 5;
+            this.lbl_Final_Bills.Text = "Final Bills";
             // 
             // txt_Total_Bill
             // 
@@ -639,28 +677,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Final_Bills.Size = new System.Drawing.Size(173, 38);
             this.txt_Final_Bills.TabIndex = 17;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pictureBox1.Location = new System.Drawing.Point(1398, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pb_Exit
-            // 
-            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pb_Exit.Location = new System.Drawing.Point(1902, 3);
-            this.pb_Exit.Name = "pb_Exit";
-            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
-            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Exit.TabIndex = 1;
-            this.pb_Exit.TabStop = false;
-            // 
             // Frm_Add_Normal_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -676,8 +692,11 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Name = "Frm_Add_Normal_Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normal Customer";
+            this.Load += new System.EventHandler(this.Frm_Add_Normal_Customer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
             this.gb_Customer_Detail.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -688,8 +707,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,17 +728,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.TextBox txt_Cust_ID;
         private System.Windows.Forms.TextBox txt_Cust_Name;
         private System.Windows.Forms.TextBox txt_Mobile_No;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Quantity;
         private System.Windows.Forms.Label lbl_Category;
         private System.Windows.Forms.Label lbl_Product_Name;
         private System.Windows.Forms.Label lbl_Watt;
         private System.Windows.Forms.Label lbl_Quantity;
         private System.Windows.Forms.Label lbl_Unit_Price;
         private System.Windows.Forms.Label lbl_Total_Price;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Category;
         private System.Windows.Forms.ComboBox cmb_Product_Name;
         private System.Windows.Forms.ComboBox cmb_Watts;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Unit_Price;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btn_Add;
