@@ -51,7 +51,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Note = new System.Windows.Forms.Label();
             this.txt_Note = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Retailer_ID = new System.Windows.Forms.TextBox();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.dgv_View_Data = new System.Windows.Forms.DataGridView();
@@ -177,6 +177,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(312, 34);
             this.txt_Name.TabIndex = 10;
+            this.txt_Name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Name_KeyDown);
+            this.txt_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Name_KeyPress);
             // 
             // dtp_Date
             // 
@@ -188,6 +190,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(341, 38);
             this.dtp_Date.TabIndex = 9;
+            this.dtp_Date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtp_Date_KeyDown);
             // 
             // txt_M_No
             // 
@@ -195,9 +198,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_M_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_M_No.Location = new System.Drawing.Point(321, 64);
             this.txt_M_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_M_No.MaxLength = 10;
             this.txt_M_No.Name = "txt_M_No";
             this.txt_M_No.Size = new System.Drawing.Size(312, 34);
             this.txt_M_No.TabIndex = 11;
+            this.txt_M_No.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_M_No_KeyDown);
+            this.txt_M_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_M_No_KeyPress);
             // 
             // lbl_Mobile_No
             // 
@@ -238,9 +244,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Alter_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Alter_No.Location = new System.Drawing.Point(894, 64);
             this.txt_Alter_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Alter_No.MaxLength = 10;
             this.txt_Alter_No.Name = "txt_Alter_No";
             this.txt_Alter_No.Size = new System.Drawing.Size(341, 34);
             this.txt_Alter_No.TabIndex = 12;
+            this.txt_Alter_No.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Alter_No_KeyDown);
+            this.txt_Alter_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Alter_No_KeyPress);
             // 
             // lbl_PAN_No
             // 
@@ -262,6 +271,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_PAN_No.Name = "txt_PAN_No";
             this.txt_PAN_No.Size = new System.Drawing.Size(312, 34);
             this.txt_PAN_No.TabIndex = 13;
+            this.txt_PAN_No.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_PAN_No_KeyDown);
             // 
             // lbl_Address
             // 
@@ -284,6 +294,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.Size = new System.Drawing.Size(341, 48);
             this.txt_Address.TabIndex = 15;
+            this.txt_Address.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Address_KeyDown);
             // 
             // lbl_Addhar_No
             // 
@@ -302,9 +313,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Addhar_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Addhar_No.Location = new System.Drawing.Point(321, 190);
             this.txt_Addhar_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Addhar_No.MaxLength = 12;
             this.txt_Addhar_No.Name = "txt_Addhar_No";
             this.txt_Addhar_No.Size = new System.Drawing.Size(312, 34);
             this.txt_Addhar_No.TabIndex = 14;
+            this.txt_Addhar_No.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Addhar_No_KeyDown);
+            this.txt_Addhar_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Addhar_No_KeyPress);
             // 
             // lbl_Note
             // 
@@ -327,6 +341,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Note.Name = "txt_Note";
             this.txt_Note.Size = new System.Drawing.Size(341, 48);
             this.txt_Note.TabIndex = 18;
+            this.txt_Note.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Note_KeyDown);
             // 
             // tableLayoutPanel3
             // 
@@ -337,8 +352,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.68596F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.71843F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.63143F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 2, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
+            this.tableLayoutPanel3.Controls.Add(this.txt_Retailer_ID, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_ID, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Search, 3, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 27);
@@ -348,15 +363,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1287, 65);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
-            // textBox1
+            // txt_Retailer_ID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(506, 13);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 38);
-            this.textBox1.TabIndex = 8;
+            this.txt_Retailer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Retailer_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Retailer_ID.Location = new System.Drawing.Point(506, 13);
+            this.txt_Retailer_ID.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Retailer_ID.Name = "txt_Retailer_ID";
+            this.txt_Retailer_ID.Size = new System.Drawing.Size(265, 38);
+            this.txt_Retailer_ID.TabIndex = 8;
             // 
             // lbl_ID
             // 
@@ -374,13 +389,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Search.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(812, 3);
+            this.btn_Search.Location = new System.Drawing.Point(811, 3);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(233, 59);
+            this.btn_Search.Size = new System.Drawing.Size(232, 59);
             this.btn_Search.TabIndex = 16;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // dgv_View_Data
             // 
@@ -401,7 +417,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel2.Controls.Add(this.btn_Refresh);
             this.panel2.Controls.Add(this.btn_Update);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 734);
+            this.panel2.Location = new System.Drawing.Point(0, 763);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1317, 88);
             this.panel2.TabIndex = 13;
@@ -446,7 +462,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 822);
+            this.ClientSize = new System.Drawing.Size(1317, 851);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgv_View_Data);
@@ -495,7 +511,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_Note;
         private System.Windows.Forms.TextBox txt_Note;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Retailer_ID;
         private System.Windows.Forms.Label lbl_ID;
         private System.Windows.Forms.DataGridView dgv_View_Data;
         private System.Windows.Forms.Panel panel2;

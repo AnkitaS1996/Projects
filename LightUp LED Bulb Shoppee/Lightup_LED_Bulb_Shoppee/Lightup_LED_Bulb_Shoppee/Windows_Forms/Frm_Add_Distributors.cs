@@ -18,6 +18,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         {
             InitializeComponent();
         }
+        #region Clear Control Field
         private void Clear_Controls()
         {
             Auto_Increment();
@@ -31,17 +32,25 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_PanNo.Text = "";
             txt_Brand.Text = "";
         }
+        #endregion
+
+        #region AutoIncrement Code
         private void Auto_Increment()
         {
             txt_Distributor_ID.Text = Convert.ToString(GVObj.AutoIncrement("select Count(ID) from Distributor_db", "Select Max(ID) from Distributor_db", 101));
         }
+        #endregion
+
+        #region Add Distributor Form Load Code
         private void Frm_Add_Distributors_Load(object sender, EventArgs e)
         {
             txt_Distributor_ID.Enabled = false;
             Auto_Increment();
             txt_Name.Focus();
         }
+        #endregion
 
+        #region Refresh Button Code
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are You Refresh Clear All Text Box", "Clear Text", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -54,6 +63,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
+        #endregion
+
+        #region KeyPress Event Handling Code
         private void txt_Name_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(!(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space || e.KeyChar == (char)Keys.CapsLock || e.KeyChar == (char)Keys.ShiftKey))
@@ -77,7 +89,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
 
         }
-        //#Endregion
+        private void txt_Addhar_No_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
+
         private void txt_Addhar_No_TextChanged(object sender, EventArgs e)
         {
            /* if(txt_Addhar_No.TextLength > 12)
@@ -89,26 +109,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                     MessageBox.Show("Plase Valid 12 Digits Addhar Card Number");
                 }
             }*/
-
         }
-
-        //#region KeyPress Event Handling
-        private void txt_Addhar_No_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-        }
-
-        //#Save Button Code
+        #region Save Button Code
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            long Mobile_No2 = 0;
+            Double Mobile_No2 = 0;
             string Email = "-";
             if(txt_Mob_No2.Text != "")
             {
-                Mobile_No2 = Convert.ToInt32(txt_Mob_No2.Text);
+                Mobile_No2 = Convert.ToDouble(txt_Mob_No2.Text);
             }
             if(txt_Email_ID.Text != "")
             {
@@ -121,7 +130,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 DialogResult result = MessageBox.Show("Are You Sure Record Save Data Successfully..!!", "Record Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if(result == DialogResult.Yes)
                 {
-                    SqlCommand cmd = new SqlCommand("Insert into Distributor_db Values (" + Convert.ToInt32(txt_Distributor_ID.Text) + ",'" + txt_Name.Text + "','" + dtp_Tie_UPDate.Text + "'," + txt_Mob_No1.Text + "," + Mobile_No2 + ",'" + txt_Address.Text + "','" + Email + "'," + txt_Addhar_No.Text + ",'" + txt_PanNo.Text + "','" + txt_Brand.Text + "')", GVObj.con);
+                    SqlCommand cmd = new SqlCommand("Insert into Distributor_db Values (" + Convert.ToInt32(txt_Distributor_ID.Text) + ",'" + txt_Name.Text + "',@date," + txt_Mob_No1.Text + "," + Mobile_No2 + ",'" + txt_Address.Text + "','" + Email + "'," + txt_Addhar_No.Text + ",'" + txt_PanNo.Text + "','" + txt_Brand.Text + "')", GVObj.con);
+                    cmd.Parameters.Add("@date",SqlDbType.Date).Value = dtp_Tie_UPDate.Text;
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record Save Successfully");
                     Clear_Controls();
@@ -136,8 +146,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 MessageBox.Show("First Fill All The Field", "First Data field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }  
         }
+        #endregion
 
-        //#region Keydown Event Hwndling
+        #region Keydown Event Hwndling
         private void txt_Name_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -209,6 +220,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 btn_Save.Focus();
             }
         }
-        //#End Region
+        #endregion
     }
 }

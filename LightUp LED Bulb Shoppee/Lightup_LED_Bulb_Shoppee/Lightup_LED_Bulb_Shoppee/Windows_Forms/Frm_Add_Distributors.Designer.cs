@@ -52,16 +52,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_ID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.gb_Add_Distributor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Add_Distributor
@@ -182,7 +182,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Addhar_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Addhar_No.Location = new System.Drawing.Point(925, 291);
             this.txt_Addhar_No.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.txt_Addhar_No.MaxLength = 14;
+            this.txt_Addhar_No.MaxLength = 12;
             this.txt_Addhar_No.Name = "txt_Addhar_No";
             this.txt_Addhar_No.Size = new System.Drawing.Size(303, 34);
             this.txt_Addhar_No.TabIndex = 23;
@@ -262,6 +262,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Mob_No2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Mob_No2.Location = new System.Drawing.Point(272, 203);
             this.txt_Mob_No2.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Mob_No2.MaxLength = 10;
             this.txt_Mob_No2.Name = "txt_Mob_No2";
             this.txt_Mob_No2.Size = new System.Drawing.Size(307, 34);
             this.txt_Mob_No2.TabIndex = 20;
@@ -274,6 +275,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Mob_No1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Mob_No1.Location = new System.Drawing.Point(925, 115);
             this.txt_Mob_No1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Mob_No1.MaxLength = 10;
             this.txt_Mob_No1.Name = "txt_Mob_No1";
             this.txt_Mob_No1.Size = new System.Drawing.Size(303, 34);
             this.txt_Mob_No1.TabIndex = 19;
@@ -359,6 +361,17 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel1.Size = new System.Drawing.Size(1317, 91);
             this.panel1.TabIndex = 6;
             // 
+            // pb_Exit
+            // 
+            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pb_Exit.Location = new System.Drawing.Point(1260, 3);
+            this.pb_Exit.Name = "pb_Exit";
+            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
+            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Exit.TabIndex = 1;
+            this.pb_Exit.TabStop = false;
+            // 
             // lbl_Header
             // 
             this.lbl_Header.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -409,17 +422,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // pb_Exit
-            // 
-            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pb_Exit.Location = new System.Drawing.Point(1260, 3);
-            this.pb_Exit.Name = "pb_Exit";
-            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
-            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Exit.TabIndex = 1;
-            this.pb_Exit.TabStop = false;
-            // 
             // Frm_Add_Distributors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,8 +440,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

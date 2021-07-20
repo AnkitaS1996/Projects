@@ -101,11 +101,11 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         //Update button Code
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            long Mobile_No2 = 0;
+            double Mobile_No2 = 0;
             string Email = "";
             if (txt_Mob_No2.Text != "")
             {
-                Mobile_No2 = Convert.ToInt32(txt_Mob_No2.Text);
+                Mobile_No2 = Convert.ToDouble(txt_Mob_No2.Text);
             }
             if (txt_Email_ID.Text != "")
             {

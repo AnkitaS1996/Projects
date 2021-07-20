@@ -18,6 +18,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         {
             InitializeComponent();
         }
+        #region Enabled False Code
         private void Enabled_False()
         {
             txt_ID.Enabled = false;
@@ -28,6 +29,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Watt.Enabled = false;
            
         }
+        #endregion
+
+        #region Enabled True code
         private void Enabled_True()
         {
             txt_Unit_Price.Enabled = true;
@@ -35,7 +39,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Warranty.Enabled = true;
 
         }
-        //#region Clear Control Field
+        #endregion
+
+        #region Clear Control Field Code
         void clear_Control_All_Field()
         {
             txt_ID.Text = "";
@@ -48,7 +54,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Purchase_Price.Clear();
             txt_Warranty.Clear();
         }
-        //#Endregion
+        #endregion
+
+        #region Fill Gridview Code
         private void Fill_Gridview_Code()
         {
             GVObj.Con_Open();
@@ -60,18 +68,27 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dgv_Data.DataSource = dt;
             GVObj.Con_Close();
         }
+        #endregion
+
+        #region Update From Load Code
         private void Frm_Update_Product_Load(object sender, EventArgs e)
         {
             Fill_Gridview_Code();
             Enabled_False();
             //GVObj.FillDataGridView("Select * from Main_Product_Details_db MPD Inner Join Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID ", dgv_Data);
         }
+        #endregion
+
+        #region Searchby Combobox Selected Index Changed Code
         private void cb_Searchby_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_Search.Text = "";
             txt_Search.Enabled = true;
             txt_Search.Focus();
         }
+        #endregion
+
+        #region Search textbox textchanged event code
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
             if (txt_Search.Text != "")
@@ -80,7 +97,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             if (cb_Searchby.Text == "Product ID")
             {
-                GVObj.FillDataGridView("Select MPD.Main_Product_ID,MPD.Date,MPD.Category,MPD.Product_Name,MPD.Distributor_Name,SPD.Watts,SPD.Unit_Price,SPD.Purchase_Price,SPD.Warrenty from Main_Product_Details_db MPD INNER JOIN Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID where MPD.Main_Product_ID like " + txt_Search.Text + "", dgv_Data);
+                GVObj.FillDataGridView("Select MPD.Main_Product_ID,MPD.Date,MPD.Category,MPD.Product_Name,MPD.Distributor_Name,SPD.Watts,SPD.Unit_Price,SPD.Purchase_Price,SPD.Warrenty from Main_Product_Details_db MPD INNER JOIN Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID where MPD.Main_Product_ID like '" + txt_Search.Text + "'", dgv_Data);
             }
             if (cb_Searchby.Text == "Category")
             {
@@ -91,7 +108,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 GVObj.FillDataGridView("Select MPD.Main_Product_ID,MPD.Date,MPD.Category,MPD.Product_Name,MPD.Distributor_Name,SPD.Watts,SPD.Unit_Price,SPD.Purchase_Price,SPD.Warrenty from Main_Product_Details_db MPD INNER JOIN Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID where MPD.Product_Name like '" + txt_Search.Text + "%'", dgv_Data);
             }
         }
-        //#region Grid Cell Click Code
+        #endregion
+
+        #region Gridview Cell Click Event Handling
         private void dgv_Data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -108,9 +127,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 txt_Warranty.Text = row.Cells[8].Value.ToString();
             }
         }
-        //#endregion
+        #endregion
 
-        //#region Keypress Handling
+        #region Keypress Handling
         private void txt_Unit_Price_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
@@ -126,9 +145,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 e.Handled = true;
             }
         }
-        //#Endreion
+        #endregion
 
-        //#region Keydown Handling Code
+        #region Keydown Handling Code
         private void txt_Unit_Price_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -150,8 +169,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 btn_Update.Focus();
             }
         }
-        //#region End
-        //#region Update Button Code
+        #endregion
+
+        #region Update Button Code
         private void btn_Update_Click(object sender, EventArgs e)
         {
             decimal Purchase_Price = 0;
@@ -185,8 +205,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             GVObj.Con_Close();
         }
-        //#region end
-        //#Start region Clear Control Code
+        #endregion
+
+        #region Button Clear Code
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             DialogResult R = MessageBox.Show("Are You Sure Clear Data", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -199,8 +220,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
-        //#region End
-        //#region Exit Button Code
+        #endregion
+
+        #region Exit Button Code
         private void pb_Exit_Click(object sender, EventArgs e)
         {
             DialogResult Result = MessageBox.Show("Are You Sure Close This Form???...", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -213,6 +235,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
-        //#region end
+        #endregion
     }
 }

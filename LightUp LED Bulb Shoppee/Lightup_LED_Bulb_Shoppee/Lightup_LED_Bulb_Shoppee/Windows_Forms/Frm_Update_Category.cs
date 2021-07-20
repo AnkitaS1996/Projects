@@ -47,7 +47,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             if (cmb_SearchBy.Text == "Product ID")
             {
-                GVObj.FillDataGridView("Select * from Category_db where Category_ID like " + txt_Search.Text + "", dgv_Data);
+                GVObj.FillDataGridView("Select * from Category_db where Category_ID like '" + txt_Search.Text + "'", dgv_Data);
             }
             if (cmb_SearchBy.Text == "Category")
             {

@@ -57,7 +57,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
             if (cmb_SearchBy.Text == "Product ID")
             {
-                GVObj.FillDataGridView("Select MPD.Main_Product_ID,MPD.Date,MPD.Category,MPD.Product_Name,MPD.Distributor_Name,SPD.Watts,SPD.Unit_Price,SPD.Purchase_Price,SPD.Warrenty,SPD.Current_Stock from Main_Product_Details_db MPD INNER JOIN Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID where MPD.Main_Product_ID like " + txt_Search.Text + "", DGV_View_Product_Data);
+                GVObj.FillDataGridView("Select MPD.Main_Product_ID,MPD.Date,MPD.Category,MPD.Product_Name,MPD.Distributor_Name,SPD.Watts,SPD.Unit_Price,SPD.Purchase_Price,SPD.Warrenty,SPD.Current_Stock from Main_Product_Details_db MPD INNER JOIN Sub_Product_Details_db SPD ON MPD.Main_Product_ID = SPD.Main_Product_ID where MPD.Main_Product_ID like '" + txt_Search.Text + "'", DGV_View_Product_Data);
             }
             if (cmb_SearchBy.Text == "Category")
             {
