@@ -132,7 +132,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             GVObj.Con_Open();
             foreach (DataGridViewRow row in dgv_Data_View.Rows)
             {
-                SqlCommand Cmd2 = new SqlCommand("Insert into Customer_Purchase_Details(Customer_ID,Category,Product_Name,Watts,Unit_Price,Quantity,Total_Price) Values(" + Convert.ToInt32(txt_Cust_ID.Text) + ",'" + row.Cells[1].Value.ToString() + "','" + row.Cells[2].Value.ToString() + "','" + row.Cells[3].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[4].Value) + "," + Convert.ToInt32(row.Cells[5].Value) + "," + decimal.Parse(row.Cells[6].Value) + " ", GVObj.con);
+                SqlCommand Cmd2 = new SqlCommand("Insert into Customer_Purchase_Details(Customer_ID,Category,Product_Name,Watts,Unit_Price,Quantity,Total_Price) Values(" + Convert.ToInt32(txt_Cust_ID.Text) + ",'" + row.Cells[1].Value.ToString() + "','" + row.Cells[2].Value.ToString() + "','" + row.Cells[3].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[4].Value) + "," + Convert.ToInt32(row.Cells[5].Value) + "," + Convert.ToDouble(row.Cells[6].Value) + " ", GVObj.con);
                 Cmd2.ExecuteNonQuery();
                 Cmd2.Dispose();
             }
