@@ -128,6 +128,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             GVObj.Con_Close();
         }
         #endregion
+
         #region Combobox SelectedIndexchanged Event Handling Code
         private void cmb_Category_SelectedIndexChanged(object sender, EventArgs e)
         {
