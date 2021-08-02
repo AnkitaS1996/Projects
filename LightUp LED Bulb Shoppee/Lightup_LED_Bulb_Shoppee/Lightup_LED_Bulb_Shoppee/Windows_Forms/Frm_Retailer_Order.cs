@@ -37,13 +37,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Mobile_No.Enabled = false;
             txt_Unit_Price.Enabled = false;
             txt_Total_Price.Enabled = false;
+            txt_Remaining_Bills.Enabled = false;
         }
         #endregion
 
         #region Retailer Order Load Form
         private void Frm_Retailer_Order_Load(object sender, EventArgs e)
         {
+            Create_Column();
             Enabled_False();
+            txt_Total_Bill.Text = "0";
             //txt_Order_ID.Enabled = false;
             Bind_Combobox_Category_Data();
             Auto_Increment();
@@ -184,7 +187,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
 
         #endregion
 
-        #region Combobox textchanged Code
+        #region Combobox And Textbox textchanged Code
         private void cmb_Category_TextChanged(object sender, EventArgs e)
         {
             cmb_Product_Name.Items.Clear();
@@ -235,8 +238,43 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 }
             }
         }
+        private void txt_Discount_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_Discount.Text != "")
+            {
+                decimal Total_Bill = decimal.Parse(txt_Total_Bill.Text);
+                decimal Disc = decimal.Parse(txt_Discount.Text);
+                decimal Final_Bill = ((100 - Disc) / 100) * Total_Bill;
+                //Display Final Bills in textbox
+                txt_Final_Bills.Text = Final_Bill.ToString();
+                //double Tot_Bill = Convert.ToDouble(txt_Final_Bills.Text) - Disc;
+                btn_Save.Enabled = true;
+            }
+        }
+        private void txt_GST_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_GST.Text != "")
+            {
+                decimal PreviousGT = decimal.Parse(txt_Final_Bills.Text);
+                decimal GST = decimal.Parse(txt_GST.Text);
+                decimal Final_BillswithGST = ((100 + GST) / 100) * PreviousGT;
+                //decimal GST = decimal.Parse(txt_Total_Bill.Text) * (decimal.Parse(txt_GST.Text) / 100);
 
+                // decimal Tot_Bill = decimal.Parse(txt_Total_Bill.Text) + GST;
+                //Displaying new FinalBills with GST
+                txt_Final_Bills.Text = Final_BillswithGST.ToString();
+                btn_Save.Enabled = true;
+            }
+        }
+        private void txt_Paid_Bills_TextChanged(object sender, EventArgs e)
+        {
+            decimal Final_Bill = decimal.Parse(txt_Final_Bills.Text);
+            decimal Paid_Amount = decimal.Parse(txt_Paid_Bills.Text);
+            decimal Remaining_Bill = Final_Bill - Paid_Amount;
+            txt_Remaining_Bills.Text = Remaining_Bill.ToString();
+        }
         #endregion
+
         #region Search Button Code
         private void btn_Search_Click(object sender, EventArgs e)
         {
@@ -261,6 +299,119 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 Enabled_False();
             }
             GVObj.Con_Close();
+        }
+        #endregion
+
+        #region Add Button Code
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            int Qty = Convert.ToInt32(txt_Quantity.Text);
+            decimal Total_Bills = decimal.Parse(txt_Total_Bill.Text);
+            Total_Bills = Total_Bills + decimal.Parse(txt_Total_Price.Text);
+            int flag = -1;
+            if (cmb_Category.Text != "" && cmb_Product_Name.Text != "" && cmb_Watts.Text != "" && txt_Unit_Price.Text != "" && txt_Quantity.Text != "" && txt_Total_Price.Text != "")
+            {
+                /*DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+                Edit.Name = "Edit";
+                Edit.Text = "Edit";
+                Edit.UseColumnTextForButtonValue = true;
+                int columnIndex = 0;
+
+                if (dgv_Data_View.Columns["Edit"] == null)
+                {
+                    dgv_Data_View.Columns.Insert(columnIndex, Edit);
+                }*/
+                foreach (DataGridViewRow row in dgv_Retailer_Purchase_Details.Rows)
+                {
+                    if (Convert.ToString(row.Cells[3].Value) == cmb_Watts.Text)
+                    {
+                        flag = 0;
+                        Qty += Convert.ToInt32(row.Cells[5].Value);
+                        if (Stock >= Qty)
+                        {
+                            double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(txt_Unit_Price.Text);
+                            row.Cells[4].Value = Convert.ToDouble(txt_Unit_Price.Text);
+                            row.Cells[5].Value = Qty;
+                            row.Cells[6].Value = Total_Bills;
+                            //Stock_Update();
+                            Clear_Control_Product_Details();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            flag = 1;
+                        }
+
+                        // txt_Total_Bill.Text = Total_Bills.ToString();
+                    }
+                    //Stock_Update();
+                    txt_Total_Bill.Text = Total_Bills.ToString();
+
+                }
+                if (flag == -1)
+                {
+                    if (Stock >= Qty)
+                    {
+                        DT.Rows.Add(cmb_Category.Text, cmb_Product_Name.Text, cmb_Watts.Text, Convert.ToDouble(txt_Unit_Price.Text), Convert.ToInt32(txt_Quantity.Text), Convert.ToDouble(txt_Total_Price.Text));
+                        dgv_Retailer_Purchase_Details.DataSource = DT;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Enough Stock Available", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        flag = 1;
+                    }
+
+                    //Stock_Update();
+                    
+                    txt_Total_Bill.Text = Total_Bills.ToString();
+                    Clear_Control_Product_Details();
+                }
+                if (flag < 1)
+                {
+                    txt_Total_Bill.Text = Total_Bills.ToString();
+                }
+                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                btn.Name = "Remove";
+                btn.Text = "Remove";
+                btn.UseColumnTextForButtonValue = true;
+                int columnIndex = 0;
+                if (dgv_Retailer_Purchase_Details.Columns["Remove"] == null)
+                {
+                    dgv_Retailer_Purchase_Details.Columns.Insert(columnIndex, btn);
+                }
+            }
+        }
+
+        #endregion
+
+        #region Leave Event Handling
+        private void txt_Discount_Leave(object sender, EventArgs e)
+        {
+            if (txt_Discount.Text == "")
+            {
+                txt_Discount.Text = "0";
+            }
+        }
+
+        private void txt_GST_Leave(object sender, EventArgs e)
+        {
+            if (txt_GST.Text == "")
+            {
+                MessageBox.Show("GST Should be a Zero Or Positive Values");
+                txt_GST.Text = "0";
+                txt_GST.Focus();
+                btn_Save.Enabled = false;
+            }
+        }
+
+
+
+        #endregion
+
+        #region Save Code
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            
         }
         #endregion
     }

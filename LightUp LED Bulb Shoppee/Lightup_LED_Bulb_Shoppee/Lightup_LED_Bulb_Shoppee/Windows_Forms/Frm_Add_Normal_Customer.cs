@@ -43,7 +43,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         private void Clear_Control_Customer_Details()
         {
-            txt_Cust_ID.Text = "";
+            Auto_Increment();
             dtp_Date.Text = "";
             txt_Cust_Name.Clear();
             txt_Mobile_No.Clear();
@@ -52,6 +52,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_GST.Text = "";
             txt_Final_Bills.Clear();
             dt.Rows.Clear();
+            Clear_Control_Product_Details();
         }
         #endregion
 
@@ -117,6 +118,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         #region Add Normal Customer From Load Code
         private void Frm_Add_Normal_Customer_Load(object sender, EventArgs e)
         {
+            txt_Cust_ID.Enabled = false;
             Auto_Increment();
             //txt_Total_Bill.Enabled = false;
             Enable_False_Button();
@@ -130,12 +132,28 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         void Insert_Gridview()
         {
             GVObj.Con_Open();
-            foreach (DataGridViewRow row in dgv_Data_View.Rows)
+            for (int i = 0; i <= dgv_Data_View.Rows.Count - 1; i++)
+            {
+                SqlCommand cmd1 = new SqlCommand("Insert Into Customer_Purchase_Details Values (@ID, @Category, @Product_Name, @Watts, @Unit_Price,@Qty, @Tot_Price )",GVObj.con);
+
+                cmd1.Parameters.Add("@ID", SqlDbType.Int).Value = txt_Cust_ID.Text;
+                cmd1.Parameters.Add("@Category", SqlDbType.NVarChar).Value = dgv_Data_View.Rows[i].Cells[1].Value;
+                cmd1.Parameters.Add("@Product_Name", SqlDbType.NVarChar).Value = dgv_Data_View.Rows[i].Cells[2].Value;
+                cmd1.Parameters.Add("@Watts", SqlDbType.NVarChar).Value = dgv_Data_View.Rows[i].Cells[3].Value;
+                cmd1.Parameters.Add("@Unit_Price", SqlDbType.Money).Value = dgv_Data_View.Rows[i].Cells[4].Value;
+                cmd1.Parameters.Add("@Qty", SqlDbType.Int).Value = dgv_Data_View.Rows[i].Cells[5].Value;
+                cmd1.Parameters.Add("@Tot_Price", SqlDbType.Money).Value = dgv_Data_View.Rows[i].Cells[6].Value;
+
+                cmd1.ExecuteNonQuery();
+                cmd1.Dispose();
+            }
+            //Clear_Control_Product_Details();
+            /*foreach (DataGridViewRow row in dgv_Data_View.Rows)
             {
                 SqlCommand Cmd2 = new SqlCommand("Insert into Customer_Purchase_Details(Customer_ID,Category,Product_Name,Watts,Unit_Price,Quantity,Total_Price) Values(" + Convert.ToInt32(txt_Cust_ID.Text) + ",'" + row.Cells[1].Value.ToString() + "','" + row.Cells[2].Value.ToString() + "','" + row.Cells[3].Value.ToString() + "'," + Convert.ToDecimal(row.Cells[4].Value) + "," + Convert.ToInt32(row.Cells[5].Value) + "," + Convert.ToDouble(row.Cells[6].Value) + " ", GVObj.con);
                 Cmd2.ExecuteNonQuery();
                 Cmd2.Dispose();
-            }
+            }*/
 
             GVObj.Con_Close();
         }
@@ -184,7 +202,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         #endregion
 
-        #region Combobox Textchanged Code
+        #region Combobox And Textbox Textchanged Code
         private void cmb_Category_TextChanged(object sender, EventArgs e)
         {
             cmb_Product_Name.Items.Clear();
@@ -336,6 +354,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             row.Cells[4].Value = Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[5].Value = Qty;
                             row.Cells[6].Value = Total_Bills;
+                            Stock_Update();
                             Clear_Control_Product_Details();
                         }
                         else
@@ -401,6 +420,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                   }*/
         }
         #endregion
+
         #region Dridview Cellclick code
         private void dgv_Data_View_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -453,11 +473,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 cmd.Dispose();
                 Insert_Gridview();
                 MessageBox.Show("Record Save Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+                Clear_Control_Customer_Details();
                 GVObj.Con_Close();
             }
         }
         #endregion
+
         #region Keydown Event Handling
         private void txt_Cust_Name_KeyDown(object sender, KeyEventArgs e)
         {
@@ -515,5 +536,37 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         #endregion
 
+        #region Exit Code
+        private void pictureBox_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("Are You Sure Close This Form???...", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (Result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
+        }
+
+        #endregion
+
+        #region Clear Button Code
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            DialogResult R = MessageBox.Show("Are Sure Clear Data", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (R == DialogResult.Yes)
+            {
+                MessageBox.Show("Clear All Text Box");
+                Clear_Control_Customer_Details();
+            }
+            else
+            {
+                MessageBox.Show("Refresh Data");
+                this.Show();
+            }
+        }
+        #endregion
     }
 }
