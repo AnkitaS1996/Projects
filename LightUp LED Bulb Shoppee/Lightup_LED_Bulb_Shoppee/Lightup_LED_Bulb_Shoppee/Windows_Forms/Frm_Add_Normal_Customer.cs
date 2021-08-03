@@ -47,10 +47,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dtp_Date.Text = "";
             txt_Cust_Name.Clear();
             txt_Mobile_No.Clear();
-            txt_Total_Bill.Clear();
+            txt_Total_Bill.Text = "0";
             txt_Discount.Clear();
             txt_GST.Text = "";
-            txt_Final_Bills.Clear();
+            txt_Final_Bills.Text = "0";
             dt.Rows.Clear();
             Clear_Control_Product_Details();
         }
@@ -353,7 +353,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[4].Value = Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[5].Value = Qty;
-                            row.Cells[6].Value = Total_Bills;
+                            row.Cells[6].Value = Tot_Price;
                             Stock_Update();
                             Clear_Control_Product_Details();
                         }
@@ -362,12 +362,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             flag = 1;
                         }
-
-                        // txt_Total_Bill.Text = Total_Bills.ToString();
+                        txt_Total_Bill.Text = Total_Bills.ToString();
                     }
                     //Stock_Update();
-                    txt_Total_Bill.Text = Total_Bills.ToString();
-
+                   // txt_Total_Bill.Text = Total_Bills.ToString();
                 }
                 if (flag == -1)
                 {

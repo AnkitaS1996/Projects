@@ -34,14 +34,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Header = new System.Windows.Forms.Label();
             this.tabControl_UserMgt = new System.Windows.Forms.TabControl();
             this.tabPage_Add_User = new System.Windows.Forms.TabPage();
-            this.tabPage_Change_Password = new System.Windows.Forms.TabPage();
-            this.tabPage_Delete_User = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_Change_Password = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_Delete_User = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.txt_Confirm_Password = new System.Windows.Forms.TextBox();
@@ -50,6 +42,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage_Change_Password = new System.Windows.Forms.TabPage();
             this.btn_Close_CP = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.txt_New_Password = new System.Windows.Forms.TextBox();
@@ -58,20 +53,30 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.txt_CP_Username = new System.Windows.Forms.TextBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label9 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_Change_Password = new System.Windows.Forms.Label();
+            this.tabPage_Delete_User = new System.Windows.Forms.TabPage();
             this.btn_Close_Dlt = new System.Windows.Forms.Button();
             this.btn_Delete_User = new System.Windows.Forms.Button();
-            this.tb_Admin_Password = new System.Windows.Forms.TextBox();
+            this.txt_Admin_Password = new System.Windows.Forms.TextBox();
             this.txt_Delete_Username = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label12 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_Delete_User = new System.Windows.Forms.Label();
+            this.chkb_Show_Pass = new System.Windows.Forms.CheckBox();
+            this.chkb_Confirm_Pass_Show = new System.Windows.Forms.CheckBox();
+            this.chkb_Current_Pass_show = new System.Windows.Forms.CheckBox();
+            this.chkb_New_Pass_Show = new System.Windows.Forms.CheckBox();
+            this.chkb_Admin_Pass_Show = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.tabControl_UserMgt.SuspendLayout();
             this.tabPage_Add_User.SuspendLayout();
-            this.tabPage_Change_Password.SuspendLayout();
-            this.tabPage_Delete_User.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tabPage_Change_Password.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tabPage_Delete_User.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +135,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // tabPage_Add_User
             // 
             this.tabPage_Add_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage_Add_User.Controls.Add(this.chkb_Confirm_Pass_Show);
+            this.tabPage_Add_User.Controls.Add(this.chkb_Show_Pass);
             this.tabPage_Add_User.Controls.Add(this.btn_Close);
             this.tabPage_Add_User.Controls.Add(this.btn_Submit);
             this.tabPage_Add_User.Controls.Add(this.txt_Confirm_Password);
@@ -147,115 +154,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tabPage_Add_User.TabIndex = 0;
             this.tabPage_Add_User.Text = "Add New User";
             // 
-            // tabPage_Change_Password
-            // 
-            this.tabPage_Change_Password.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage_Change_Password.Controls.Add(this.btn_Close_CP);
-            this.tabPage_Change_Password.Controls.Add(this.btn_Update);
-            this.tabPage_Change_Password.Controls.Add(this.txt_New_Password);
-            this.tabPage_Change_Password.Controls.Add(this.Label10);
-            this.tabPage_Change_Password.Controls.Add(this.txt_Current_Password);
-            this.tabPage_Change_Password.Controls.Add(this.txt_CP_Username);
-            this.tabPage_Change_Password.Controls.Add(this.Label8);
-            this.tabPage_Change_Password.Controls.Add(this.Label9);
-            this.tabPage_Change_Password.Controls.Add(this.panel3);
-            this.tabPage_Change_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage_Change_Password.Location = new System.Drawing.Point(4, 38);
-            this.tabPage_Change_Password.Name = "tabPage_Change_Password";
-            this.tabPage_Change_Password.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Change_Password.Size = new System.Drawing.Size(1413, 607);
-            this.tabPage_Change_Password.TabIndex = 1;
-            this.tabPage_Change_Password.Text = "Change Password";
-            // 
-            // tabPage_Delete_User
-            // 
-            this.tabPage_Delete_User.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage_Delete_User.Controls.Add(this.btn_Close_Dlt);
-            this.tabPage_Delete_User.Controls.Add(this.btn_Delete_User);
-            this.tabPage_Delete_User.Controls.Add(this.tb_Admin_Password);
-            this.tabPage_Delete_User.Controls.Add(this.txt_Delete_Username);
-            this.tabPage_Delete_User.Controls.Add(this.Label11);
-            this.tabPage_Delete_User.Controls.Add(this.Label12);
-            this.tabPage_Delete_User.Controls.Add(this.panel4);
-            this.tabPage_Delete_User.Location = new System.Drawing.Point(4, 38);
-            this.tabPage_Delete_User.Name = "tabPage_Delete_User";
-            this.tabPage_Delete_User.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Delete_User.Size = new System.Drawing.Size(1413, 607);
-            this.tabPage_Delete_User.TabIndex = 2;
-            this.tabPage_Delete_User.Text = "Delete User";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1407, 91);
-            this.panel2.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(507, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 69);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add New User";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.lbl_Change_Password);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1407, 91);
-            this.panel3.TabIndex = 7;
-            // 
-            // lbl_Change_Password
-            // 
-            this.lbl_Change_Password.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Change_Password.AutoSize = true;
-            this.lbl_Change_Password.BackColor = System.Drawing.Color.Silver;
-            this.lbl_Change_Password.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Change_Password.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Change_Password.Location = new System.Drawing.Point(458, 9);
-            this.lbl_Change_Password.Name = "lbl_Change_Password";
-            this.lbl_Change_Password.Size = new System.Drawing.Size(592, 69);
-            this.lbl_Change_Password.TabIndex = 0;
-            this.lbl_Change_Password.Text = "Change Password";
-            this.lbl_Change_Password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Controls.Add(this.lbl_Delete_User);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1407, 91);
-            this.panel4.TabIndex = 7;
-            // 
-            // lbl_Delete_User
-            // 
-            this.lbl_Delete_User.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Delete_User.AutoSize = true;
-            this.lbl_Delete_User.BackColor = System.Drawing.Color.LightGray;
-            this.lbl_Delete_User.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Delete_User.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Delete_User.Location = new System.Drawing.Point(561, 11);
-            this.lbl_Delete_User.Name = "lbl_Delete_User";
-            this.lbl_Delete_User.Size = new System.Drawing.Size(386, 69);
-            this.lbl_Delete_User.TabIndex = 0;
-            this.lbl_Delete_User.Text = "Delete User";
-            this.lbl_Delete_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -269,6 +167,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Close.TabIndex = 35;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_Submit
             // 
@@ -283,6 +182,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Submit.TabIndex = 34;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = false;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // txt_Confirm_Password
             // 
@@ -353,6 +253,52 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Label6.TabIndex = 36;
             this.Label6.Text = "Enter Password";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1407, 91);
+            this.panel2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(507, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(470, 69);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Add New User";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage_Change_Password
+            // 
+            this.tabPage_Change_Password.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage_Change_Password.Controls.Add(this.chkb_New_Pass_Show);
+            this.tabPage_Change_Password.Controls.Add(this.chkb_Current_Pass_show);
+            this.tabPage_Change_Password.Controls.Add(this.btn_Close_CP);
+            this.tabPage_Change_Password.Controls.Add(this.btn_Update);
+            this.tabPage_Change_Password.Controls.Add(this.txt_New_Password);
+            this.tabPage_Change_Password.Controls.Add(this.Label10);
+            this.tabPage_Change_Password.Controls.Add(this.txt_Current_Password);
+            this.tabPage_Change_Password.Controls.Add(this.txt_CP_Username);
+            this.tabPage_Change_Password.Controls.Add(this.Label8);
+            this.tabPage_Change_Password.Controls.Add(this.Label9);
+            this.tabPage_Change_Password.Controls.Add(this.panel3);
+            this.tabPage_Change_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage_Change_Password.Location = new System.Drawing.Point(4, 38);
+            this.tabPage_Change_Password.Name = "tabPage_Change_Password";
+            this.tabPage_Change_Password.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Change_Password.Size = new System.Drawing.Size(1413, 607);
+            this.tabPage_Change_Password.TabIndex = 1;
+            this.tabPage_Change_Password.Text = "Change Password";
+            // 
             // btn_Close_CP
             // 
             this.btn_Close_CP.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -366,6 +312,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Close_CP.TabIndex = 54;
             this.btn_Close_CP.Text = "Close";
             this.btn_Close_CP.UseVisualStyleBackColor = false;
+            this.btn_Close_CP.Click += new System.EventHandler(this.btn_Close_CP_Click);
             // 
             // btn_Update
             // 
@@ -380,6 +327,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Update.TabIndex = 53;
             this.btn_Update.Text = "Update Password";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // txt_New_Password
             // 
@@ -452,6 +400,48 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Label9.TabIndex = 55;
             this.Label9.Text = "Current Password";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.lbl_Change_Password);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1407, 91);
+            this.panel3.TabIndex = 7;
+            // 
+            // lbl_Change_Password
+            // 
+            this.lbl_Change_Password.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Change_Password.AutoSize = true;
+            this.lbl_Change_Password.BackColor = System.Drawing.Color.Silver;
+            this.lbl_Change_Password.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Change_Password.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Change_Password.Location = new System.Drawing.Point(458, 9);
+            this.lbl_Change_Password.Name = "lbl_Change_Password";
+            this.lbl_Change_Password.Size = new System.Drawing.Size(592, 69);
+            this.lbl_Change_Password.TabIndex = 0;
+            this.lbl_Change_Password.Text = "Change Password";
+            this.lbl_Change_Password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage_Delete_User
+            // 
+            this.tabPage_Delete_User.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage_Delete_User.Controls.Add(this.chkb_Admin_Pass_Show);
+            this.tabPage_Delete_User.Controls.Add(this.btn_Close_Dlt);
+            this.tabPage_Delete_User.Controls.Add(this.btn_Delete_User);
+            this.tabPage_Delete_User.Controls.Add(this.txt_Admin_Password);
+            this.tabPage_Delete_User.Controls.Add(this.txt_Delete_Username);
+            this.tabPage_Delete_User.Controls.Add(this.Label11);
+            this.tabPage_Delete_User.Controls.Add(this.Label12);
+            this.tabPage_Delete_User.Controls.Add(this.panel4);
+            this.tabPage_Delete_User.Location = new System.Drawing.Point(4, 38);
+            this.tabPage_Delete_User.Name = "tabPage_Delete_User";
+            this.tabPage_Delete_User.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Delete_User.Size = new System.Drawing.Size(1413, 607);
+            this.tabPage_Delete_User.TabIndex = 2;
+            this.tabPage_Delete_User.Text = "Delete User";
+            // 
             // btn_Close_Dlt
             // 
             this.btn_Close_Dlt.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -465,6 +455,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Close_Dlt.TabIndex = 65;
             this.btn_Close_Dlt.Text = "Close";
             this.btn_Close_Dlt.UseVisualStyleBackColor = false;
+            this.btn_Close_Dlt.Click += new System.EventHandler(this.btn_Close_Dlt_Click);
             // 
             // btn_Delete_User
             // 
@@ -479,18 +470,19 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Delete_User.TabIndex = 64;
             this.btn_Delete_User.Text = "Delete User";
             this.btn_Delete_User.UseVisualStyleBackColor = false;
+            this.btn_Delete_User.Click += new System.EventHandler(this.btn_Delete_User_Click);
             // 
-            // tb_Admin_Password
+            // txt_Admin_Password
             // 
-            this.tb_Admin_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Admin_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Admin_Password.Location = new System.Drawing.Point(815, 320);
-            this.tb_Admin_Password.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Admin_Password.MaxLength = 8;
-            this.tb_Admin_Password.Name = "tb_Admin_Password";
-            this.tb_Admin_Password.PasswordChar = '*';
-            this.tb_Admin_Password.Size = new System.Drawing.Size(295, 38);
-            this.tb_Admin_Password.TabIndex = 61;
+            this.txt_Admin_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Admin_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Admin_Password.Location = new System.Drawing.Point(815, 320);
+            this.txt_Admin_Password.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Admin_Password.MaxLength = 8;
+            this.txt_Admin_Password.Name = "txt_Admin_Password";
+            this.txt_Admin_Password.PasswordChar = '*';
+            this.txt_Admin_Password.Size = new System.Drawing.Size(295, 38);
+            this.txt_Admin_Password.TabIndex = 61;
             // 
             // txt_Delete_Username
             // 
@@ -529,6 +521,95 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Label12.TabIndex = 62;
             this.Label12.Text = "Enter Admin Password";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.lbl_Delete_User);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1407, 91);
+            this.panel4.TabIndex = 7;
+            // 
+            // lbl_Delete_User
+            // 
+            this.lbl_Delete_User.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Delete_User.AutoSize = true;
+            this.lbl_Delete_User.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_Delete_User.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Delete_User.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Delete_User.Location = new System.Drawing.Point(561, 11);
+            this.lbl_Delete_User.Name = "lbl_Delete_User";
+            this.lbl_Delete_User.Size = new System.Drawing.Size(386, 69);
+            this.lbl_Delete_User.TabIndex = 0;
+            this.lbl_Delete_User.Text = "Delete User";
+            this.lbl_Delete_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chkb_Show_Pass
+            // 
+            this.chkb_Show_Pass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkb_Show_Pass.AutoSize = true;
+            this.chkb_Show_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkb_Show_Pass.Location = new System.Drawing.Point(728, 301);
+            this.chkb_Show_Pass.Name = "chkb_Show_Pass";
+            this.chkb_Show_Pass.Size = new System.Drawing.Size(209, 33);
+            this.chkb_Show_Pass.TabIndex = 39;
+            this.chkb_Show_Pass.Text = "Show Password";
+            this.chkb_Show_Pass.UseVisualStyleBackColor = true;
+            this.chkb_Show_Pass.CheckedChanged += new System.EventHandler(this.chkb_Show_Pass_CheckedChanged);
+            // 
+            // chkb_Confirm_Pass_Show
+            // 
+            this.chkb_Confirm_Pass_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkb_Confirm_Pass_Show.AutoSize = true;
+            this.chkb_Confirm_Pass_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkb_Confirm_Pass_Show.Location = new System.Drawing.Point(728, 413);
+            this.chkb_Confirm_Pass_Show.Name = "chkb_Confirm_Pass_Show";
+            this.chkb_Confirm_Pass_Show.Size = new System.Drawing.Size(209, 33);
+            this.chkb_Confirm_Pass_Show.TabIndex = 8;
+            this.chkb_Confirm_Pass_Show.Text = "Show Password";
+            this.chkb_Confirm_Pass_Show.UseVisualStyleBackColor = true;
+            this.chkb_Confirm_Pass_Show.CheckedChanged += new System.EventHandler(this.chkb_Confirm_Pass_Show_CheckedChanged);
+            // 
+            // chkb_Current_Pass_show
+            // 
+            this.chkb_Current_Pass_show.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkb_Current_Pass_show.AutoSize = true;
+            this.chkb_Current_Pass_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkb_Current_Pass_show.Location = new System.Drawing.Point(813, 316);
+            this.chkb_Current_Pass_show.Name = "chkb_Current_Pass_show";
+            this.chkb_Current_Pass_show.Size = new System.Drawing.Size(209, 33);
+            this.chkb_Current_Pass_show.TabIndex = 58;
+            this.chkb_Current_Pass_show.Text = "Show Password";
+            this.chkb_Current_Pass_show.UseVisualStyleBackColor = true;
+            this.chkb_Current_Pass_show.CheckedChanged += new System.EventHandler(this.chkb_Current_Pass_show_CheckedChanged);
+            // 
+            // chkb_New_Pass_Show
+            // 
+            this.chkb_New_Pass_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkb_New_Pass_Show.AutoSize = true;
+            this.chkb_New_Pass_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkb_New_Pass_Show.Location = new System.Drawing.Point(813, 430);
+            this.chkb_New_Pass_Show.Name = "chkb_New_Pass_Show";
+            this.chkb_New_Pass_Show.Size = new System.Drawing.Size(209, 33);
+            this.chkb_New_Pass_Show.TabIndex = 59;
+            this.chkb_New_Pass_Show.Text = "Show Password";
+            this.chkb_New_Pass_Show.UseVisualStyleBackColor = true;
+            this.chkb_New_Pass_Show.CheckedChanged += new System.EventHandler(this.chkb_New_Pass_Show_CheckedChanged);
+            // 
+            // chkb_Admin_Pass_Show
+            // 
+            this.chkb_Admin_Pass_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkb_Admin_Pass_Show.AutoSize = true;
+            this.chkb_Admin_Pass_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkb_Admin_Pass_Show.Location = new System.Drawing.Point(815, 365);
+            this.chkb_Admin_Pass_Show.Name = "chkb_Admin_Pass_Show";
+            this.chkb_Admin_Pass_Show.Size = new System.Drawing.Size(209, 33);
+            this.chkb_Admin_Pass_Show.TabIndex = 66;
+            this.chkb_Admin_Pass_Show.Text = "Show Password";
+            this.chkb_Admin_Pass_Show.UseVisualStyleBackColor = true;
+            this.chkb_Admin_Pass_Show.CheckedChanged += new System.EventHandler(this.chkb_Admin_Pass_Show_CheckedChanged);
+            // 
             // Frm_User_Managements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -545,14 +626,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tabControl_UserMgt.ResumeLayout(false);
             this.tabPage_Add_User.ResumeLayout(false);
             this.tabPage_Add_User.PerformLayout();
-            this.tabPage_Change_Password.ResumeLayout(false);
-            this.tabPage_Change_Password.PerformLayout();
-            this.tabPage_Delete_User.ResumeLayout(false);
-            this.tabPage_Delete_User.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tabPage_Change_Password.ResumeLayout(false);
+            this.tabPage_Change_Password.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tabPage_Delete_User.ResumeLayout(false);
+            this.tabPage_Delete_User.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -590,11 +671,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.TabPage tabPage_Delete_User;
         private System.Windows.Forms.Button btn_Close_Dlt;
         private System.Windows.Forms.Button btn_Delete_User;
-        private System.Windows.Forms.TextBox tb_Admin_Password;
+        private System.Windows.Forms.TextBox txt_Admin_Password;
         private System.Windows.Forms.TextBox txt_Delete_Username;
         private System.Windows.Forms.Label Label11;
         private System.Windows.Forms.Label Label12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbl_Delete_User;
+        private System.Windows.Forms.CheckBox chkb_Confirm_Pass_Show;
+        private System.Windows.Forms.CheckBox chkb_Show_Pass;
+        private System.Windows.Forms.CheckBox chkb_New_Pass_Show;
+        private System.Windows.Forms.CheckBox chkb_Current_Pass_show;
+        private System.Windows.Forms.CheckBox chkb_Admin_Pass_Show;
     }
 }

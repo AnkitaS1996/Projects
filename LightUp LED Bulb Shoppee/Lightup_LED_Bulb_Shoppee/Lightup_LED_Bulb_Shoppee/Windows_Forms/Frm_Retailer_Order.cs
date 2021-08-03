@@ -47,6 +47,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             Create_Column();
             Enabled_False();
             txt_Total_Bill.Text = "0";
+            //txt_Paid_Bills.Text = "0";
             //txt_Order_ID.Enabled = false;
             Bind_Combobox_Category_Data();
             Auto_Increment();
@@ -71,12 +72,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             dtp_Date.Text = "";
             txt_Cust_Name.Clear();
             txt_Mobile_No.Clear();
-            txt_Total_Bill.Clear();
-            txt_Discount.Clear();
-            txt_GST.Text = "";
-            txt_Final_Bills.Clear();
-            txt_Remaining_Bills.Clear();
-            txt_Paid_Bills.Clear();
+            txt_Total_Bill.Text = "0";
+            txt_Discount.Text = "0.0";
+            txt_GST.Text = "0.0";
+            txt_Final_Bills.Text = "0"; 
+            txt_Remaining_Bills.Text = "0";
+            txt_Paid_Bills.Text = "0";
             DT.Rows.Clear();
             Clear_Control_Product_Details();
         }
@@ -270,17 +271,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         private void txt_Paid_Bills_TextChanged(object sender, EventArgs e)
         {
-            if (txt_Paid_Bills.Text == "")
-            {
-                txt_Paid_Bills.Text = "0";
-            }
-            else
-            {
+           
                 decimal Final_Bill = decimal.Parse(txt_Final_Bills.Text);
                 decimal Paid_Amount = decimal.Parse(txt_Paid_Bills.Text);
                 decimal Remaining_Bill = Final_Bill - Paid_Amount;
                 txt_Remaining_Bills.Text = Remaining_Bill.ToString();
-            }
+           
             
         }
         #endregion
@@ -342,7 +338,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             double Tot_Price = Convert.ToDouble(Qty) * Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[4].Value = Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[5].Value = Qty;
-                            row.Cells[6].Value = Total_Bills;
+                            row.Cells[6].Value = Tot_Price;
                             Stock_Update();
                             Clear_Control_Product_Details();
                         }
@@ -351,11 +347,11 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             flag = 1;
                         }
-
+                        txt_Total_Bill.Text = Total_Bills.ToString();
                         // txt_Total_Bill.Text = Total_Bills.ToString();
                     }
                     //Stock_Update();
-                    txt_Total_Bill.Text = Total_Bills.ToString();
+                    ///txt_Total_Bill.Text = Total_Bills.ToString();
 
                 }
                 if (flag == -1)
@@ -484,6 +480,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 MessageBox.Show("First Fill All The Field Data", "Fill Record Completely", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             GVObj.Con_Close();
+        }
+        #endregion
+
+        #region Clear Code
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            DialogResult R = MessageBox.Show("Are Sure Clear Data", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (R == DialogResult.Yes)
+            {
+                MessageBox.Show("Clear All Text Box");
+                Clear_Control_Customer_Details();
+            }
+            else
+            {
+                MessageBox.Show("Refresh Data");
+                this.Show();
+            }
         }
         #endregion
     }
