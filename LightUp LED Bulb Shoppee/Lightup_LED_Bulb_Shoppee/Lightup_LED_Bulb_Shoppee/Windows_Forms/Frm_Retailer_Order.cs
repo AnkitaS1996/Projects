@@ -66,6 +66,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         private void Clear_Control_Customer_Details()
         {
+            Auto_Increment();
             txt_Cust_ID.Text = "";
             dtp_Date.Text = "";
             txt_Cust_Name.Clear();
@@ -76,7 +77,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             txt_Final_Bills.Clear();
             txt_Remaining_Bills.Clear();
             txt_Paid_Bills.Clear();
-           // dt.Rows.Clear();
+            DT.Rows.Clear();
+            Clear_Control_Product_Details();
         }
         #endregion
 
@@ -268,10 +270,18 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         private void txt_Paid_Bills_TextChanged(object sender, EventArgs e)
         {
-            decimal Final_Bill = decimal.Parse(txt_Final_Bills.Text);
-            decimal Paid_Amount = decimal.Parse(txt_Paid_Bills.Text);
-            decimal Remaining_Bill = Final_Bill - Paid_Amount;
-            txt_Remaining_Bills.Text = Remaining_Bill.ToString();
+            if (txt_Paid_Bills.Text == "")
+            {
+                txt_Paid_Bills.Text = "0";
+            }
+            else
+            {
+                decimal Final_Bill = decimal.Parse(txt_Final_Bills.Text);
+                decimal Paid_Amount = decimal.Parse(txt_Paid_Bills.Text);
+                decimal Remaining_Bill = Final_Bill - Paid_Amount;
+                txt_Remaining_Bills.Text = Remaining_Bill.ToString();
+            }
+            
         }
         #endregion
 
@@ -333,7 +343,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             row.Cells[4].Value = Convert.ToDouble(txt_Unit_Price.Text);
                             row.Cells[5].Value = Qty;
                             row.Cells[6].Value = Total_Bills;
-                            //Stock_Update();
+                            Stock_Update();
                             Clear_Control_Product_Details();
                         }
                         else
@@ -361,7 +371,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                         flag = 1;
                     }
 
-                    //Stock_Update();
+                    Stock_Update();
                     
                     txt_Total_Bill.Text = Total_Bills.ToString();
                     Clear_Control_Product_Details();
@@ -408,10 +418,72 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
 
         #endregion
 
+        #region Stock Update
+        private void Stock_Update()
+        {
+            GVObj.Con_Open();
+            //string s = txt_Quantity.Text;
+            Stock = (Stock - Convert.ToInt32(txt_Quantity.Text));
+            SqlDataAdapter Sa = new SqlDataAdapter("Update Sub_Product_Details_db SET Sub_Product_Details_db.Current_Stock = " + Stock + " from Main_Product_Details_db MP inner join Sub_Product_Details_db SP on MP.Main_Product_ID = SP.Main_Product_ID where MP.Category='" + cmb_Category.Text + "' And MP.Product_Name = '" + cmb_Product_Name.Text + "' And SP.Watts = '" + cmb_Watts.Text + "' ", GVObj.con);
+            DataTable dt2 = new DataTable();
+            Sa.Fill(dt2);
+            Sa.Dispose();
+            dt2.Dispose();
+            Stock = 0;
+            GVObj.Con_Close();
+        }
+        #endregion
+
+        #region Insert Gridview Data
+        private void Insert_Gridview()
+        {
+            int i = 0;
+            GVObj.Con_Open();
+            for(i = 0;i <= dgv_Retailer_Purchase_Details.Rows.Count-1;i++)
+            {
+                SqlCommand cmd1 = new SqlCommand("Insert into Order_Details Values(@O_ID,@Category,@Product_Name,@Watts,@Unit_Price,@Quantity,@Total_Price) ",GVObj.con);
+                cmd1.Parameters.Add("@O_ID", SqlDbType.Int).Value = txt_Order_ID.Text;
+                cmd1.Parameters.Add("@Category", SqlDbType.NVarChar).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[1].Value;
+                cmd1.Parameters.Add("@Product_Name", SqlDbType.NVarChar).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[2].Value;
+                cmd1.Parameters.Add("@Watts", SqlDbType.NVarChar).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[3].Value;
+                cmd1.Parameters.Add("@Unit_Price", SqlDbType.Money).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[4].Value;
+                cmd1.Parameters.Add("@Quantity", SqlDbType.BigInt).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[5].Value;
+                cmd1.Parameters.Add("@Total_Price", SqlDbType.Money).Value = dgv_Retailer_Purchase_Details.Rows[i].Cells[6].Value;
+                cmd1.ExecuteNonQuery();
+                cmd1.Dispose();
+            }
+            GVObj.Con_Close();
+        }
+        #endregion
+
         #region Save Code
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            
+            GVObj.Con_Open();
+            if(txt_Order_ID.Text != "" && txt_Cust_ID.Text != "" && txt_Total_Bill.Text != "" && txt_Discount.Text != "" && txt_GST.Text != "" && txt_Final_Bills.Text != "" && txt_Paid_Bills.Text != "" && txt_Remaining_Bills.Text != "" && dgv_Retailer_Purchase_Details.Rows.Count > 0)
+            {
+                SqlCommand cmd = new SqlCommand("Insert into Retailer_Order_Details_db Values(@R_ID,@O_ID,@Date,@Total_Bills,@Discount,@GST,@Final_Bill,@Paid_Bill,@Remaining_Bill) Select Retailer_ID from Retailer_Details_db", GVObj.con);
+               // SqlCommand cmd = new SqlCommand("Insert into Retailer_Order_Details_db(Retailer_ID,Order_ID,Create_Date,Total_Bills,Discount,GST,Final_Bills,Paid_Bills,Remaining_Bills) Values(@R_Id,@O_ID,@Date,@Total_Bills,@Discount,@GST,@Final_Bill,@Paid_Bill,@Remaining_Bill)", GVObj.con);
+                cmd.Parameters.Add("@R_Id", SqlDbType.Int).Value = txt_Cust_ID.Text;
+                cmd.Parameters.Add("@O_ID", SqlDbType.Int).Value = txt_Order_ID.Text;
+                cmd.Parameters.Add("@Date", SqlDbType.Date).Value = dtp_Date.Text;
+                cmd.Parameters.Add("@Total_Bills", SqlDbType.Money).Value = txt_Total_Bill.Text;
+                cmd.Parameters.Add("@Discount", SqlDbType.Float).Value = txt_Discount.Text;
+                cmd.Parameters.Add("@GST", SqlDbType.Float).Value = txt_GST.Text;
+                cmd.Parameters.Add("@Final_Bill", SqlDbType.Money).Value = txt_Final_Bills.Text;
+                cmd.Parameters.Add("@Paid_Bill", SqlDbType.Money).Value = txt_Paid_Bills.Text;
+                cmd.Parameters.Add("@Remaining_Bill", SqlDbType.Money).Value = txt_Remaining_Bills.Text;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                Insert_Gridview();
+                MessageBox.Show("Record Save Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear_Control_Customer_Details();
+            }
+            else
+            {
+                MessageBox.Show("First Fill All The Field Data", "Fill Record Completely", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            GVObj.Con_Close();
         }
         #endregion
     }

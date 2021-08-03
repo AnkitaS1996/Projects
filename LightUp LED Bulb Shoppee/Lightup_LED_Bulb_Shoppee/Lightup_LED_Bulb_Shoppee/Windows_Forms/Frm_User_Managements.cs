@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
 {
-    public partial class Frm_Accept_Payment : Form
+    public partial class Frm_User_Managements : Form
     {
-        public Frm_Accept_Payment()
+        public Frm_User_Managements()
         {
             InitializeComponent();
         }
+
         #region Exit Code
-        private void pb_Exits_Click(object sender, EventArgs e)
+        private void pb_Exit_Click(object sender, EventArgs e)
         {
             DialogResult Result = MessageBox.Show("Are You Sure Close This Form???...", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (Result == DialogResult.Yes)
@@ -28,18 +29,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             {
                 this.Show();
             }
+
         }
         #endregion
-
-        #region Accept Payment Page Load
-        private void Frm_Accept_Payment_Load(object sender, EventArgs e)
-        {
-            txt_Total_Final_Bill.Enabled = false;
-            txt_Total_Pay_Bill.Enabled = false;
-            txt_Pending_Bills.Enabled = false;
-        }
-        #endregion
-
-
     }
 }

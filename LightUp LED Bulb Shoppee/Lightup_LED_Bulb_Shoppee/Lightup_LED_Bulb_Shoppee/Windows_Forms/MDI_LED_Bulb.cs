@@ -163,7 +163,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             ANCObj.Show();
         }
 
-        private void retailerOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_View_Customer_Details VCObj = new Frm_View_Customer_Details();
+            VCObj.MdiParent = this;
+            VCObj.WindowState = FormWindowState.Maximized;
+            VCObj.Show();
+        }
+
+        private void showPendingBillsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Show_Pending_Bills SPBill = new Frm_Show_Pending_Bills();
+            SPBill.MdiParent = this;
+            SPBill.WindowState = FormWindowState.Maximized;
+            SPBill.Show();
+        }
+
+        private void retailerOrderToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Frm_Retailer_Order ROobj = new Frm_Retailer_Order();
             ROobj.MdiParent = this;
@@ -171,12 +187,35 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             ROobj.Show();
         }
 
-        private void viewCustomerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void acceptPaymentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_View_Customer_Details VCObj = new Frm_View_Customer_Details();
-            VCObj.MdiParent = this;
-            VCObj.WindowState = FormWindowState.Maximized;
-            VCObj.Show();
+            Frm_Accept_Payment ACPObj = new Frm_Accept_Payment();
+            ACPObj.MdiParent = this;
+            ACPObj.WindowState = FormWindowState.Maximized;
+            ACPObj.Show();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_User_Managements obj = new Frm_User_Managements();
+            obj.MdiParent = this;
+            obj.WindowState = FormWindowState.Maximized;
+            //obj.tabControl_UserMgt.SelectedIndex = 0;
+            obj.Show();
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_User_Managements obj = new Frm_User_Managements();
+            obj.MdiParent = this;
+            obj.WindowState = FormWindowState.Maximized;
+           // obj.tabControl_UserMgt.SelectedIndex = 1;
+            obj.Show();
+        }
+
+        private void updatePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,5 +29,20 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                 this.Show();
             }
         }
+
+        private void Frm_Show_Pending_Bills_Load(object sender, EventArgs e)
+        {
+            txt_Pending_Bills.Enabled = false;
+        }
+
+        private void txt_OrderID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        
     }
 }

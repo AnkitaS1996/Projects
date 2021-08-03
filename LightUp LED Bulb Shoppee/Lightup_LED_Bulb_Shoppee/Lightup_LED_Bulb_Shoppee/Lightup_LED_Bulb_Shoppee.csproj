@@ -133,6 +133,12 @@
     <Compile Include="Windows_Forms\Frm_Update_Retailer_Info.Designer.cs">
       <DependentUpon>Frm_Update_Retailer_Info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows_Forms\Frm_User_Managements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows_Forms\Frm_User_Managements.Designer.cs">
+      <DependentUpon>Frm_User_Managements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows_Forms\Frm_View_Category.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_Update_Retailer_Info.resx">
       <DependentUpon>Frm_Update_Retailer_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows_Forms\Frm_User_Managements.resx">
+      <DependentUpon>Frm_User_Managements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_View_Category.resx">
       <DependentUpon>Frm_View_Category.cs</DependentUpon>

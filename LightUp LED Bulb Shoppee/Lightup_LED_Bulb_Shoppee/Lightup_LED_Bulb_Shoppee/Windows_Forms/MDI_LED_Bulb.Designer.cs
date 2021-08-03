@@ -51,11 +51,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.addRetailerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateRetailerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewRetailerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retailerOrderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNormalCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.retailerOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPendingBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceptPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +66,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pb_Logout = new System.Windows.Forms.PictureBox();
             this.lbl_Logged_In_Uname = new System.Windows.Forms.Label();
-            this.viewCustomerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logout)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +85,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.distributorsToolStripMenuItem,
             this.billingToolStripMenuItem,
             this.customerToolStripMenuItem,
-            this.orderToolStripMenuItem,
             this.usersToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.reportsToolStripMenuItem1,
@@ -217,7 +220,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.billingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addRetailerToolStripMenuItem,
             this.updateRetailerToolStripMenuItem,
-            this.viewRetailerToolStripMenuItem});
+            this.viewRetailerToolStripMenuItem,
+            this.retailerOrderToolStripMenuItem1});
             this.billingToolStripMenuItem.Name = "billingToolStripMenuItem";
             this.billingToolStripMenuItem.Size = new System.Drawing.Size(135, 36);
             this.billingToolStripMenuItem.Text = "Retailers";
@@ -243,6 +247,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.viewRetailerToolStripMenuItem.Text = "View Retailer";
             this.viewRetailerToolStripMenuItem.Click += new System.EventHandler(this.viewRetailerToolStripMenuItem_Click);
             // 
+            // retailerOrderToolStripMenuItem1
+            // 
+            this.retailerOrderToolStripMenuItem1.Name = "retailerOrderToolStripMenuItem1";
+            this.retailerOrderToolStripMenuItem1.Size = new System.Drawing.Size(293, 36);
+            this.retailerOrderToolStripMenuItem1.Text = "Retailer Order";
+            this.retailerOrderToolStripMenuItem1.Click += new System.EventHandler(this.retailerOrderToolStripMenuItem1_Click);
+            // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -259,29 +270,42 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.addNormalCustomerToolStripMenuItem.Text = "Add Normal Customer";
             this.addNormalCustomerToolStripMenuItem.Click += new System.EventHandler(this.addNormalCustomerToolStripMenuItem_Click);
             // 
-            // orderToolStripMenuItem
+            // viewCustomerDetailsToolStripMenuItem
             // 
-            this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.retailerOrderToolStripMenuItem});
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(103, 36);
-            this.orderToolStripMenuItem.Text = "Order";
-            // 
-            // retailerOrderToolStripMenuItem
-            // 
-            this.retailerOrderToolStripMenuItem.Name = "retailerOrderToolStripMenuItem";
-            this.retailerOrderToolStripMenuItem.Size = new System.Drawing.Size(279, 36);
-            this.retailerOrderToolStripMenuItem.Text = "Retailer Order";
-            this.retailerOrderToolStripMenuItem.Click += new System.EventHandler(this.retailerOrderToolStripMenuItem_Click);
+            this.viewCustomerDetailsToolStripMenuItem.Name = "viewCustomerDetailsToolStripMenuItem";
+            this.viewCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(376, 36);
+            this.viewCustomerDetailsToolStripMenuItem.Text = "View Customer Details";
+            this.viewCustomerDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewCustomerDetailsToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPendingBillsToolStripMenuItem,
+            this.acceptPaymentToolStripMenuItem});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(111, 36);
             this.usersToolStripMenuItem.Text = "Billing";
             // 
+            // showPendingBillsToolStripMenuItem
+            // 
+            this.showPendingBillsToolStripMenuItem.Name = "showPendingBillsToolStripMenuItem";
+            this.showPendingBillsToolStripMenuItem.Size = new System.Drawing.Size(338, 36);
+            this.showPendingBillsToolStripMenuItem.Text = "Show Pending Bills";
+            this.showPendingBillsToolStripMenuItem.Click += new System.EventHandler(this.showPendingBillsToolStripMenuItem_Click);
+            // 
+            // acceptPaymentToolStripMenuItem
+            // 
+            this.acceptPaymentToolStripMenuItem.Name = "acceptPaymentToolStripMenuItem";
+            this.acceptPaymentToolStripMenuItem.Size = new System.Drawing.Size(338, 36);
+            this.acceptPaymentToolStripMenuItem.Text = "Accept Payment";
+            this.acceptPaymentToolStripMenuItem.Click += new System.EventHandler(this.acceptPaymentToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem
             // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addUserToolStripMenuItem,
+            this.updatePasswordToolStripMenuItem,
+            this.deleteUserToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
             this.reportsToolStripMenuItem.Text = "Users";
@@ -330,18 +354,32 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.lbl_Logged_In_Uname.AutoSize = true;
             this.lbl_Logged_In_Uname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Logged_In_Uname.Location = new System.Drawing.Point(1421, 9);
+            this.lbl_Logged_In_Uname.Location = new System.Drawing.Point(1406, 8);
             this.lbl_Logged_In_Uname.Name = "lbl_Logged_In_Uname";
             this.lbl_Logged_In_Uname.Size = new System.Drawing.Size(219, 29);
             this.lbl_Logged_In_Uname.TabIndex = 4;
             this.lbl_Logged_In_Uname.Text = "Logged In Uname";
             // 
-            // viewCustomerDetailsToolStripMenuItem
+            // addUserToolStripMenuItem
             // 
-            this.viewCustomerDetailsToolStripMenuItem.Name = "viewCustomerDetailsToolStripMenuItem";
-            this.viewCustomerDetailsToolStripMenuItem.Size = new System.Drawing.Size(376, 36);
-            this.viewCustomerDetailsToolStripMenuItem.Text = "View Customer Details";
-            this.viewCustomerDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewCustomerDetailsToolStripMenuItem_Click);
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(313, 36);
+            this.addUserToolStripMenuItem.Text = "Add New User";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(253, 36);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
+            // updatePasswordToolStripMenuItem
+            // 
+            this.updatePasswordToolStripMenuItem.Name = "updatePasswordToolStripMenuItem";
+            this.updatePasswordToolStripMenuItem.Size = new System.Drawing.Size(313, 36);
+            this.updatePasswordToolStripMenuItem.Text = "Update Password";
+            this.updatePasswordToolStripMenuItem.Click += new System.EventHandler(this.updatePasswordToolStripMenuItem_Click);
             // 
             // MDI_LED_Bulb
             // 
@@ -397,7 +435,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem updateDistributorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewDistributorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
@@ -406,8 +443,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.ToolStripMenuItem updateRetailerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewRetailerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNormalCustomerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem retailerOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCustomerDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem retailerOrderToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem showPendingBillsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acceptPaymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatePasswordToolStripMenuItem;
     }
 }
 

@@ -221,5 +221,21 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             }
         }
         #endregion
+
+        #region Exit Code
+        private void pb_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult Result = MessageBox.Show("Are You Sure Close This Form???...", "Form Close", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (Result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
+
+        }
+        #endregion
     }
 }

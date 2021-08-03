@@ -72,3 +72,4 @@ F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.exe
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.pdb
 F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.csprojAssemblyReference.cache
+F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\obj\Debug\Lightup_LED_Bulb_Shoppee.Windows_Forms.Frm_User_Managements.resources

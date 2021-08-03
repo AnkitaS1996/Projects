@@ -371,6 +371,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Exit.TabIndex = 1;
             this.pb_Exit.TabStop = false;
+            this.pb_Exit.Click += new System.EventHandler(this.pb_Exit_Click);
             // 
             // lbl_Header
             // 
