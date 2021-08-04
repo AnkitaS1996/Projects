@@ -216,10 +216,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             cmb_Watts.SelectedIndex = -1;
             cmb_Watts.Text = "";
             txt_Unit_Price.Clear();
+            txt_Quantity.Clear();
+            txt_Total_Price.Clear();
         }
         private void cmb_Watts_TextChanged(object sender, EventArgs e)
         {
             txt_Unit_Price.Clear();
+            txt_Quantity.Clear();
+            txt_Total_Price.Clear();
         }
         private void txt_Quantity_TextChanged(object sender, EventArgs e)
         {
@@ -355,6 +359,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             row.Cells[5].Value = Qty;
                             row.Cells[6].Value = Tot_Price;
                             Stock_Update();
+                            txt_Total_Bill.Text = Total_Bills.ToString();
                             Clear_Control_Product_Details();
                         }
                         else
@@ -362,9 +367,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             flag = 1;
                         }
-                        txt_Total_Bill.Text = Total_Bills.ToString();
+                        //txt_Total_Bill.Text = Total_Bills.ToString();
                     }
-                    //Stock_Update();
+                    
                    // txt_Total_Bill.Text = Total_Bills.ToString();
                 }
                 if (flag == -1)
@@ -373,6 +378,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                     {
                         dt.Rows.Add(cmb_Category.Text, cmb_Product_Name.Text, cmb_Watts.Text, Convert.ToDouble(txt_Unit_Price.Text), Convert.ToInt32(txt_Quantity.Text), Convert.ToDouble(txt_Total_Price.Text));
                         dgv_Data_View.DataSource = dt;
+                        txt_Total_Bill.Text = Total_Bills.ToString();
                     }
                     else
                     {
@@ -383,7 +389,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                     Stock_Update();
                     Clear_Control_Product_Details();
                     //Total_Bills = Total_Bills + decimal.Parse(txt_Total_Price.Text);
-                    txt_Total_Bill.Text = Total_Bills.ToString();
+                    //txt_Total_Bill.Text = Total_Bills.ToString();
                 }
                 if (flag < 1)
                 {
@@ -423,24 +429,27 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private void dgv_Data_View_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
-            
+            GVObj.Con_Open();
 
             if (e.RowIndex >= 0)
             {
-                DataRow dr = dt.Rows[e.RowIndex];
-
-                for (i= 0; i <= dgv_Data_View.Rows.Count; i++)
-                {
-                    double Total_Bills = Convert.ToDouble(txt_Total_Bill.Text);
-                    Total_Bills = (Total_Bills + (Convert.ToDouble(txt_Total_Price.Text)));
-
-                    txt_Total_Bill.Text = Total_Bills.ToString();     
-
-                }
-                dr.Delete();
-                dgv_Data_View.DataSource = dt;
-                //txt_Total_Bill.Text = ;
+               DataRow dr = dt.Rows[e.RowIndex];
+               decimal Total_Price = 0;
+               decimal Total_Bills = Convert.ToDecimal(txt_Total_Bill.Text);
                 
+               foreach(DataGridViewRow row in dgv_Data_View.Rows)
+               {
+                    //string s = txt_Quantity.Text;
+                    
+                    Total_Price =Convert.ToInt32(row.Cells[6].Value);   
+               }
+               
+               (Total_Bills) = Convert.ToDecimal(Total_Bills) - Convert.ToDecimal(Total_Price);
+               txt_Total_Bill.Text = Total_Bills.ToString();
+               dr.Delete();
+               dgv_Data_View.DataSource = dt;
+                //txt_Total_Bill.Text = ;
+                GVObj.Con_Close();
             } 
         }
         #endregion

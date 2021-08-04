@@ -29,21 +29,21 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.gb_View_Product = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Order_ID = new System.Windows.Forms.Label();
-            this.txt_OrderID = new System.Windows.Forms.TextBox();
+            this.lbl_Retailer_ID = new System.Windows.Forms.Label();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
+            this.txt_Search = new System.Windows.Forms.TextBox();
+            this.cmb_SearchBy = new System.Windows.Forms.ComboBox();
             this.DGV_Pending_Bills = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_Total_Pending_Bill = new System.Windows.Forms.Label();
             this.txt_Pending_Bills = new System.Windows.Forms.TextBox();
+            this.lbl_Total_Pending_Bill = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.gb_View_Product.SuspendLayout();
@@ -111,13 +111,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.01948F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.66883F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.516234F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.10065F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.34091F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.31169F));
-            this.tableLayoutPanel2.Controls.Add(this.lbl_Order_ID, 1, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.18841F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.89092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.2212F));
+            this.tableLayoutPanel2.Controls.Add(this.lbl_Retailer_ID, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Refresh, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txt_OrderID, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_Search, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_Search, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cmb_SearchBy, 2, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -125,27 +125,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1311, 75);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // lbl_Order_ID
+            // lbl_Retailer_ID
             // 
-            this.lbl_Order_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Order_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Order_ID.Location = new System.Drawing.Point(191, 19);
-            this.lbl_Order_ID.Name = "lbl_Order_ID";
-            this.lbl_Order_ID.Size = new System.Drawing.Size(229, 36);
-            this.lbl_Order_ID.TabIndex = 16;
-            this.lbl_Order_ID.Text = "Order ID";
-            this.lbl_Order_ID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txt_OrderID
-            // 
-            this.txt_OrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_OrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_OrderID.Location = new System.Drawing.Point(443, 18);
-            this.txt_OrderID.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.txt_OrderID.Name = "txt_OrderID";
-            this.txt_OrderID.Size = new System.Drawing.Size(203, 38);
-            this.txt_OrderID.TabIndex = 17;
-            this.txt_OrderID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_OrderID_KeyPress);
+            this.lbl_Retailer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Retailer_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Retailer_ID.Location = new System.Drawing.Point(192, 19);
+            this.lbl_Retailer_ID.Name = "lbl_Retailer_ID";
+            this.lbl_Retailer_ID.Size = new System.Drawing.Size(230, 36);
+            this.lbl_Retailer_ID.TabIndex = 16;
+            this.lbl_Retailer_ID.Text = "Retailer ID";
+            this.lbl_Retailer_ID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_Refresh
             // 
@@ -153,27 +142,40 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.btn_Refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Refresh.Location = new System.Drawing.Point(954, 9);
+            this.btn_Refresh.Location = new System.Drawing.Point(1026, 9);
             this.btn_Refresh.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(160, 57);
+            this.btn_Refresh.Size = new System.Drawing.Size(129, 57);
             this.btn_Refresh.TabIndex = 20;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // btn_Search
+            // txt_Search
             // 
-            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Search.Location = new System.Drawing.Point(718, 9);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(196, 57);
-            this.btn_Search.TabIndex = 21;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = false;
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.Location = new System.Drawing.Point(722, 18);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(264, 38);
+            this.txt_Search.TabIndex = 17;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
+            // 
+            // cmb_SearchBy
+            // 
+            this.cmb_SearchBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_SearchBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_SearchBy.FormattingEnabled = true;
+            this.cmb_SearchBy.Items.AddRange(new object[] {
+            "Retailer ID",
+            "Retailer Name"});
+            this.cmb_SearchBy.Location = new System.Drawing.Point(445, 17);
+            this.cmb_SearchBy.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.cmb_SearchBy.Name = "cmb_SearchBy";
+            this.cmb_SearchBy.Size = new System.Drawing.Size(204, 39);
+            this.cmb_SearchBy.TabIndex = 21;
+            this.cmb_SearchBy.SelectedIndexChanged += new System.EventHandler(this.cmb_SearchBy_SelectedIndexChanged);
             // 
             // DGV_Pending_Bills
             // 
@@ -183,23 +185,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Pending_Bills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Pending_Bills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Pending_Bills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGV_Pending_Bills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Pending_Bills.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Pending_Bills.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGV_Pending_Bills.Location = new System.Drawing.Point(12, 233);
             this.DGV_Pending_Bills.Name = "DGV_Pending_Bills";
             this.DGV_Pending_Bills.RowHeadersWidth = 51;
@@ -218,7 +220,15 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1326, 86);
             this.panel2.TabIndex = 26;
-            
+            // 
+            // txt_Pending_Bills
+            // 
+            this.txt_Pending_Bills.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_Pending_Bills.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Pending_Bills.Location = new System.Drawing.Point(696, 20);
+            this.txt_Pending_Bills.Name = "txt_Pending_Bills";
+            this.txt_Pending_Bills.Size = new System.Drawing.Size(298, 45);
+            this.txt_Pending_Bills.TabIndex = 1;
             // 
             // lbl_Total_Pending_Bill
             // 
@@ -229,18 +239,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Total_Pending_Bill.ForeColor = System.Drawing.Color.Maroon;
             this.lbl_Total_Pending_Bill.Location = new System.Drawing.Point(332, 23);
             this.lbl_Total_Pending_Bill.Name = "lbl_Total_Pending_Bill";
-            this.lbl_Total_Pending_Bill.Size = new System.Drawing.Size(320, 39);
+            this.lbl_Total_Pending_Bill.Size = new System.Drawing.Size(305, 38);
             this.lbl_Total_Pending_Bill.TabIndex = 0;
             this.lbl_Total_Pending_Bill.Text = "Total Pending Bills";
-            // 
-            // txt_Pending_Bills
-            // 
-            this.txt_Pending_Bills.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_Pending_Bills.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Pending_Bills.Location = new System.Drawing.Point(696, 20);
-            this.txt_Pending_Bills.Name = "txt_Pending_Bills";
-            this.txt_Pending_Bills.Size = new System.Drawing.Size(298, 45);
-            this.txt_Pending_Bills.TabIndex = 1;
             // 
             // Frm_Show_Pending_Bills
             // 
@@ -275,13 +276,13 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.Label lbl_Header;
         private System.Windows.Forms.GroupBox gb_View_Product;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label lbl_Order_ID;
+        private System.Windows.Forms.Label lbl_Retailer_ID;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.TextBox txt_OrderID;
-        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.DataGridView DGV_Pending_Bills;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Pending_Bills;
         private System.Windows.Forms.Label lbl_Total_Pending_Bill;
+        private System.Windows.Forms.ComboBox cmb_SearchBy;
     }
 }

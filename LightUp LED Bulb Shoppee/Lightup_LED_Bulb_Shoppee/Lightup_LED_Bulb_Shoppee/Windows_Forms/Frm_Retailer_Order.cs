@@ -340,6 +340,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             row.Cells[5].Value = Qty;
                             row.Cells[6].Value = Tot_Price;
                             Stock_Update();
+                            txt_Total_Bill.Text = Total_Bills.ToString();
                             Clear_Control_Product_Details();
                         }
                         else
@@ -347,12 +348,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                             MessageBox.Show("Can't Add More Quantity", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             flag = 1;
                         }
-                        txt_Total_Bill.Text = Total_Bills.ToString();
                         // txt_Total_Bill.Text = Total_Bills.ToString();
                     }
                     //Stock_Update();
                     ///txt_Total_Bill.Text = Total_Bills.ToString();
-
                 }
                 if (flag == -1)
                 {
@@ -360,16 +359,14 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
                     {
                         DT.Rows.Add(cmb_Category.Text, cmb_Product_Name.Text, cmb_Watts.Text, Convert.ToDouble(txt_Unit_Price.Text), Convert.ToInt32(txt_Quantity.Text), Convert.ToDouble(txt_Total_Price.Text));
                         dgv_Retailer_Purchase_Details.DataSource = DT;
+                        txt_Total_Bill.Text = Total_Bills.ToString();
                     }
                     else
                     {
                         MessageBox.Show("No Enough Stock Available", "Insufficiant Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         flag = 1;
                     }
-
                     Stock_Update();
-                    
-                    txt_Total_Bill.Text = Total_Bills.ToString();
                     Clear_Control_Product_Details();
                 }
                 if (flag < 1)
