@@ -194,28 +194,44 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             ACPObj.WindowState = FormWindowState.Maximized;
             ACPObj.Show();
         }
-
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_User_Managements obj = new Frm_User_Managements();
             obj.MdiParent = this;
             obj.WindowState = FormWindowState.Maximized;
-            //obj.tabControl_UserMgt.SelectedIndex = 0;
             obj.Show();
         }
 
-        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void monthlyProdutSalesReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_User_Managements obj = new Frm_User_Managements();
-            obj.MdiParent = this;
-            obj.WindowState = FormWindowState.Maximized;
-           // obj.tabControl_UserMgt.SelectedIndex = 1;
-            obj.Show();
+            Report_Forms.Frm_Monthly_Product_Sales_Reports Obj1 = new Report_Forms.Frm_Monthly_Product_Sales_Reports();
+            Obj1.MdiParent = this;
+            Obj1.WindowState = FormWindowState.Maximized;
+            Obj1.Show();
         }
 
-        private void updatePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        private void monthlyStockReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Report_Forms.Frm_Monthly_Stock_Reports obj2 = new Report_Forms.Frm_Monthly_Stock_Reports();
+            obj2.MdiParent = this;
+            obj2.WindowState = FormWindowState.Maximized;
+            obj2.Show();
+        }
 
+        private void monthlyOrderReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_Forms.Frm_Monthly_Order_Reports OObj = new Report_Forms.Frm_Monthly_Order_Reports();
+            OObj.MdiParent = this;
+            OObj.WindowState = FormWindowState.Maximized;
+            OObj.Show();
+        }
+
+        private void monthlyAddProductReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_Forms.Frm_Monthly_Add_Product_Reports APObj = new Report_Forms.Frm_Monthly_Add_Product_Reports();
+            APObj.MdiParent = this;
+            APObj.WindowState = FormWindowState.Maximized;
+            APObj.Show();
         }
     }
 }

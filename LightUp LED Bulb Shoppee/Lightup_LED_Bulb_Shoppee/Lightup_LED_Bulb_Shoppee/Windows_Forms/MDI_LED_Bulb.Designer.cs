@@ -59,16 +59,18 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.showPendingBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acceptPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyProdutSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pb_Logout = new System.Windows.Forms.PictureBox();
             this.lbl_Logged_In_Uname = new System.Windows.Forms.Label();
-            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updatePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyStockReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyOrderReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyAddProductReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logout)).BeginInit();
             this.SuspendLayout();
@@ -303,18 +305,35 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addUserToolStripMenuItem,
-            this.updatePasswordToolStripMenuItem,
-            this.deleteUserToolStripMenuItem});
+            this.addUserToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
             this.reportsToolStripMenuItem.Text = "Users";
             // 
+            // addUserToolStripMenuItem
+            // 
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(331, 36);
+            this.addUserToolStripMenuItem.Text = "User Managements";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
             // reportsToolStripMenuItem1
             // 
+            this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.monthlyProdutSalesReportToolStripMenuItem,
+            this.monthlyStockReportsToolStripMenuItem,
+            this.monthlyOrderReportsToolStripMenuItem,
+            this.monthlyAddProductReportsToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
             this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(123, 36);
             this.reportsToolStripMenuItem1.Text = "Reports";
+            // 
+            // monthlyProdutSalesReportToolStripMenuItem
+            // 
+            this.monthlyProdutSalesReportToolStripMenuItem.Name = "monthlyProdutSalesReportToolStripMenuItem";
+            this.monthlyProdutSalesReportToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.monthlyProdutSalesReportToolStripMenuItem.Text = "Monthly Produt Sales Report";
+            this.monthlyProdutSalesReportToolStripMenuItem.Click += new System.EventHandler(this.monthlyProdutSalesReportToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -360,26 +379,26 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Logged_In_Uname.TabIndex = 4;
             this.lbl_Logged_In_Uname.Text = "Logged In Uname";
             // 
-            // addUserToolStripMenuItem
+            // monthlyStockReportsToolStripMenuItem
             // 
-            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(313, 36);
-            this.addUserToolStripMenuItem.Text = "Add New User";
-            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            this.monthlyStockReportsToolStripMenuItem.Name = "monthlyStockReportsToolStripMenuItem";
+            this.monthlyStockReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.monthlyStockReportsToolStripMenuItem.Text = "Monthly Stock Reports";
+            this.monthlyStockReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyStockReportsToolStripMenuItem_Click);
             // 
-            // deleteUserToolStripMenuItem
+            // monthlyOrderReportsToolStripMenuItem
             // 
-            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(253, 36);
-            this.deleteUserToolStripMenuItem.Text = "Delete User";
-            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            this.monthlyOrderReportsToolStripMenuItem.Name = "monthlyOrderReportsToolStripMenuItem";
+            this.monthlyOrderReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.monthlyOrderReportsToolStripMenuItem.Text = "Monthly Order Reports";
+            this.monthlyOrderReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyOrderReportsToolStripMenuItem_Click);
             // 
-            // updatePasswordToolStripMenuItem
+            // monthlyAddProductReportsToolStripMenuItem
             // 
-            this.updatePasswordToolStripMenuItem.Name = "updatePasswordToolStripMenuItem";
-            this.updatePasswordToolStripMenuItem.Size = new System.Drawing.Size(313, 36);
-            this.updatePasswordToolStripMenuItem.Text = "Update Password";
-            this.updatePasswordToolStripMenuItem.Click += new System.EventHandler(this.updatePasswordToolStripMenuItem_Click);
+            this.monthlyAddProductReportsToolStripMenuItem.Name = "monthlyAddProductReportsToolStripMenuItem";
+            this.monthlyAddProductReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.monthlyAddProductReportsToolStripMenuItem.Text = "Monthly Add Product Reports";
+            this.monthlyAddProductReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyAddProductReportsToolStripMenuItem_Click);
             // 
             // MDI_LED_Bulb
             // 
@@ -448,8 +467,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.ToolStripMenuItem showPendingBillsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acceptPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updatePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthlyProdutSalesReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthlyStockReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthlyOrderReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthlyAddProductReportsToolStripMenuItem;
     }
 }
 
