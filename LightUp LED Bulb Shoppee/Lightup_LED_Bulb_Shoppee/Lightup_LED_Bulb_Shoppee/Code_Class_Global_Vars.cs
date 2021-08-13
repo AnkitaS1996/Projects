@@ -12,6 +12,7 @@ namespace Lightup_LED_Bulb_Shoppee
     class Code_Class_Global_Vars
     {
         public static string Uname = "User";
+        //public static int URole = 0;
 
         public SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=Lightup_LED_Bulb_Shoppee_db;Integrated Security=True");
         public void Con_Open()

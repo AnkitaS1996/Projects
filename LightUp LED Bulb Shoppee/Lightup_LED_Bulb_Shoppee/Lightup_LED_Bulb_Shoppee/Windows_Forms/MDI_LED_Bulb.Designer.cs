@@ -58,19 +58,20 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPendingBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acceptPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.singleCustomerBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyProdutSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyOrderReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monthlyProductReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.pb_Logout = new System.Windows.Forms.PictureBox();
             this.lbl_Logged_In_Uname = new System.Windows.Forms.Label();
-            this.monthlyStockReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthlyOrderReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthlyAddProductReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datewiseCustomerSalesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Logout)).BeginInit();
             this.SuspendLayout();
@@ -283,7 +284,8 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // 
             this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showPendingBillsToolStripMenuItem,
-            this.acceptPaymentToolStripMenuItem});
+            this.acceptPaymentToolStripMenuItem,
+            this.singleCustomerBillToolStripMenuItem});
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(111, 36);
             this.usersToolStripMenuItem.Text = "Billing";
@@ -291,16 +293,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // showPendingBillsToolStripMenuItem
             // 
             this.showPendingBillsToolStripMenuItem.Name = "showPendingBillsToolStripMenuItem";
-            this.showPendingBillsToolStripMenuItem.Size = new System.Drawing.Size(338, 36);
+            this.showPendingBillsToolStripMenuItem.Size = new System.Drawing.Size(351, 36);
             this.showPendingBillsToolStripMenuItem.Text = "Show Pending Bills";
             this.showPendingBillsToolStripMenuItem.Click += new System.EventHandler(this.showPendingBillsToolStripMenuItem_Click);
             // 
             // acceptPaymentToolStripMenuItem
             // 
             this.acceptPaymentToolStripMenuItem.Name = "acceptPaymentToolStripMenuItem";
-            this.acceptPaymentToolStripMenuItem.Size = new System.Drawing.Size(338, 36);
+            this.acceptPaymentToolStripMenuItem.Size = new System.Drawing.Size(351, 36);
             this.acceptPaymentToolStripMenuItem.Text = "Accept Payment";
             this.acceptPaymentToolStripMenuItem.Click += new System.EventHandler(this.acceptPaymentToolStripMenuItem_Click);
+            // 
+            // singleCustomerBillToolStripMenuItem
+            // 
+            this.singleCustomerBillToolStripMenuItem.Name = "singleCustomerBillToolStripMenuItem";
+            this.singleCustomerBillToolStripMenuItem.Size = new System.Drawing.Size(351, 36);
+            this.singleCustomerBillToolStripMenuItem.Text = "Single Customer Bill";
+            this.singleCustomerBillToolStripMenuItem.Click += new System.EventHandler(this.singleCustomerBillToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -320,10 +329,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // reportsToolStripMenuItem1
             // 
             this.reportsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.datewiseCustomerSalesReportToolStripMenuItem,
             this.monthlyProdutSalesReportToolStripMenuItem,
-            this.monthlyStockReportsToolStripMenuItem,
             this.monthlyOrderReportsToolStripMenuItem,
-            this.monthlyAddProductReportsToolStripMenuItem});
+            this.monthlyProductReportsToolStripMenuItem});
             this.reportsToolStripMenuItem1.Name = "reportsToolStripMenuItem1";
             this.reportsToolStripMenuItem1.Size = new System.Drawing.Size(123, 36);
             this.reportsToolStripMenuItem1.Text = "Reports";
@@ -331,9 +340,23 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             // monthlyProdutSalesReportToolStripMenuItem
             // 
             this.monthlyProdutSalesReportToolStripMenuItem.Name = "monthlyProdutSalesReportToolStripMenuItem";
-            this.monthlyProdutSalesReportToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.monthlyProdutSalesReportToolStripMenuItem.Size = new System.Drawing.Size(489, 36);
             this.monthlyProdutSalesReportToolStripMenuItem.Text = "Monthly Produt Sales Report";
             this.monthlyProdutSalesReportToolStripMenuItem.Click += new System.EventHandler(this.monthlyProdutSalesReportToolStripMenuItem_Click);
+            // 
+            // monthlyOrderReportsToolStripMenuItem
+            // 
+            this.monthlyOrderReportsToolStripMenuItem.Name = "monthlyOrderReportsToolStripMenuItem";
+            this.monthlyOrderReportsToolStripMenuItem.Size = new System.Drawing.Size(489, 36);
+            this.monthlyOrderReportsToolStripMenuItem.Text = "Monthly Order Reports";
+            this.monthlyOrderReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyOrderReportsToolStripMenuItem_Click);
+            // 
+            // monthlyProductReportsToolStripMenuItem
+            // 
+            this.monthlyProductReportsToolStripMenuItem.Name = "monthlyProductReportsToolStripMenuItem";
+            this.monthlyProductReportsToolStripMenuItem.Size = new System.Drawing.Size(489, 36);
+            this.monthlyProductReportsToolStripMenuItem.Text = "Monthly Product Reports";
+            this.monthlyProductReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyProductReportsToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -379,26 +402,12 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.lbl_Logged_In_Uname.TabIndex = 4;
             this.lbl_Logged_In_Uname.Text = "Logged In Uname";
             // 
-            // monthlyStockReportsToolStripMenuItem
+            // datewiseCustomerSalesReportToolStripMenuItem
             // 
-            this.monthlyStockReportsToolStripMenuItem.Name = "monthlyStockReportsToolStripMenuItem";
-            this.monthlyStockReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
-            this.monthlyStockReportsToolStripMenuItem.Text = "Monthly Stock Reports";
-            this.monthlyStockReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyStockReportsToolStripMenuItem_Click);
-            // 
-            // monthlyOrderReportsToolStripMenuItem
-            // 
-            this.monthlyOrderReportsToolStripMenuItem.Name = "monthlyOrderReportsToolStripMenuItem";
-            this.monthlyOrderReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
-            this.monthlyOrderReportsToolStripMenuItem.Text = "Monthly Order Reports";
-            this.monthlyOrderReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyOrderReportsToolStripMenuItem_Click);
-            // 
-            // monthlyAddProductReportsToolStripMenuItem
-            // 
-            this.monthlyAddProductReportsToolStripMenuItem.Name = "monthlyAddProductReportsToolStripMenuItem";
-            this.monthlyAddProductReportsToolStripMenuItem.Size = new System.Drawing.Size(468, 36);
-            this.monthlyAddProductReportsToolStripMenuItem.Text = "Monthly Add Product Reports";
-            this.monthlyAddProductReportsToolStripMenuItem.Click += new System.EventHandler(this.monthlyAddProductReportsToolStripMenuItem_Click);
+            this.datewiseCustomerSalesReportToolStripMenuItem.Name = "datewiseCustomerSalesReportToolStripMenuItem";
+            this.datewiseCustomerSalesReportToolStripMenuItem.Size = new System.Drawing.Size(489, 36);
+            this.datewiseCustomerSalesReportToolStripMenuItem.Text = "Datewise Customer Sales Report";
+            this.datewiseCustomerSalesReportToolStripMenuItem.Click += new System.EventHandler(this.datewiseCustomerSalesReportToolStripMenuItem_Click);
             // 
             // MDI_LED_Bulb
             // 
@@ -468,9 +477,10 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         private System.Windows.Forms.ToolStripMenuItem acceptPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monthlyProdutSalesReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem monthlyStockReportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monthlyOrderReportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem monthlyAddProductReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monthlyProductReportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem singleCustomerBillToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem datewiseCustomerSalesReportToolStripMenuItem;
     }
 }
 

@@ -65,6 +65,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code_Class_Global_Vars.cs" />
+    <Compile Include="Dataset_Customer_Sales_Report.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_Customer_Sales_Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset_Order_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_Order_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset_Product_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_Product_Details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset_Single_Customer_Bills.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_Single_Customer_Bills.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Lightup_LED_Bulb_Shoppee_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +94,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lightup_LED_Bulb_Shoppee_dbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Datewise_Customer_Sales_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Forms\Frm_Datewise_Customer_Sales_Reports.Designer.cs">
+      <DependentUpon>Frm_Datewise_Customer_Sales_Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="Report_Forms\Frm_Monthly_Add_Product_Reports.cs">
       <SubType>Form</SubType>
@@ -93,11 +119,11 @@
     <Compile Include="Report_Forms\Frm_Monthly_Product_Sales_Reports.Designer.cs">
       <DependentUpon>Frm_Monthly_Product_Sales_Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report_Forms\Frm_Monthly_Stock_Reports.cs">
+    <Compile Include="Report_Forms\Frm_Single_Normal_Customer_Bills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report_Forms\Frm_Monthly_Stock_Reports.Designer.cs">
-      <DependentUpon>Frm_Monthly_Stock_Reports.cs</DependentUpon>
+    <Compile Include="Report_Forms\Frm_Single_Normal_Customer_Bills.Designer.cs">
+      <DependentUpon>Frm_Single_Normal_Customer_Bills.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Windows_Forms\Frm_Accept_Payment.cs">
@@ -234,7 +260,14 @@
     <Compile Include="Windows_Forms\MDI_LED_Bulb.Designer.cs">
       <DependentUpon>MDI_LED_Bulb.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Rpt_Datewise_Customer_Sales_Report.rdlc" />
+    <EmbeddedResource Include="Reports\Rpt_Monthly_Order_Reports.rdlc" />
+    <EmbeddedResource Include="Reports\Rpt_Monthly_Product_Details.rdlc" />
     <EmbeddedResource Include="Reports\Rpt_Monthly_Product_Sales_Report.rdlc" />
+    <EmbeddedResource Include="Reports\Rpt_Single_Normal_Customer_Bill.rdlc" />
+    <EmbeddedResource Include="Report_Forms\Frm_Datewise_Customer_Sales_Reports.resx">
+      <DependentUpon>Frm_Datewise_Customer_Sales_Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report_Forms\Frm_Monthly_Add_Product_Reports.resx">
       <DependentUpon>Frm_Monthly_Add_Product_Reports.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,8 +277,8 @@
     <EmbeddedResource Include="Report_Forms\Frm_Monthly_Product_Sales_Reports.resx">
       <DependentUpon>Frm_Monthly_Product_Sales_Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report_Forms\Frm_Monthly_Stock_Reports.resx">
-      <DependentUpon>Frm_Monthly_Stock_Reports.cs</DependentUpon>
+    <EmbeddedResource Include="Report_Forms\Frm_Single_Normal_Customer_Bills.resx">
+      <DependentUpon>Frm_Single_Normal_Customer_Bills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows_Forms\Frm_Accept_Payment.resx">
       <DependentUpon>Frm_Accept_Payment.cs</DependentUpon>
@@ -323,6 +356,50 @@
     <EmbeddedResource Include="Windows_Forms\MDI_LED_Bulb.resx">
       <DependentUpon>MDI_LED_Bulb.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Dataset_Customer_Sales_Report.xsc">
+      <DependentUpon>Dataset_Customer_Sales_Report.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Customer_Sales_Report.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_Customer_Sales_Report.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset_Customer_Sales_Report.xss">
+      <DependentUpon>Dataset_Customer_Sales_Report.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Order_Details.xsc">
+      <DependentUpon>Dataset_Order_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Order_Details.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_Order_Details.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset_Order_Details.xss">
+      <DependentUpon>Dataset_Order_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Product_Details.xsc">
+      <DependentUpon>Dataset_Product_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Product_Details.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_Product_Details.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset_Product_Details.xss">
+      <DependentUpon>Dataset_Product_Details.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Single_Customer_Bills.xsc">
+      <DependentUpon>Dataset_Single_Customer_Bills.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_Single_Customer_Bills.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_Single_Customer_Bills.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset_Single_Customer_Bills.xss">
+      <DependentUpon>Dataset_Single_Customer_Bills.xsd</DependentUpon>
+    </None>
     <None Include="Lightup_LED_Bulb_Shoppee_dbDataSet.xsc">
       <DependentUpon>Lightup_LED_Bulb_Shoppee_dbDataSet.xsd</DependentUpon>
     </None>

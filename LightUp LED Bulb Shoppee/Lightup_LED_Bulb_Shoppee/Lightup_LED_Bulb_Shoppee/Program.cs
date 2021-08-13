@@ -16,7 +16,7 @@ namespace Lightup_LED_Bulb_Shoppee
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Windows_Forms.MDI_LED_Bulb());
+            Application.Run(new Windows_Forms.Frm_Login());
         }
     }
 }

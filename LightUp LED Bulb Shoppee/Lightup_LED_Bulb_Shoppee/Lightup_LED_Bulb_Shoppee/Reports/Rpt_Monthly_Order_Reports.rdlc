@@ -2,50 +2,51 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix3">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>6.57707cm</Width>
+              <Width>2.55556cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.0359cm</Width>
+              <Width>2.42856cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.94861cm</Width>
+              <Width>3.6774cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.45144cm</Width>
+              <Width>4.23511cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.9726cm</Width>
+              <Width>2.76723cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.54926cm</Width>
+              <Width>2.80956cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.16826cm</Width>
+              <Width>2.99501cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.90909cm</Width>
+              <Width>3.12706cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.11858cm</Height>
+              <Height>1.108cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Customer Product ID</Value>
+                              <Value>Order ID</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -54,11 +55,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -71,16 +72,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox57">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Created Date</Value>
+                              <Value>Date</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -89,11 +91,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox57</rd:DefaultName>
+                      <rd:DefaultName>Textbox37</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -106,7 +108,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox30">
+                    <Textbox Name="Textbox24">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -115,7 +117,8 @@
                             <TextRun>
                               <Value>Category</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -124,11 +127,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <rd:DefaultName>Textbox24</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -141,7 +144,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox32">
+                    <Textbox Name="Textbox26">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -150,7 +153,8 @@
                             <TextRun>
                               <Value>Product Name</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -159,11 +163,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox32</rd:DefaultName>
+                      <rd:DefaultName>Textbox26</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -176,7 +180,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox40">
+                    <Textbox Name="Textbox29">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -185,7 +189,8 @@
                             <TextRun>
                               <Value>Watts</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -194,11 +199,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox40</rd:DefaultName>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -211,7 +216,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox42">
+                    <Textbox Name="Textbox31">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -220,7 +225,8 @@
                             <TextRun>
                               <Value>Unit Price</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -229,11 +235,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox42</rd:DefaultName>
+                      <rd:DefaultName>Textbox31</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -246,7 +252,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox44">
+                    <Textbox Name="Textbox33">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -255,7 +261,8 @@
                             <TextRun>
                               <Value>Quantity</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -264,11 +271,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox44</rd:DefaultName>
+                      <rd:DefaultName>Textbox33</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -281,7 +288,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox49">
+                    <Textbox Name="Textbox35">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -290,7 +297,8 @@
                             <TextRun>
                               <Value>Total Price</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -299,11 +307,11 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox49</rd:DefaultName>
+                      <rd:DefaultName>Textbox35</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Double</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Tan</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -317,18 +325,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.05508cm</Height>
+              <Height>1.108cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Customer_Product_ID">
+                    <Textbox Name="Order_ID">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Customer_Product_ID.Value</Value>
+                              <Value>=Fields!Order_ID.Value</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -340,7 +348,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Customer_Product_ID</rd:DefaultName>
+                      <rd:DefaultName>Order_ID</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -356,18 +364,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox58">
+                    <Textbox Name="Textbox38">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Lookup(Fields!Customer_ID.Value,Fields!Customer_ID.Value,Fields!Created_Date.Value,"DataSet2")</Value>
+                              <Value>=Lookup(Fields!Order_ID.Value,Fields!Order_ID.Value,Fields!Create_Date.Value,"Dataset_Retailer_Oreder_Details")</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
+                                <Format>dd-MM-yyyy</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -376,7 +384,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox58</rd:DefaultName>
+                      <rd:DefaultName>Textbox38</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -388,6 +396,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -406,9 +415,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Category</rd:DefaultName>
@@ -441,9 +448,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Product_Name</rd:DefaultName>
@@ -484,7 +489,8 @@
                       <rd:DefaultName>Watts</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -625,11 +631,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet_Product_Sales</DataSetName>
-        <Top>1.3462cm</Top>
-        <Left>1.22496cm</Left>
-        <Height>2.17366cm</Height>
-        <Width>34.61223cm</Width>
+        <DataSetName>Dataset_Product_Order</DataSetName>
+        <Top>1.0287cm</Top>
+        <Left>0.82232cm</Left>
+        <Height>2.216cm</Height>
+        <Width>24.59549cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -637,16 +643,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.125in</Height>
-    <Style>
-      <Border>
-        <Style>Double</Style>
-        <Width>1.25pt</Width>
-      </Border>
-      <BackgroundColor>LightGrey</BackgroundColor>
-    </Style>
+    <Height>4.69167in</Height>
+    <Style />
   </Body>
-  <Width>14.53413in</Width>
+  <Width>10.30493in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -660,7 +660,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Monthly Product Sales Report</Value>
+                  <Value>Monthly Order Report</Value>
                   <Style>
                     <FontFamily>Times New Roman</FontFamily>
                     <FontSize>26pt</FontSize>
@@ -675,8 +675,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.5207cm</Top>
-          <Left>13.04443cm</Left>
+          <Top>0.56784cm</Top>
+          <Left>6.78158cm</Left>
           <Height>1.40433cm</Height>
           <Width>12.51417cm</Width>
           <Style>
@@ -709,34 +709,27 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Lightup_LED_Bulb_Shoppee_dbDataSet">
+    <DataSource Name="Dataset_Order_Details">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3555ca14-8d77-4510-a83c-61e59cd0cd66</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="Lightup_LED_Bulb_Shoppee_dbDataSet1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>6b465395-71c7-475d-b71d-750e5e73d800</rd:DataSourceID>
+      <rd:DataSourceID>b169d7ae-c8fa-46fb-83ed-40b991a62b01</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet_Product_Sales">
+    <DataSet Name="Dataset_Product_Order">
       <Query>
-        <DataSourceName>Lightup_LED_Bulb_Shoppee_dbDataSet</DataSourceName>
+        <DataSourceName>Dataset_Order_Details</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Customer_Product_ID">
-          <DataField>Customer_Product_ID</DataField>
+        <Field Name="O_ID">
+          <DataField>O_ID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Customer_ID">
-          <DataField>Customer_ID</DataField>
+        <Field Name="Order_ID">
+          <DataField>Order_ID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Category">
@@ -765,35 +758,31 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Lightup_LED_Bulb_Shoppee_dbDataSet</rd:DataSetName>
-        <rd:SchemaPath>F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee_dbDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Customer_Purchase_Details</rd:TableName>
+        <rd:DataSetName>Dataset_Order_Details</rd:DataSetName>
+        <rd:SchemaPath>F:\Ankita\C# Projects\LightUp LED Bulb Shoppee_11\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\Dataset_Order_Details.xsd</rd:SchemaPath>
+        <rd:TableName>Order_Details</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Customer_Purchase_DetailsTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>Order_DetailsTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSet2">
+    <DataSet Name="Dataset_Retailer_Oreder_Details">
       <Query>
-        <DataSourceName>Lightup_LED_Bulb_Shoppee_dbDataSet1</DataSourceName>
+        <DataSourceName>Dataset_Order_Details</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Customer_ID">
-          <DataField>Customer_ID</DataField>
+        <Field Name="Retailer_ID">
+          <DataField>Retailer_ID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Created_Date">
-          <DataField>Created_Date</DataField>
+        <Field Name="Order_ID">
+          <DataField>Order_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Create_Date">
+          <DataField>Create_Date</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Customer_Name">
-          <DataField>Customer_Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Mobile_No">
-          <DataField>Mobile_No</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Total_Bills">
           <DataField>Total_Bills</DataField>
@@ -811,17 +800,25 @@
           <DataField>Final_Bills</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
+        <Field Name="Paid_Bills">
+          <DataField>Paid_Bills</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Remaining_Bills">
+          <DataField>Remaining_Bills</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Lightup_LED_Bulb_Shoppee_dbDataSet1</rd:DataSetName>
-        <rd:SchemaPath>F:\Ankita\C# Projects\LightUp LED Bulb Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee_dbDataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>Customer_Details_db</rd:TableName>
+        <rd:DataSetName>Dataset_Order_Details</rd:DataSetName>
+        <rd:SchemaPath>F:\Ankita\C# Projects\LightUp LED Bulb Shoppee_11\Lightup_LED_Bulb_Shoppee\Lightup_LED_Bulb_Shoppee\Dataset_Order_Details.xsd</rd:SchemaPath>
+        <rd:TableName>Retailer_Order_Details_db</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Customer_Details_dbTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>Retailer_Order_Details_dbTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>02c295ef-7ee6-48d7-a8bb-0ed008cc9ac7</rd:ReportID>
+  <rd:ReportID>c571589f-80e9-4d94-af15-07c0e5aac3d8</rd:ReportID>
 </Report>

@@ -31,16 +31,16 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Monthly_Order_Report = new System.Windows.Forms.Label();
-            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.cmb_Month = new System.Windows.Forms.ComboBox();
             this.lbl_Monthly_Stock_Report = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,18 +68,6 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.lbl_Monthly_Order_Report.TabIndex = 2;
             this.lbl_Monthly_Order_Report.Text = "Monthly Order Report";
             this.lbl_Monthly_Order_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pb_Exit
-            // 
-            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
-            this.pb_Exit.Location = new System.Drawing.Point(1427, 3);
-            this.pb_Exit.Name = "pb_Exit";
-            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
-            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Exit.TabIndex = 1;
-            this.pb_Exit.TabStop = false;
-            this.pb_Exit.Click += new System.EventHandler(this.pb_Exit_Click);
             // 
             // lbl_Header
             // 
@@ -117,6 +105,7 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.btn_Refresh.TabIndex = 2;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // cmb_Month
             // 
@@ -141,6 +130,7 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.cmb_Month.Name = "cmb_Month";
             this.cmb_Month.Size = new System.Drawing.Size(214, 33);
             this.cmb_Month.TabIndex = 1;
+            this.cmb_Month.SelectedIndexChanged += new System.EventHandler(this.cmb_Month_SelectedIndexChanged);
             // 
             // lbl_Monthly_Stock_Report
             // 
@@ -149,9 +139,9 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.lbl_Monthly_Stock_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Monthly_Stock_Report.Location = new System.Drawing.Point(239, 32);
             this.lbl_Monthly_Stock_Report.Name = "lbl_Monthly_Stock_Report";
-            this.lbl_Monthly_Stock_Report.Size = new System.Drawing.Size(409, 32);
+            this.lbl_Monthly_Stock_Report.Size = new System.Drawing.Size(410, 32);
             this.lbl_Monthly_Stock_Report.TabIndex = 0;
-            this.lbl_Monthly_Stock_Report.Text = "Search Monthly Stock Report";
+            this.lbl_Monthly_Stock_Report.Text = "Search Monthly Order Report";
             // 
             // reportViewer1
             // 
@@ -161,6 +151,18 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1484, 585);
             this.reportViewer1.TabIndex = 11;
+            // 
+            // pb_Exit
+            // 
+            this.pb_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_Exit.Image = global::Lightup_LED_Bulb_Shoppee.Properties.Resources._77_771475_x_exit_button_icon_symbol_vector_illustration_hong;
+            this.pb_Exit.Location = new System.Drawing.Point(1427, 3);
+            this.pb_Exit.Name = "pb_Exit";
+            this.pb_Exit.Size = new System.Drawing.Size(54, 45);
+            this.pb_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Exit.TabIndex = 1;
+            this.pb_Exit.TabStop = false;
+            this.pb_Exit.Click += new System.EventHandler(this.pb_Exit_Click);
             // 
             // Frm_Monthly_Order_Reports
             // 
@@ -176,9 +178,9 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.Load += new System.EventHandler(this.Frm_Monthly_Order_Reports_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace Lightup_LED_Bulb_Shoppee.Report_Forms
 {
-    partial class Frm_Monthly_Add_Product_Reports
+    partial class Frm_Datewise_Customer_Sales_Reports
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,16 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Monthly_Order_Report = new System.Windows.Forms.Label();
             this.pb_Exit = new System.Windows.Forms.PictureBox();
             this.lbl_Header = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.dtp_To_Date = new System.Windows.Forms.DateTimePicker();
+            this.lbl_To_Date = new System.Windows.Forms.Label();
+            this.dtp_From_Date = new System.Windows.Forms.DateTimePicker();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.cmb_Month = new System.Windows.Forms.ComboBox();
-            this.lbl_Monthly_Product_Sales_Report = new System.Windows.Forms.Label();
+            this.lbl_From_Date = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).BeginInit();
@@ -46,28 +49,28 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_Monthly_Order_Report);
             this.panel1.Controls.Add(this.pb_Exit);
             this.panel1.Controls.Add(this.lbl_Header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1484, 91);
-            this.panel1.TabIndex = 8;
+            this.panel1.TabIndex = 10;
             // 
-            // label1
+            // lbl_Monthly_Order_Report
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(367, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(809, 69);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Monthly Product  Report";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Monthly_Order_Report.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Monthly_Order_Report.AutoSize = true;
+            this.lbl_Monthly_Order_Report.BackColor = System.Drawing.Color.White;
+            this.lbl_Monthly_Order_Report.Font = new System.Drawing.Font("Georgia", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Monthly_Order_Report.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_Monthly_Order_Report.Location = new System.Drawing.Point(231, 9);
+            this.lbl_Monthly_Order_Report.Name = "lbl_Monthly_Order_Report";
+            this.lbl_Monthly_Order_Report.Size = new System.Drawing.Size(1048, 69);
+            this.lbl_Monthly_Order_Report.TabIndex = 2;
+            this.lbl_Monthly_Order_Report.Text = "Datewise Customer Sales Report";
+            this.lbl_Monthly_Order_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb_Exit
             // 
@@ -96,14 +99,58 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_Search);
+            this.panel2.Controls.Add(this.dtp_To_Date);
+            this.panel2.Controls.Add(this.lbl_To_Date);
+            this.panel2.Controls.Add(this.dtp_From_Date);
             this.panel2.Controls.Add(this.btn_Refresh);
-            this.panel2.Controls.Add(this.cmb_Month);
-            this.panel2.Controls.Add(this.lbl_Monthly_Product_Sales_Report);
+            this.panel2.Controls.Add(this.lbl_From_Date);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1484, 100);
-            this.panel2.TabIndex = 9;
+            this.panel2.TabIndex = 11;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Search.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.Color.Maroon;
+            this.btn_Search.Location = new System.Drawing.Point(1120, 21);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(173, 52);
+            this.btn_Search.TabIndex = 6;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // dtp_To_Date
+            // 
+            this.dtp_To_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_To_Date.Location = new System.Drawing.Point(860, 30);
+            this.dtp_To_Date.Name = "dtp_To_Date";
+            this.dtp_To_Date.Size = new System.Drawing.Size(250, 34);
+            this.dtp_To_Date.TabIndex = 5;
+            // 
+            // lbl_To_Date
+            // 
+            this.lbl_To_Date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_To_Date.AutoSize = true;
+            this.lbl_To_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_To_Date.Location = new System.Drawing.Point(608, 30);
+            this.lbl_To_Date.Name = "lbl_To_Date";
+            this.lbl_To_Date.Size = new System.Drawing.Size(131, 32);
+            this.lbl_To_Date.TabIndex = 4;
+            this.lbl_To_Date.Text = "To Date:";
+            // 
+            // dtp_From_Date
+            // 
+            this.dtp_From_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_From_Date.Location = new System.Drawing.Point(332, 30);
+            this.dtp_From_Date.Name = "dtp_From_Date";
+            this.dtp_From_Date.Size = new System.Drawing.Size(270, 34);
+            this.dtp_From_Date.TabIndex = 3;
             // 
             // btn_Refresh
             // 
@@ -111,7 +158,7 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.btn_Refresh.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Refresh.ForeColor = System.Drawing.Color.Maroon;
-            this.btn_Refresh.Location = new System.Drawing.Point(932, 21);
+            this.btn_Refresh.Location = new System.Drawing.Point(1299, 19);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(173, 52);
             this.btn_Refresh.TabIndex = 2;
@@ -119,41 +166,16 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // cmb_Month
+            // lbl_From_Date
             // 
-            this.cmb_Month.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmb_Month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Month.FormattingEnabled = true;
-            this.cmb_Month.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "Octomber",
-            "November",
-            "December",
-            ""});
-            this.cmb_Month.Location = new System.Drawing.Point(683, 32);
-            this.cmb_Month.Name = "cmb_Month";
-            this.cmb_Month.Size = new System.Drawing.Size(214, 33);
-            this.cmb_Month.TabIndex = 1;
-            this.cmb_Month.SelectedIndexChanged += new System.EventHandler(this.cmb_Month_SelectedIndexChanged);
-            // 
-            // lbl_Monthly_Product_Sales_Report
-            // 
-            this.lbl_Monthly_Product_Sales_Report.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Monthly_Product_Sales_Report.AutoSize = true;
-            this.lbl_Monthly_Product_Sales_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Monthly_Product_Sales_Report.Location = new System.Drawing.Point(239, 32);
-            this.lbl_Monthly_Product_Sales_Report.Name = "lbl_Monthly_Product_Sales_Report";
-            this.lbl_Monthly_Product_Sales_Report.Size = new System.Drawing.Size(347, 32);
-            this.lbl_Monthly_Product_Sales_Report.TabIndex = 0;
-            this.lbl_Monthly_Product_Sales_Report.Text = "Search Monthly Product ";
+            this.lbl_From_Date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_From_Date.AutoSize = true;
+            this.lbl_From_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_From_Date.Location = new System.Drawing.Point(31, 32);
+            this.lbl_From_Date.Name = "lbl_From_Date";
+            this.lbl_From_Date.Size = new System.Drawing.Size(165, 32);
+            this.lbl_From_Date.TabIndex = 0;
+            this.lbl_From_Date.Text = "From Date:";
             // 
             // reportViewer1
             // 
@@ -162,9 +184,9 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1484, 585);
-            this.reportViewer1.TabIndex = 10;
+            this.reportViewer1.TabIndex = 12;
             // 
-            // Frm_Monthly_Add_Product_Reports
+            // Frm_Datewise_Customer_Sales_Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,9 +194,9 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Frm_Monthly_Add_Product_Reports";
-            this.Text = "Monthly Add Product Reports";
-            this.Load += new System.EventHandler(this.Frm_Monthly_Add_Product_Reports_Load);
+            this.Name = "Frm_Datewise_Customer_Sales_Reports";
+            this.Text = "Datewise Customer Sales Reports";
+            this.Load += new System.EventHandler(this.Frm_Datewise_Customer_Sales_Reports_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Exit)).EndInit();
@@ -187,13 +209,16 @@ namespace Lightup_LED_Bulb_Shoppee.Report_Forms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Monthly_Order_Report;
         private System.Windows.Forms.PictureBox pb_Exit;
         private System.Windows.Forms.Label lbl_Header;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.ComboBox cmb_Month;
-        private System.Windows.Forms.Label lbl_Monthly_Product_Sales_Report;
+        private System.Windows.Forms.Label lbl_From_Date;
+        private System.Windows.Forms.DateTimePicker dtp_From_Date;
+        private System.Windows.Forms.DateTimePicker dtp_To_Date;
+        private System.Windows.Forms.Label lbl_To_Date;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button btn_Search;
     }
 }

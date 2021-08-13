@@ -210,14 +210,6 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             Obj1.Show();
         }
 
-        private void monthlyStockReportsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Report_Forms.Frm_Monthly_Stock_Reports obj2 = new Report_Forms.Frm_Monthly_Stock_Reports();
-            obj2.MdiParent = this;
-            obj2.WindowState = FormWindowState.Maximized;
-            obj2.Show();
-        }
-
         private void monthlyOrderReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report_Forms.Frm_Monthly_Order_Reports OObj = new Report_Forms.Frm_Monthly_Order_Reports();
@@ -226,12 +218,28 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             OObj.Show();
         }
 
-        private void monthlyAddProductReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void monthlyProductReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report_Forms.Frm_Monthly_Add_Product_Reports APObj = new Report_Forms.Frm_Monthly_Add_Product_Reports();
             APObj.MdiParent = this;
             APObj.WindowState = FormWindowState.Maximized;
             APObj.Show();
+        }
+
+        private void singleCustomerBillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_Forms.Frm_Single_Normal_Customer_Bills SNCObj = new Report_Forms.Frm_Single_Normal_Customer_Bills();
+            SNCObj.MdiParent = this;
+            SNCObj.WindowState = FormWindowState.Maximized;
+            SNCObj.Show();
+        }
+
+        private void datewiseCustomerSalesReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_Forms.Frm_Datewise_Customer_Sales_Reports DCSRObj = new Report_Forms.Frm_Datewise_Customer_Sales_Reports();
+            DCSRObj.MdiParent = this;
+            DCSRObj.WindowState = FormWindowState.Maximized;
+            DCSRObj.Show();
         }
     }
 }

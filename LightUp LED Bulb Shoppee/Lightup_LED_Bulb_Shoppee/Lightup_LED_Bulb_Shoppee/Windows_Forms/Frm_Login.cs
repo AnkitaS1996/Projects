@@ -69,8 +69,16 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             {
                 lbl_Note.Visible = false;
                 Code_Class_Global_Vars.Uname = txt_Username.Text;
+                /*if(txt_Username.Text == "Admin")
+                {
+                    Code_Class_Global_Vars.URole = 1;
+                }
+                else if(txt_Password.Text == "User")
+                {
+                    Code_Class_Global_Vars.URole = 2;
+                }*/
                 
-                MessageBox.Show("Login Save Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MDI_LED_Bulb obj = new MDI_LED_Bulb();
                 obj.Show();
                 this.Hide();
