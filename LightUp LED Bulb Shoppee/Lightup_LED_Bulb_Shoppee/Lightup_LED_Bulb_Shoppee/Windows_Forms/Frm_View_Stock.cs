@@ -89,5 +89,9 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
         }
         #endregion
 
+        private void Frm_View_Stock_Load(object sender, EventArgs e)
+        {
+            Fill_Gridview();
+        }
     }
 }

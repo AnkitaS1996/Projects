@@ -104,7 +104,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             "Product ID",
             "Category",
             "Product Name"});
-            this.cmb_SearchBy.Location = new System.Drawing.Point(460, 20);
+            this.cmb_SearchBy.Location = new System.Drawing.Point(460, 21);
             this.cmb_SearchBy.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.cmb_SearchBy.Name = "cmb_SearchBy";
             this.cmb_SearchBy.Size = new System.Drawing.Size(289, 39);
@@ -219,6 +219,7 @@ namespace Lightup_LED_Bulb_Shoppee.Windows_Forms
             this.Name = "Frm_View_Stock";
             this.Text = "View Stock";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_View_Stock_Load);
             this.gb_View_Stock.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
